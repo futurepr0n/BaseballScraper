@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
+import random
 import time
 from urllib.parse import urlparse
 import os
@@ -306,8 +307,8 @@ if __name__ == "__main__":
             else:
                 print(f"Skipping data extraction and saving due to fetch error for {game_url}")
             
-            sleep_time = 23
-            print(f"Waiting for {sleep_time} seconds before next request...")
+            sleep_time = random.uniform(10, 35)
+            print(f"Waiting for {sleep_time:.2f} seconds before next request...")
             time.sleep(sleep_time)
         
         print(f"\n--- Finished processing all URLs from {url_file}. ---")
