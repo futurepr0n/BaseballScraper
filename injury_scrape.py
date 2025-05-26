@@ -8,8 +8,8 @@ import hashlib
 import os
 
 # File paths
-ROSTERS_FILE = "/home/BaseballTracker/public/data/rosters.json"
-INJURIES_DIR = "/home/BaseballTracker/public/data/injuries"
+ROSTERS_FILE = "/app/BaseballTracker/public/data/rosters.json"
+INJURIES_DIR = "/app/BaseballTracker/public/data/injuries"
 
 # Team name mapping from full names to abbreviations
 TEAM_MAPPING = {
