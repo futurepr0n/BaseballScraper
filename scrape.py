@@ -6,9 +6,9 @@ import random
 import time
 from urllib.parse import urlparse
 import os
-import glob  # Added for finding files matching pattern
+import glob
 
-# --- (Keep TEAM_ABBREVIATIONS dictionary and get_team_abbr function) ---
+# --- (Keep TEAM_ABBREVIATIONS dictionary as is) ---
 TEAM_ABBREVIATIONS = {
     "Arizona Diamondbacks": "ARI", "D-backs": "ARI", "Diamondbacks": "ARI",
     "Atlanta Braves": "ATL", "Braves": "ATL",
@@ -56,7 +56,6 @@ def get_team_abbr(full_name):
     print(f"Warning: Abbreviation not found for team name: '{full_name}' (cleaned: '{cleaned_name}')")
     return cleaned_name[:3].upper()
 
-# --- (Other functions remain the same) ---
 def get_page_content(url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
@@ -69,24 +68,24 @@ def get_page_content(url):
 
 def extract_boxscore_data(html_content, url):
     if not html_content:
-        return None # Return None for data
+        return None, None  # Return None for both data and gameId
 
     soup = BeautifulSoup(html_content, 'html.parser')
-    # --- Date extraction removed ---
+    
+    # Extract gameId from URL
+    game_id = extract_game_id_from_url(url)
+    
+    all_teams_data = {}
 
-    all_teams_data = {} # Nested structure: {team_abbr: {'hitting': df, 'pitching': df}}
-
-    # Find all Team Title divs
     team_title_divs = soup.find_all('div', class_='TeamTitle', attrs={'data-testid': 'teamTitle'})
 
     if not team_title_divs:
         print(f"Error: Could not find any 'div.TeamTitle' elements on {url}. Cannot extract H/P data.")
-        return None
+        return None, game_id
 
     print(f"Debug: Found {len(team_title_divs)} TeamTitle divs. Processing...")
 
     for title_div in team_title_divs:
-        # 1. Extract Team Name and Determine Data Type (Hitting/Pitching)
         team_name_tag = title_div.find('div', class_='TeamTitle__Name')
         if not team_name_tag:
             print(f"Warning: Found TeamTitle div but no TeamTitle__Name inside. Skipping section. URL: {url}")
@@ -102,13 +101,11 @@ def extract_boxscore_data(html_content, url):
             continue
         print(f"Debug: Processing team: {team_name_full} ({team_abbr}), type: {data_type}")
 
-        # 2. Find ResponsiveTable div
         responsive_table_div = title_div.find_next_sibling('div', class_='ResponsiveTable')
         if not responsive_table_div:
             print(f"Warning: Could not find 'div.ResponsiveTable' immediately after TeamTitle for {team_name_full}. Skipping. URL: {url}")
             continue
 
-        # 3. Find the TWO tables
         player_name_table = responsive_table_div.find('table', class_='Table--fixed-left')
         stats_scroller_div = responsive_table_div.find('div', class_='Table__Scroller')
         stats_table = stats_scroller_div.find('table') if stats_scroller_div else None
@@ -116,7 +113,6 @@ def extract_boxscore_data(html_content, url):
             print(f"Warning: Could not find both player name table and stats table for {team_name_full}. Skipping. URL: {url}")
             continue
 
-        # 4. Extract Stat Headers
         stat_headers = []
         stats_head = stats_table.find('thead')
         if stats_head:
@@ -125,11 +121,9 @@ def extract_boxscore_data(html_content, url):
         if not stat_headers:
              print(f"Warning: Could not extract stat headers for {team_name_full} ({data_type}). Skipping. URL: {url}")
              continue
-        # Use generic player column name temporarily
         all_headers = ['player_temp'] + stat_headers
         print(f"Debug: Headers for {data_type}: {all_headers}")
 
-        # 5. Extract Player Names and Stats using data-idx
         player_names_map = {}
         player_stats_map = {}
         name_body = player_name_table.find('tbody')
@@ -142,7 +136,7 @@ def extract_boxscore_data(html_content, url):
                     name_link = name_cell.find('a', class_='Boxscore__Athlete_Name')
                     player_name = name_link.get_text(strip=True) if name_link else name_cell.get_text(strip=True)
                     player_name = re.sub(r'^[a-z]-', '', player_name).strip()
-                    player_name = re.sub(r'\s*\([^)]+\)$', '', player_name).strip() # Pitching notes
+                    player_name = re.sub(r'\s*\([^)]+\)$', '', player_name).strip()
                     if player_name and player_name.lower() != 'team':
                         player_names_map[idx] = player_name
         stats_body = stats_table.find('tbody')
@@ -155,7 +149,6 @@ def extract_boxscore_data(html_content, url):
                  if len(stats_list) == len(stat_headers):
                     player_stats_map[idx] = stats_list
 
-        # 6. Combine into final list of dictionaries
         combined_player_data = []
         processed_indices = set(player_names_map.keys()) & set(player_stats_map.keys())
         sorted_indices = sorted(list(processed_indices), key=int)
@@ -163,7 +156,7 @@ def extract_boxscore_data(html_content, url):
         for idx in sorted_indices:
             player_data = {}
             player_name = player_names_map[idx]
-            player_name = re.sub(r'\s+[A-Z1-3]{1,3}$', '', player_name).strip() # Hitting positions
+            player_name = re.sub(r'\s+[A-Z1-3]{1,3}$', '', player_name).strip()
             player_data[all_headers[0]] = player_name
             stats = player_stats_map[idx]
             for i, header in enumerate(stat_headers): player_data[header] = stats[i]
@@ -172,31 +165,29 @@ def extract_boxscore_data(html_content, url):
             if data_type == 'pitching' and 'ip' in player_data: valid = True
             if valid: combined_player_data.append(player_data)
 
-        # 7. Create DataFrame and store
         if combined_player_data:
             df = pd.DataFrame(combined_player_data)
-            df = df.rename(columns={all_headers[0]: 'player'}) # Rename first col to 'player'
+            df = df.rename(columns={all_headers[0]: 'player'})
             if team_abbr not in all_teams_data: all_teams_data[team_abbr] = {}
             all_teams_data[team_abbr][data_type] = df
             print(f"Successfully processed and stored {data_type} data for {team_abbr}.")
         else:
             print(f"Warning: No combined player data could be generated for {team_name_full} ({data_type}).")
 
-    # Final check
     processed_teams = len(all_teams_data)
     expected_teams = len(set(get_team_abbr(t.find('div', class_='TeamTitle__Name').get_text(strip=True)) for t in team_title_divs if t.find('div', class_='TeamTitle__Name')))
     if processed_teams < expected_teams:
         print(f"Warning: Found {expected_teams} unique teams in titles but only successfully processed data for {processed_teams} teams.")
 
-    return all_teams_data # Only return the data dictionary
+    return all_teams_data, game_id
 
-def save_data_to_csv(all_teams_data, date_identifier): # Now expects date string from filename
+def save_data_to_csv(all_teams_data, date_identifier, game_id):
     if not all_teams_data:
-        print(f"No data extracted to save for date: {date_identifier}.")
+        print(f"No data extracted to save for date: {date_identifier}, gameId: {game_id}.")
         return
-    if not date_identifier: # Should not happen with new logic, but safety check
-         date_identifier = "unknown_date"
-         print("Warning: Using 'unknown_date' as filename identifier.")
+    if not date_identifier:
+        date_identifier = "unknown_date"
+        print("Warning: Using 'unknown_date' as filename identifier.")
 
     hitting_headers = ['player', 'ab', 'r', 'h', 'rbi', 'hr', 'bb', 'k', 'avg', 'obp', 'slg']
     pitching_headers = ['player', 'ip', 'h', 'r', 'er', 'bb', 'k', 'hr', 'pc_st', 'era']
@@ -218,8 +209,8 @@ def save_data_to_csv(all_teams_data, date_identifier): # Now expects date string
                      continue
 
                 df_output = df[output_columns]
-                # Construct filename using the passed date_identifier
-                filename = f"{team_abbr.lower()}_{data_type}_{date_identifier}.csv"
+                # Include gameId in filename
+                filename = f"{team_abbr.lower()}_{data_type}_{date_identifier}_{game_id}.csv"
                 try:
                     df_output.to_csv(filename, index=False, encoding='utf-8')
                     print(f"Successfully saved data to {filename}")
@@ -227,7 +218,6 @@ def save_data_to_csv(all_teams_data, date_identifier): # Now expects date string
                     print(f"Error saving {filename}: {e}")
             else:
                 print(f"No valid DataFrame found or empty for {team_abbr} {data_type}.")
-
 
 def read_urls_from_file(filepath):
     urls = []
@@ -253,19 +243,15 @@ def extract_game_id_from_url(url):
     except Exception as e: print(f"Error parsing gameId from URL {url}: {e}")
     return None
 
-
 # --- REVISED: Main execution block ---
 if __name__ == "__main__":
-    # Find all files matching the month_day_year.txt pattern
     date_files = glob.glob("*_*_*.txt")
     valid_files = []
     
-    # Validate files follow expected naming convention
     for file in date_files:
         base_name = os.path.basename(file)
         date_identifier, extension = os.path.splitext(base_name)
         
-        # Simple validation that it looks like month_day_year format
         if re.match(r'^[a-z]+_\d+_\d+$', date_identifier, re.IGNORECASE):
             valid_files.append(file)
         else:
@@ -277,14 +263,12 @@ if __name__ == "__main__":
     
     print(f"Found {len(valid_files)} date files to process: {', '.join(valid_files)}")
     
-    # Process each valid file
     for url_file in valid_files:
         base_name = os.path.basename(url_file)
         date_identifier, extension = os.path.splitext(base_name)
         
         print(f"\n=== Processing file: {url_file} with date identifier: {date_identifier} ===\n")
         
-        # Read URLs from this file
         urls_to_process = read_urls_from_file(url_file)
         
         if not urls_to_process:
@@ -295,15 +279,18 @@ if __name__ == "__main__":
         for i, game_url in enumerate(urls_to_process):
             print(f"\n--- Processing URL {i+1}/{len(urls_to_process)}: {game_url} ---")
             
-            # Fetch content
             html = get_page_content(game_url)
             
             if html:
-                # Extract data
-                extracted_data = extract_boxscore_data(html, game_url)
+                # Extract data and gameId
+                extracted_data, game_id = extract_boxscore_data(html, game_url)
                 
-                # Save data using the date identifier from this filename
-                save_data_to_csv(extracted_data, date_identifier)
+                if game_id:
+                    print(f"Extracted gameId: {game_id}")
+                    # Save data with gameId in filename
+                    save_data_to_csv(extracted_data, date_identifier, game_id)
+                else:
+                    print(f"Warning: Could not extract gameId from URL: {game_url}")
             else:
                 print(f"Skipping data extraction and saving due to fetch error for {game_url}")
             
