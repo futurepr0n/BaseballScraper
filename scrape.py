@@ -7,6 +7,8 @@ import time
 from urllib.parse import urlparse
 import os
 import glob
+from datetime import datetime, timedelta
+import shutil
 
 # --- (Keep TEAM_ABBREVIATIONS dictionary as is) ---
 TEAM_ABBREVIATIONS = {
@@ -243,61 +245,117 @@ def extract_game_id_from_url(url):
     except Exception as e: print(f"Error parsing gameId from URL {url}: {e}")
     return None
 
+def get_yesterday_filename():
+    """Generate yesterday's filename in format: month_day_year.txt"""
+    yesterday = datetime.now() - timedelta(days=1)
+    month_name = yesterday.strftime("%B").lower()  # Full month name in lowercase
+    day = yesterday.day  # No leading zero
+    year = yesterday.year
+    return f"{month_name}_{day}_{year}.txt"
+
+def ensure_scanned_directory():
+    """Create SCANNED directory if it doesn't exist"""
+    scanned_dir = "SCANNED"
+    if not os.path.exists(scanned_dir):
+        os.makedirs(scanned_dir)
+        print(f"Created directory: {scanned_dir}")
+    return scanned_dir
+
+def move_file_to_scanned(filename):
+    """Move processed file to SCANNED directory"""
+    scanned_dir = ensure_scanned_directory()
+    destination = os.path.join(scanned_dir, filename)
+    
+    try:
+        shutil.move(filename, destination)
+        print(f"✅ Moved processed file to: {destination}")
+        return True
+    except Exception as e:
+        print(f"❌ Error moving file to SCANNED: {e}")
+        return False
+
 # --- REVISED: Main execution block ---
 if __name__ == "__main__":
-    date_files = glob.glob("*_*_*.txt")
-    valid_files = []
+    # Get yesterday's filename
+    target_filename = get_yesterday_filename()
+    print(f"🔍 Looking for yesterday's file: {target_filename}")
     
-    for file in date_files:
-        base_name = os.path.basename(file)
-        date_identifier, extension = os.path.splitext(base_name)
-        
-        if re.match(r'^[a-z]+_\d+_\d+$', date_identifier, re.IGNORECASE):
-            valid_files.append(file)
+    # Check if the target file exists
+    if not os.path.exists(target_filename):
+        print(f"❌ Yesterday's file '{target_filename}' not found.")
+        print("Available .txt files in directory:")
+        available_files = glob.glob("*_*_*.txt")
+        if available_files:
+            for file in sorted(available_files):
+                print(f"  - {file}")
         else:
-            print(f"Skipping file '{file}' as it doesn't match expected naming format month_day_year.txt")
+            print("  No .txt files found")
+        exit(1)
     
-    if not valid_files:
-        print("No valid date files found. Please ensure files are named like 'month_day_year.txt'")
-        exit()
+    # Validate the filename format
+    base_name = os.path.basename(target_filename)
+    date_identifier, extension = os.path.splitext(base_name)
     
-    print(f"Found {len(valid_files)} date files to process: {', '.join(valid_files)}")
+    if not re.match(r'^[a-z]+_\d+_\d+$', date_identifier, re.IGNORECASE):
+        print(f"❌ File '{target_filename}' doesn't match expected format month_day_year.txt")
+        exit(1)
     
-    for url_file in valid_files:
-        base_name = os.path.basename(url_file)
-        date_identifier, extension = os.path.splitext(base_name)
+    print(f"✅ Found target file: {target_filename}")
+    print(f"📅 Date identifier: {date_identifier}")
+    
+    # Process the file
+    print(f"\n=== Processing file: {target_filename} ===\n")
+    
+    urls_to_process = read_urls_from_file(target_filename)
+    
+    if not urls_to_process:
+        print(f"❌ No valid URLs found in {target_filename}. Exiting.")
+        exit(1)
+    
+    print(f"📊 Found {len(urls_to_process)} URLs to process from {target_filename}.")
+    
+    # Process each URL
+    successful_extractions = 0
+    total_urls = len(urls_to_process)
+    
+    for i, game_url in enumerate(urls_to_process):
+        print(f"\n--- Processing URL {i+1}/{total_urls}: {game_url} ---")
         
-        print(f"\n=== Processing file: {url_file} with date identifier: {date_identifier} ===\n")
+        html = get_page_content(game_url)
         
-        urls_to_process = read_urls_from_file(url_file)
-        
-        if not urls_to_process:
-            print(f"No valid URLs found in {url_file}. Skipping.")
-            continue
-        
-        print(f"Found {len(urls_to_process)} URLs to process from {url_file}.")
-        for i, game_url in enumerate(urls_to_process):
-            print(f"\n--- Processing URL {i+1}/{len(urls_to_process)}: {game_url} ---")
+        if html:
+            # Extract data and gameId
+            extracted_data, game_id = extract_boxscore_data(html, game_url)
             
-            html = get_page_content(game_url)
-            
-            if html:
-                # Extract data and gameId
-                extracted_data, game_id = extract_boxscore_data(html, game_url)
-                
-                if game_id:
-                    print(f"Extracted gameId: {game_id}")
-                    # Save data with gameId in filename
-                    save_data_to_csv(extracted_data, date_identifier, game_id)
-                else:
-                    print(f"Warning: Could not extract gameId from URL: {game_url}")
+            if game_id:
+                print(f"✅ Extracted gameId: {game_id}")
+                # Save data with gameId in filename
+                save_data_to_csv(extracted_data, date_identifier, game_id)
+                successful_extractions += 1
             else:
-                print(f"Skipping data extraction and saving due to fetch error for {game_url}")
-            
-            sleep_time = random.uniform(10, 35)
-            print(f"Waiting for {sleep_time:.2f} seconds before next request...")
-            time.sleep(sleep_time)
+                print(f"⚠️ Warning: Could not extract gameId from URL: {game_url}")
+        else:
+            print(f"❌ Skipping data extraction due to fetch error for {game_url}")
         
-        print(f"\n--- Finished processing all URLs from {url_file}. ---")
+        # Sleep between requests (except for the last one)
+        if i < total_urls - 1:
+            sleep_time = random.uniform(10, 35)
+            print(f"⏳ Waiting for {sleep_time:.2f} seconds before next request...")
+            time.sleep(sleep_time)
     
-    print("\n=== Completed processing all input files. ===")
+    print(f"\n=== Processing Summary ===")
+    print(f"📊 Total URLs processed: {total_urls}")
+    print(f"✅ Successful extractions: {successful_extractions}")
+    print(f"❌ Failed extractions: {total_urls - successful_extractions}")
+    
+    # Move the processed file to SCANNED directory
+    if successful_extractions > 0:
+        print(f"\n🗂️ Moving processed file to SCANNED directory...")
+        if move_file_to_scanned(target_filename):
+            print(f"✅ Successfully processed and archived {target_filename}")
+        else:
+            print(f"⚠️ File processing completed but archiving failed")
+    else:
+        print(f"\n⚠️ No successful extractions - keeping file in place for manual review")
+    
+    print("\n=== Script completed ===")
