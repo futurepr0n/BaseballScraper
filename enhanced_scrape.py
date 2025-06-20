@@ -128,14 +128,8 @@ def detect_postponed_game(html_content: str, url: str) -> Dict[str, any]:
                 'status': 'unknown_issue'
             }
     
-    # Check for empty or minimal game data
-    scoreboards = soup.find_all('div', class_=['Scoreboard', 'scoreboard'])
-    if not scoreboards:
-        return {
-            'is_postponed': True,
-            'reason': 'no_scoreboard_data',
-            'status': 'possible_postponement'
-        }
+    # Only flag as postponed if we have both missing TeamTitle elements AND postponement indicators
+    # The absence of scoreboard divs alone is not sufficient since ESPN doesn't use these classes consistently
     
     return {'is_postponed': False, 'reason': 'game_appears_normal', 'status': 'active'}
 
