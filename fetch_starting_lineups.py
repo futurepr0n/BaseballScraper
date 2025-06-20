@@ -517,27 +517,42 @@ class StartingLineupFetcher:
         return lineup_data
     
     def save_lineup_data(self, lineup_data: Dict, date_str: str = None) -> str:
-        """Save lineup data to JSON file"""
+        """Save lineup data to JSON files in both dev and production directories"""
         if not date_str:
             date_str = datetime.datetime.now().strftime("%Y-%m-%d")
             
-        # Ensure lineups directory exists
-        lineups_dir = "../BaseballTracker/public/data/lineups"
-        os.makedirs(lineups_dir, exist_ok=True)
-        
         filename = f"starting_lineups_{date_str}.json"
-        filepath = os.path.join(lineups_dir, filename)
         
-        try:
-            with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(lineup_data, f, indent=2, ensure_ascii=False)
-            
-            print(f"✅ Lineup data saved to {filepath}")
+        # Save to both dev (public) and production (build) directories
+        directories = [
+            "../BaseballTracker/public/data/lineups",   # Dev environment
+            "../BaseballTracker/build/data/lineups"     # Production environment
+        ]
+        
+        saved_files = []
+        
+        for lineups_dir in directories:
+            try:
+                # Ensure directory exists
+                os.makedirs(lineups_dir, exist_ok=True)
+                
+                filepath = os.path.join(lineups_dir, filename)
+                
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    json.dump(lineup_data, f, indent=2, ensure_ascii=False)
+                
+                print(f"✅ Lineup data saved to {filepath}")
+                saved_files.append(filepath)
+                
+            except Exception as e:
+                print(f"❌ Error saving to {lineups_dir}: {e}")
+        
+        if saved_files:
             print(f"📊 Found {lineup_data['totalGames']} games with {lineup_data['gamesWithLineups']} having lineup info")
-            return filepath
-            
-        except Exception as e:
-            print(f"❌ Error saving lineup data: {e}")
+            print(f"💾 Saved to {len(saved_files)} locations: dev + production")
+            return saved_files[0]  # Return first successful save path
+        else:
+            print("❌ Failed to save to any location")
             return ""
     
     def fetch_todays_lineups(self) -> Optional[Dict]:
