@@ -275,17 +275,18 @@ class StartingLineupFetcher:
     
     def extract_lineups_info(self, lineups: Dict) -> Dict:
         """Extract lineup information from API response"""
-        # Lineups might not always be available
+        # Lineups might not always be available from Stats API
+        # Use enhanced_lineup_scraper.py to populate batting_order arrays
         return {
             "home": {
                 "confirmed": bool(lineups.get('home')),
                 "lastUpdated": datetime.datetime.now().isoformat(),
-                "batting_order": []  # Would need separate API call for full lineups
+                "batting_order": []  # Populated by enhanced_lineup_scraper.py
             },
             "away": {
                 "confirmed": bool(lineups.get('away')),
                 "lastUpdated": datetime.datetime.now().isoformat(),
-                "batting_order": []  # Would need separate API call for full lineups
+                "batting_order": []  # Populated by enhanced_lineup_scraper.py
             }
         }
     
