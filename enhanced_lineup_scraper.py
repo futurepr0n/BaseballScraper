@@ -185,49 +185,61 @@ class MLBLineupScraper:
         return team_map.get(name)
     
     def update_lineup_file(self, date_str, scraped_lineups):
-        """Update existing lineup JSON file with scraped data"""
-        lineup_file = f"../BaseballTracker/public/data/lineups/starting_lineups_{date_str}.json"
+        """Update existing lineup JSON files with scraped data in both dev and production"""
         
-        try:
-            # Load existing file
-            if os.path.exists(lineup_file):
-                with open(lineup_file, 'r') as f:
-                    lineup_data = json.load(f)
-            else:
-                print(f"⚠️ Lineup file not found: {lineup_file}")
-                return False
+        # Files to update in both dev and production directories
+        lineup_files = [
+            f"../BaseballTracker/public/data/lineups/starting_lineups_{date_str}.json",  # Dev
+            f"../BaseballTracker/build/data/lineups/starting_lineups_{date_str}.json"   # Production
+        ]
+        
+        updated_files = 0
+        
+        for lineup_file in lineup_files:
+            try:
+                # Load existing file
+                if os.path.exists(lineup_file):
+                    with open(lineup_file, 'r') as f:
+                        lineup_data = json.load(f)
+                else:
+                    print(f"⚠️ Lineup file not found: {lineup_file}")
+                    continue
             
-            # Update lineups for each game
-            updated_count = 0
-            for game in lineup_data.get('games', []):
-                home_team = game['teams']['home']['abbr']
-                away_team = game['teams']['away']['abbr']
+                # Update lineups for each game
+                updated_count = 0
+                for game in lineup_data.get('games', []):
+                    home_team = game['teams']['home']['abbr']
+                    away_team = game['teams']['away']['abbr']
+                    
+                    # Update home team lineup
+                    if home_team in scraped_lineups:
+                        game['lineups']['home'] = scraped_lineups[home_team]
+                        updated_count += 1
+                    
+                    # Update away team lineup
+                    if away_team in scraped_lineups:
+                        game['lineups']['away'] = scraped_lineups[away_team]
+                        updated_count += 1
                 
-                # Update home team lineup
-                if home_team in scraped_lineups:
-                    game['lineups']['home'] = scraped_lineups[home_team]
-                    updated_count += 1
-                    print(f"✅ Updated {home_team} lineup")
+                # Update metadata
+                lineup_data['lastUpdated'] = datetime.now().isoformat()
+                lineup_data['gamesWithLineups'] = updated_count // 2  # Each game has 2 teams
                 
-                # Update away team lineup
-                if away_team in scraped_lineups:
-                    game['lineups']['away'] = scraped_lineups[away_team]
-                    updated_count += 1
-                    print(f"✅ Updated {away_team} lineup")
-            
-            # Update metadata
-            lineup_data['lastUpdated'] = datetime.now().isoformat()
-            lineup_data['gamesWithLineups'] = updated_count // 2  # Each game has 2 teams
-            
-            # Save updated file
-            with open(lineup_file, 'w') as f:
-                json.dump(lineup_data, f, indent=2)
-            
-            print(f"💾 Saved updated lineup file: {updated_count} lineups updated")
+                # Save updated file
+                with open(lineup_file, 'w') as f:
+                    json.dump(lineup_data, f, indent=2)
+                
+                print(f"✅ Updated {lineup_file}: {updated_count} lineups updated")
+                updated_files += 1
+                
+            except Exception as e:
+                print(f"❌ Error updating {lineup_file}: {e}")
+        
+        if updated_files > 0:
+            print(f"💾 Successfully updated {updated_files} lineup files (dev + production)")
             return True
-            
-        except Exception as e:
-            print(f"❌ Error updating lineup file: {e}")
+        else:
+            print("❌ Failed to update any lineup files")
             return False
 
 def main():
