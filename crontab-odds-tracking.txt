@@ -1,0 +1,29 @@
+# MLB Odds Tracking - Cron Job Template
+# Copy these lines to your crontab with: crontab -e
+# Or use the automated setup: ./setup-odds-automation.sh
+
+# IMPORTANT: Update /path/to/BaseballScraper with your actual path
+# Example: /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper
+
+# MLB Odds Tracking - Daily Reset and Scraping
+# Daily reset at 6:00 AM (clears tracking, establishes new opening odds)
+0 6 * * * /path/to/BaseballScraper/daily-reset.sh auto >> /path/to/BaseballScraper/logs/cron-daily-reset.log 2>&1
+
+# Odds scraping every 30 minutes from 6:30 AM to 11:30 PM
+30 6-23 * * * /path/to/BaseballScraper/daily_odds_scrape.sh >> /path/to/BaseballScraper/logs/cron-odds-scrape.log 2>&1
+0 7-23 * * * /path/to/BaseballScraper/daily_odds_scrape.sh >> /path/to/BaseballScraper/logs/cron-odds-scrape.log 2>&1
+
+# Schedule explanation:
+# 0 6 * * *     = Every day at 6:00 AM (daily reset)
+# 30 6-23 * * * = Every day at 6:30, 7:30, 8:30, ... 22:30, 23:30
+# 0 7-23 * * *  = Every day at 7:00, 8:00, 9:00, ... 22:00, 23:00
+# Combined: Every 30 minutes from 6:30 AM to 11:30 PM
+
+# To install these cron jobs:
+# 1. Edit this file and replace /path/to/BaseballScraper with actual path
+# 2. Copy the cron lines (lines starting with numbers)
+# 3. Run: crontab -e
+# 4. Paste the lines and save
+# 
+# Or use the automated setup script:
+# ./setup-odds-automation.sh
