@@ -15,6 +15,15 @@ The scraper now includes intelligent postponement detection and automatic schedu
 - **Smart Automation** (`smart_morning_run.py`) - Intelligent morning automation
 - **Setup Scripts** (`setup_postponement_detection.sh`) - Automated configuration
 
+### MLB Odds Tracking System (NEW)
+Comprehensive daily odds tracking with movement analysis for dashboard integration:
+
+- **Daily Reset** (`daily-reset.sh`) - Resets tracking at 6 AM, establishes opening odds
+- **Odds Scraping** (`daily_odds_scrape.sh`) - Tracks movement every 30 minutes (6:30 AM - 11:30 PM)
+- **Movement Analysis** - Generates top movers and line movement data for dashboard cards
+- **Automated Setup** (`setup-odds-automation.sh`) - One-click cron job configuration
+- **Dual Environment** - Updates both development and production paths simultaneously
+
 ## Quick Start Commands
 
 ### Basic Setup
@@ -41,6 +50,25 @@ python3 smart_morning_run.py --dry-run
 # 4. Set up daily automation at 8 AM
 # (Edit paths in crontab_sample.txt first, then)
 crontab crontab_sample.txt
+```
+
+### MLB Odds Tracking Setup (NEW)
+```bash
+cd BaseballScraper
+
+# 1. Set up automated odds tracking
+./setup-odds-automation.sh
+
+# 2. Manual testing
+./daily-reset.sh auto        # Reset and establish opening odds
+./daily_odds_scrape.sh       # Track movement (respects time restrictions)
+
+# 3. Check automation status
+crontab -l | grep "MLB Odds"
+
+# 4. Monitor logs
+tail -f logs/cron-odds-scrape.log
+tail -f logs/cron-daily-reset.log
 ```
 
 ### Manual Execution
@@ -72,6 +100,12 @@ crontab crontab_sample.txt
 - `smart_morning_run.py` - Intelligent automation wrapper
 - `test_postponement_detection.py` - Testing utilities
 
+### Odds Tracking Scripts (NEW)
+- `daily_odds_scraper.py` - Main odds scraping script
+- `daily-reset.sh` - Daily reset and opening odds establishment
+- `daily_odds_scrape.sh` - Movement tracking wrapper script
+- `setup-odds-automation.sh` - Automated cron job configuration
+
 ### Schedule Files
 - `MONTH_DAY_YEAR.txt` - Daily game URL lists (e.g., `june_18_2025.txt`)
 - `crontab_sample.txt` - Cron job configuration template
@@ -81,6 +115,13 @@ crontab crontab_sample.txt
 - `TEAM_pitching_DATE_GAMEID.csv` - Team pitching statistics
 - `postponements_DATE.json` - Postponement detection logs
 - `morning_run_YYYYMMDD.json` - Daily automation results
+
+### Odds Tracking Output Files (NEW)
+- `mlb-hr-odds-only.csv` - Basic current odds (compatibility)
+- `mlb-hr-odds-tracking.csv` - Comprehensive movement tracking
+- `mlb-hr-odds-history.csv` - Complete chronological log
+- `daily-status.json` - Dashboard status file
+- `movement-summary.json` - Top line movers for dashboard cards
 
 ### Directories
 - `SCANNED/` - Processed schedule files archive
@@ -173,6 +214,60 @@ python smart_morning_run.py --verbose
 tail -f logs/morning_run.log
 ```
 
+### MLB Odds Tracking Workflow (NEW)
+Automated daily odds tracking with comprehensive line movement analysis:
+
+**Daily Schedule:**
+```bash
+# 6:00 AM - Daily reset (clears yesterday's tracking)
+./daily-reset.sh auto
+  ├── Archives yesterday's data to archive/
+  ├── Creates fresh tracking files with headers
+  ├── Establishes opening odds on first scrape
+  └── Updates daily-status.json
+
+# 6:30 AM - 11:30 PM - Every 30 minutes
+./daily_odds_scrape.sh
+  ├── Runs daily_odds_scraper.py
+  ├── Tracks movement from previous scrape
+  ├── Updates both dev and production files
+  ├── Generates movement-summary.json for dashboard
+  └── Logs all activity
+```
+
+**Movement Tracking Features:**
+- **Opening Odds**: Established at first scrape of day (baseline, never changes)
+- **Previous → Current**: Movement between each 30-minute scrape
+- **Movement Indicators**: ↗ (better odds), ↘ (worse odds), → (stable)
+- **Daily Trends**: 📈 (bullish), 📉 (bearish), 📊 (stable) from opening
+- **Top Movers**: Players with ≥5% line movement for dashboard cards
+- **Dual Environment**: Automatically syncs ../BaseballTracker/public/data/odds/ and ../BaseballTracker/build/data/odds/
+
+**Files Generated:**
+- `mlb-hr-odds-only.csv` - Basic current odds (compatibility)
+- `mlb-hr-odds-tracking.csv` - Full movement tracking data
+- `mlb-hr-odds-history.csv` - Complete chronological log
+- `daily-status.json` - Real-time status for dashboard
+- `movement-summary.json` - Top 10 movers for dashboard cards
+
+**Monitoring Odds Tracking:**
+```bash
+# Check cron jobs
+crontab -l | grep "MLB Odds"
+
+# Monitor real-time logs
+tail -f logs/cron-odds-scrape.log
+tail -f logs/cron-daily-reset.log
+
+# Manual execution (respects time restrictions)
+./daily-reset.sh auto        # Reset and establish opening odds
+./daily_odds_scrape.sh       # Track movement (6:30 AM - 11:30 PM only)
+
+# Check dashboard files
+ls -la ../BaseballTracker/public/data/odds/
+cat ../BaseballTracker/public/data/odds/daily-status.json
+```
+
 ## Common Issues and Solutions
 
 ### Missing Dependencies
@@ -195,6 +290,15 @@ pip install requests beautifulsoup4 pandas
 - Check cron job configuration: `crontab -l`
 - Review automation logs: `logs/morning_run.log`
 - Test manual execution first
+
+### Odds Tracking Issues (NEW)
+- **Outside tracking hours**: Script only runs 6:30 AM - 11:30 PM, exits gracefully otherwise
+- **Missing Python script**: Ensure `daily_odds_scraper.py` exists and is executable
+- **Path issues**: Scripts use relative paths `../BaseballTracker/` for portability
+- **Permission errors**: Run `chmod +x *.sh` to make scripts executable
+- **Cron job failures**: Check logs in `logs/cron-odds-scrape.log` and `logs/cron-daily-reset.log`
+- **Production sync failures**: Verify `../BaseballTracker/build/data/odds/` directory exists
+- **Movement tracking gaps**: Check if daily reset properly cleared yesterday's data
 
 ## Data Quality
 
