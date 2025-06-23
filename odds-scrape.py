@@ -1,8 +1,8 @@
 import json
 import csv
 import os
+import shutil
 from datetime import datetime
-import copy
 
 # Load the JSON data from the file
 file_path = 'mlb-batter-hr-props.json'
@@ -16,14 +16,21 @@ except json.JSONDecodeError:
     print(f"Error: Could not decode JSON from '{file_path}'. The file might be corrupted or not valid JSON.")
     exit()
 
-# Hardcoded directory path
-output_dir = '/app/BaseballTracker/public/data'
-os.makedirs(output_dir, exist_ok=True)
+# Dual directory paths for development and production
+output_dirs = [
+    '../BaseballTracker/public/data/odds',  # Development
+    '../BaseballTracker/build/data/odds'    # Production build
+]
 
-# File paths
-current_odds_file = os.path.join(output_dir, 'mlb-hr-odds-only.csv')
-tracking_file = os.path.join(output_dir, 'mlb-hr-odds-tracking.csv')
-historical_file = os.path.join(output_dir, 'mlb-hr-odds-history.csv')
+# Create both directories
+for output_dir in output_dirs:
+    os.makedirs(output_dir, exist_ok=True)
+
+# Use primary directory for file paths (will copy to both)
+primary_dir = output_dirs[0]
+current_odds_file = os.path.join(primary_dir, 'mlb-hr-odds-only.csv')
+tracking_file = os.path.join(primary_dir, 'mlb-hr-odds-tracking.csv')
+historical_file = os.path.join(primary_dir, 'mlb-hr-odds-history.csv')
 
 def load_tracking_data():
     """Load existing tracking data (opening odds, previous odds, etc.)"""
@@ -291,6 +298,21 @@ for selection in data['selections']:
                 status_msg += f" [Run #{player_data['total_runs']}, Trend: {player_data['trend_direction']}]"
             print(status_msg)
 
+def copy_files_to_all_directories(files_to_copy):
+    """Copy generated files to all output directories"""
+    for i, output_dir in enumerate(output_dirs):
+        if i == 0:  # Skip primary directory (already written)
+            continue
+            
+        try:
+            for source_file, target_name in files_to_copy:
+                target_file = os.path.join(output_dir, target_name)
+                import shutil
+                shutil.copy2(source_file, target_file)
+                print(f"  ✓ Synced {target_name} to {output_dir}")
+        except Exception as e:
+            print(f"  ⚠ Warning: Could not sync to {output_dir}: {e}")
+
 # --- Step 4: Write comprehensive tracking files ---
 try:
     # Write basic odds file (for compatibility)
@@ -319,12 +341,22 @@ try:
             player_data['previous_odds'] = player_data['current_odds']
             player_data['previous_timestamp'] = player_data['current_timestamp']
             writer.writerow(player_data)
+    
+    # Copy files to all directories (development + production)
+    files_to_copy = [
+        (current_odds_file, 'mlb-hr-odds-only.csv'),
+        (tracking_file, 'mlb-hr-odds-tracking.csv'),
+        (historical_file, 'mlb-hr-odds-history.csv')
+    ]
+    copy_files_to_all_directories(files_to_copy)
 
     print(f"\nSUCCESS: Processed {len(processed_players)} players")
-    print(f"Files updated:")
-    print(f"  - Basic odds: {current_odds_file}")
-    print(f"  - Tracking data: {tracking_file}")
-    print(f"  - Historical log: {historical_file}")
+    print(f"Files updated in {len(output_dirs)} directories:")
+    for output_dir in output_dirs:
+        print(f"  📂 {output_dir}/")
+        print(f"    - mlb-hr-odds-only.csv (basic odds)")
+        print(f"    - mlb-hr-odds-tracking.csv (movement tracking)")
+        print(f"    - mlb-hr-odds-history.csv (historical log)")
     
     # Print session summary
     new_players = len([p for p in processed_players if p['total_runs'] == 1])
