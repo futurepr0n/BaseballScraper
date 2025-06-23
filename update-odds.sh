@@ -29,14 +29,19 @@ fi
 # Activate virtual environment
 echo "$(date): 🐍 Activating virtual environment..."
 if [ -f "venv/bin/activate" ]; then
-    source venv/bin/activate
+    . venv/bin/activate
 else
     echo "$(date): ⚠️ No virtual environment found at venv/bin/activate"
 fi
 
-# Verify Python environment
-PYTHON_VERSION=$(python3 --version 2>&1)
-echo "$(date): 🐍 Using Python: $PYTHON_VERSION"
+# Verify Python environment (use venv's python after activation)
+if [ -n "$VIRTUAL_ENV" ]; then
+    PYTHON_VERSION=$(python --version 2>&1)
+    echo "$(date): 🐍 Using venv Python: $PYTHON_VERSION from $VIRTUAL_ENV"
+else
+    PYTHON_VERSION=$(python3 --version 2>&1)
+    echo "$(date): ⚠️ Using system Python: $PYTHON_VERSION (venv not activated)"
+fi
 
 # Download the latest odds data from DraftKings
 echo "$(date): 📶 Downloading latest odds data from DraftKings..."
@@ -50,9 +55,14 @@ if [ $? -eq 0 ]; then
     if [ -s "mlb-batter-hr-props.json" ]; then
         echo "$(date): 📄 JSON file size: $(wc -c < mlb-batter-hr-props.json) bytes"
         
-        # Run the Python script to process the data
+        # Run the Python script to process the data (use venv's python)
         echo "$(date): 🔄 Processing odds data..."
-        python3 odds-scrape.py
+        if [ -n "$VIRTUAL_ENV" ]; then
+            python odds-scrape.py
+        else
+            echo "$(date): ⚠️ Warning: venv not activated, using system python3"
+            python3 odds-scrape.py
+        fi
         
         if [ $? -eq 0 ]; then
             echo "$(date): ✅ Odds update completed successfully"

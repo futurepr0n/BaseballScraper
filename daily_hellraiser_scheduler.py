@@ -14,6 +14,7 @@ import subprocess
 import datetime
 import time
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -43,8 +44,11 @@ class HellraiserScheduler:
         try:
             self.log(f"🔥 Starting {run_type} analysis run...")
             
+            # Use the currently activated python (should be venv's python)
+            python_executable = "python" if "VIRTUAL_ENV" in os.environ else "python3"
+            
             result = subprocess.run([
-                "python3", 
+                python_executable, 
                 str(self.script_dir / "generate_hellraiser_analysis.py")
             ], capture_output=True, text=True, timeout=300)
             
