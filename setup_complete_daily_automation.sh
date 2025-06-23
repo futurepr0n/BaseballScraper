@@ -36,12 +36,14 @@ cat > "$ODDS_WRAPPER" << EOF
 # Set working directory
 cd "$SCRIPT_DIR"
 
-# Activate virtual environment if available
+# Activate virtual environment (REQUIRED)
 if [ -f "venv/bin/activate" ]; then
-    source venv/bin/activate
-    echo "\$(date): Virtual environment activated" >> logs/odds_cron.log
+    . venv/bin/activate
+    echo "\$(date): Virtual environment activated: \$VIRTUAL_ENV" >> logs/odds_cron.log
 else
-    echo "\$(date): No virtual environment found, using system Python" >> logs/odds_cron.log
+    echo "\$(date): ERROR: No virtual environment found at venv/bin/activate" >> logs/odds_cron.log
+    echo "\$(date): Please set up venv: python3 -m venv venv && . venv/bin/activate && pip install requirements" >> logs/odds_cron.log
+    exit 1
 fi
 
 # Run the odds update script
@@ -74,20 +76,22 @@ cat > "$HELLRAISER_WRAPPER" << EOF
 # Set working directory
 cd "$SCRIPT_DIR"
 
-# Activate virtual environment if available
+# Activate virtual environment (REQUIRED)
 if [ -f "venv/bin/activate" ]; then
-    source venv/bin/activate
-    echo "\$(date): Virtual environment activated" >> logs/hellraiser_cron.log
+    . venv/bin/activate
+    echo "\$(date): Virtual environment activated: \$VIRTUAL_ENV" >> logs/hellraiser_cron.log
 else
-    echo "\$(date): No virtual environment found, using system Python" >> logs/hellraiser_cron.log
+    echo "\$(date): ERROR: No virtual environment found at venv/bin/activate" >> logs/hellraiser_cron.log
+    echo "\$(date): Please set up venv: python3 -m venv venv && . venv/bin/activate && pip install requirements" >> logs/hellraiser_cron.log
+    exit 1
 fi
 
-# Set Python path
+# Set Python path for project imports
 export PYTHONPATH="\$PYTHONPATH:$PROJECT_ROOT"
 
-# Run the Hellraiser scheduler
-echo "\$(date): Starting Hellraiser scheduler..." >> logs/hellraiser_cron.log
-python3 daily_hellraiser_scheduler.py >> logs/hellraiser_cron.log 2>&1
+# Run the Hellraiser scheduler (use venv's python)
+echo "\$(date): Starting Hellraiser scheduler with venv python..." >> logs/hellraiser_cron.log
+python daily_hellraiser_scheduler.py >> logs/hellraiser_cron.log 2>&1
 EXIT_CODE=\$?
 
 if [ \$EXIT_CODE -eq 0 ]; then
@@ -134,7 +138,7 @@ cat > "$COMPLETE_CRON_FILE" << EOF
 # ========================================
 # DAILY MAINTENANCE - Weekly performance analysis
 # ========================================
-0 7 * * 1 cd $SCRIPT_DIR && python3 simple_performance_analyzer.py --days 7 >> logs/weekly_performance.log 2>&1
+0 7 * * 1 cd $SCRIPT_DIR && . venv/bin/activate && python simple_performance_analyzer.py --days 7 >> logs/weekly_performance.log 2>&1
 
 EOF
 
@@ -174,7 +178,7 @@ echo ""
 echo "🧪 To test before installing:"
 echo "   - Test odds update: $ODDS_WRAPPER"
 echo "   - Test Hellraiser: $HELLRAISER_WRAPPER"
-echo "   - Run performance analysis: cd $SCRIPT_DIR && python3 simple_performance_analyzer.py"
+echo "   - Run performance analysis: cd $SCRIPT_DIR && . venv/bin/activate && python simple_performance_analyzer.py"
 
 echo ""
 echo "📁 Directory structure created:"
@@ -186,7 +190,7 @@ echo "   $PROJECT_ROOT/BaseballTracker/public/data/hellraiser/performance/ - Per
 
 echo ""
 echo "⚠️ Important Notes:"
-echo "   - Ensure virtual environment is set up: python3 -m venv venv && source venv/bin/activate"
+echo "   - Ensure virtual environment is set up: python3 -m venv venv && . venv/bin/activate"
 echo "   - Verify DraftKings API access (odds data source)"
 echo "   - Monitor logs for the first few days to ensure proper operation"
 echo "   - Archive files will accumulate - consider monthly cleanup"
