@@ -1,5 +1,27 @@
 *.csv
-logs/*
-__pycache__/*
-*.logs
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+.env
+
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
 *.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

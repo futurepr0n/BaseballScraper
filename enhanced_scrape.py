@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Enhanced Baseball Scraper with Postponement Detection
+Automatically detects postponed games and updates next day's schedule
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -5,10 +11,12 @@ import re
 import random
 import time
 from urllib.parse import urlparse
+from datetime import datetime, timedelta
 import os
 import glob
-from datetime import datetime, timedelta
 import shutil
+import json
+from typing import List, Dict
 
 # --- (Keep TEAM_ABBREVIATIONS dictionary as is) ---
 TEAM_ABBREVIATIONS = {
@@ -68,14 +76,81 @@ def get_page_content(url):
         print(f"Error fetching URL {url}: {e}")
         return None
 
-def extract_boxscore_data(html_content, url):
+def detect_postponed_game(html_content: str, url: str) -> Dict[str, any]:
+    """
+    Detect if a game is postponed/cancelled based on page content
+    Returns dict with postponement info
+    """
     if not html_content:
-        return None, None  # Return None for both data and gameId
+        return {'is_postponed': True, 'reason': 'page_not_accessible', 'status': 'unknown'}
+    
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Check for common postponement indicators
+    postponement_indicators = [
+        'postponed', 'cancelled', 'canceled', 'suspended', 'delayed',
+        'ppd', 'susp', 'game not played', 'rain delay', 'weather',
+        'makeup game', 'rescheduled'
+    ]
+    
+    # Look for postponement in various page elements
+    page_text = soup.get_text().lower()
+    
+    # Check game status elements
+    status_elements = soup.find_all('div', class_=['game-status', 'GameStatus', 'gameStatus'])
+    status_elements.extend(soup.find_all('span', class_=['status', 'Status']))
+    
+    for element in status_elements:
+        element_text = element.get_text().lower()
+        for indicator in postponement_indicators:
+            if indicator in element_text:
+                return {
+                    'is_postponed': True,
+                    'reason': 'status_indicator',
+                    'status': element_text.strip(),
+                    'detected_text': element_text
+                }
+    
+    # Check for missing TeamTitle elements (main indicator from your error)
+    team_title_divs = soup.find_all('div', class_='TeamTitle', attrs={'data-testid': 'teamTitle'})
+    if not team_title_divs:
+        # Additional checks to confirm it's postponed vs other error
+        if any(indicator in page_text for indicator in postponement_indicators):
+            return {
+                'is_postponed': True,
+                'reason': 'no_team_data_with_postponement_text',
+                'status': 'likely_postponed'
+            }
+        else:
+            return {
+                'is_postponed': True,
+                'reason': 'no_team_data_unknown_cause',
+                'status': 'unknown_issue'
+            }
+    
+    # Only flag as postponed if we have both missing TeamTitle elements AND postponement indicators
+    # The absence of scoreboard divs alone is not sufficient since ESPN doesn't use these classes consistently
+    
+    return {'is_postponed': False, 'reason': 'game_appears_normal', 'status': 'active'}
 
+def extract_boxscore_data(html_content, url):
+    """Enhanced boxscore extraction with postponement detection"""
+    if not html_content:
+        return None, None, {'is_postponed': True, 'reason': 'no_content'}
+    
+    # First check if game is postponed
+    postponement_info = detect_postponed_game(html_content, url)
+    
     soup = BeautifulSoup(html_content, 'html.parser')
     
     # Extract gameId from URL
     game_id = extract_game_id_from_url(url)
+    
+    if postponement_info['is_postponed']:
+        print(f"🚨 POSTPONED GAME DETECTED: {url}")
+        print(f"   Reason: {postponement_info['reason']}")
+        print(f"   Status: {postponement_info['status']}")
+        return None, game_id, postponement_info
     
     all_teams_data = {}
 
@@ -83,7 +158,7 @@ def extract_boxscore_data(html_content, url):
 
     if not team_title_divs:
         print(f"Error: Could not find any 'div.TeamTitle' elements on {url}. Cannot extract H/P data.")
-        return None, game_id
+        return None, game_id, {'is_postponed': True, 'reason': 'no_team_titles'}
 
     print(f"Debug: Found {len(team_title_divs)} TeamTitle divs. Processing...")
 
@@ -141,6 +216,7 @@ def extract_boxscore_data(html_content, url):
                     player_name = re.sub(r'\s*\([^)]+\)$', '', player_name).strip()
                     if player_name and player_name.lower() != 'team':
                         player_names_map[idx] = player_name
+                        
         stats_body = stats_table.find('tbody')
         if stats_body:
              stats_rows = stats_body.find_all('tr', attrs={'data-idx': True})
@@ -181,7 +257,7 @@ def extract_boxscore_data(html_content, url):
     if processed_teams < expected_teams:
         print(f"Warning: Found {expected_teams} unique teams in titles but only successfully processed data for {processed_teams} teams.")
 
-    return all_teams_data, game_id
+    return all_teams_data, game_id, {'is_postponed': False}
 
 def save_data_to_csv(all_teams_data, date_identifier, game_id):
     if not all_teams_data:
@@ -245,13 +321,21 @@ def extract_game_id_from_url(url):
     except Exception as e: print(f"Error parsing gameId from URL {url}: {e}")
     return None
 
+def get_date_filename(date_offset: int = 0) -> str:
+    """Generate filename for a specific date offset from today"""
+    target_date = datetime.now() + timedelta(days=date_offset)
+    month_name = target_date.strftime("%B").lower()  # Full month name in lowercase
+    day = target_date.day  # No leading zero
+    year = target_date.year
+    return f"{month_name}_{day}_{year}.txt"
+
 def get_yesterday_filename():
     """Generate yesterday's filename in format: month_day_year.txt"""
-    yesterday = datetime.now() - timedelta(days=1)
-    month_name = yesterday.strftime("%B").lower()  # Full month name in lowercase
-    day = yesterday.day  # No leading zero
-    year = yesterday.year
-    return f"{month_name}_{day}_{year}.txt"
+    return get_date_filename(-1)
+
+def get_tomorrow_filename():
+    """Generate tomorrow's filename in format: month_day_year.txt"""
+    return get_date_filename(1)
 
 def ensure_scanned_directory():
     """Create SCANNED directory if it doesn't exist"""
@@ -274,11 +358,161 @@ def move_file_to_scanned(filename):
         print(f"❌ Error moving file to SCANNED: {e}")
         return False
 
-# --- REVISED: Main execution block ---
+def fetch_espn_schedule(target_date: datetime) -> List[str]:
+    """
+    Fetch game URLs from ESPN schedule for a specific date
+    Returns list of boxscore URLs
+    """
+    # Format date for ESPN schedule URL
+    date_str = target_date.strftime("%Y%m%d")
+    schedule_url = f"https://www.espn.com/mlb/schedule/_/date/{date_str}"
+    
+    print(f"🔍 Fetching schedule from: {schedule_url}")
+    
+    html_content = get_page_content(schedule_url)
+    if not html_content:
+        print(f"❌ Could not fetch schedule from ESPN")
+        return []
+    
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Look for game links - ESPN uses various patterns
+    game_urls = []
+    
+    # Method 1: Look for boxscore links directly
+    boxscore_links = soup.find_all('a', href=re.compile(r'/mlb/boxscore/_/gameId/\d+'))
+    for link in boxscore_links:
+        href = link.get('href')
+        if href and '/gameId/' in href:
+            if not href.startswith('http'):
+                href = 'https://www.espn.com' + href
+            game_urls.append(href)
+    
+    # Method 2: Look for game containers with data attributes
+    game_containers = soup.find_all('div', attrs={'data-game-id': True})
+    for container in game_containers:
+        game_id = container.get('data-game-id')
+        if game_id:
+            boxscore_url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
+            if boxscore_url not in game_urls:
+                game_urls.append(boxscore_url)
+    
+    # Method 3: Look for any gameId references in the page
+    game_id_pattern = re.compile(r'gameId[=/](\d+)')
+    matches = game_id_pattern.findall(html_content)
+    for game_id in matches:
+        boxscore_url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
+        if boxscore_url not in game_urls:
+            game_urls.append(boxscore_url)
+    
+    # Remove duplicates while preserving order
+    unique_urls = []
+    seen = set()
+    for url in game_urls:
+        if url not in seen:
+            unique_urls.append(url)
+            seen.add(url)
+    
+    print(f"✅ Found {len(unique_urls)} game URLs for {target_date.strftime('%Y-%m-%d')}")
+    return unique_urls
+
+def update_next_day_schedule(postponed_games: List[str], next_day_filename: str) -> bool:
+    """
+    Update next day's schedule file with new games from ESPN schedule
+    """
+    tomorrow_date = datetime.now() + timedelta(days=1)
+    
+    print(f"\n🔄 Updating schedule for {next_day_filename}")
+    print(f"   Found {len(postponed_games)} postponed games to potentially reschedule")
+    
+    # Fetch fresh schedule from ESPN
+    fresh_schedule = fetch_espn_schedule(tomorrow_date)
+    
+    if not fresh_schedule:
+        print("❌ Could not fetch fresh schedule from ESPN")
+        return False
+    
+    # Read existing schedule if it exists
+    existing_urls = []
+    if os.path.exists(next_day_filename):
+        existing_urls = read_urls_from_file(next_day_filename)
+        print(f"📋 Existing schedule has {len(existing_urls)} games")
+    
+    # Find new games that aren't in existing schedule
+    new_games = []
+    for url in fresh_schedule:
+        if url not in existing_urls:
+            new_games.append(url)
+    
+    if not new_games:
+        print("✅ No new games found - schedule is up to date")
+        return True
+    
+    print(f"🆕 Found {len(new_games)} new games to add to schedule")
+    
+    # Combine existing and new games
+    all_games = existing_urls + new_games
+    
+    # Create backup of existing file
+    if os.path.exists(next_day_filename):
+        backup_name = f"{next_day_filename}.backup.{int(time.time())}"
+        shutil.copy2(next_day_filename, backup_name)
+        print(f"💾 Created backup: {backup_name}")
+    
+    # Write updated schedule
+    try:
+        with open(next_day_filename, 'w') as f:
+            for url in all_games:
+                f.write(f"{url}\n")
+        
+        print(f"✅ Updated {next_day_filename} with {len(all_games)} total games")
+        print(f"   Added {len(new_games)} new games")
+        
+        # Log the new games
+        if new_games:
+            print("🆕 New games added:")
+            for i, url in enumerate(new_games, 1):
+                game_id = extract_game_id_from_url(url)
+                print(f"   {i}. gameId: {game_id}")
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error updating schedule file: {e}")
+        return False
+
+def save_postponement_log(postponed_games: List[Dict], date_identifier: str):
+    """Save postponement information to a log file"""
+    if not postponed_games:
+        return
+    
+    log_filename = f"postponements_{date_identifier}.json"
+    
+    try:
+        with open(log_filename, 'w') as f:
+            json.dump({
+                'date': date_identifier,
+                'total_postponed': len(postponed_games),
+                'postponements': postponed_games,
+                'timestamp': datetime.now().isoformat()
+            }, f, indent=2)
+        
+        print(f"📝 Saved postponement log: {log_filename}")
+        
+    except Exception as e:
+        print(f"❌ Error saving postponement log: {e}")
+
+# --- Enhanced Main execution block ---
 if __name__ == "__main__":
+    print("🏟️ Enhanced Baseball Scraper with Postponement Detection")
+    print("=" * 60)
+    
     # Get yesterday's filename
     target_filename = get_yesterday_filename()
+    tomorrow_filename = get_tomorrow_filename()
+    
     print(f"🔍 Looking for yesterday's file: {target_filename}")
+    print(f"📅 Tomorrow's file: {tomorrow_filename}")
     
     # Check if the target file exists
     if not os.path.exists(target_filename):
@@ -314,8 +548,9 @@ if __name__ == "__main__":
     
     print(f"📊 Found {len(urls_to_process)} URLs to process from {target_filename}.")
     
-    # Process each URL
+    # Process each URL with postponement tracking
     successful_extractions = 0
+    postponed_games = []
     total_urls = len(urls_to_process)
     
     for i, game_url in enumerate(urls_to_process):
@@ -324,14 +559,25 @@ if __name__ == "__main__":
         html = get_page_content(game_url)
         
         if html:
-            # Extract data and gameId
-            extracted_data, game_id = extract_boxscore_data(html, game_url)
+            # Extract data with postponement detection
+            extracted_data, game_id, postponement_info = extract_boxscore_data(html, game_url)
             
             if game_id:
                 print(f"✅ Extracted gameId: {game_id}")
-                # Save data with gameId in filename
-                save_data_to_csv(extracted_data, date_identifier, game_id)
-                successful_extractions += 1
+                
+                if postponement_info['is_postponed']:
+                    # Track postponed game
+                    postponed_games.append({
+                        'url': game_url,
+                        'game_id': game_id,
+                        'postponement_info': postponement_info,
+                        'index': i + 1
+                    })
+                    print(f"🚨 Game {game_id} marked as POSTPONED")
+                else:
+                    # Save successful extraction
+                    save_data_to_csv(extracted_data, date_identifier, game_id)
+                    successful_extractions += 1
             else:
                 print(f"⚠️ Warning: Could not extract gameId from URL: {game_url}")
         else:
@@ -343,19 +589,43 @@ if __name__ == "__main__":
             print(f"⏳ Waiting for {sleep_time:.2f} seconds before next request...")
             time.sleep(sleep_time)
     
+    # Summary
     print(f"\n=== Processing Summary ===")
     print(f"📊 Total URLs processed: {total_urls}")
     print(f"✅ Successful extractions: {successful_extractions}")
-    print(f"❌ Failed extractions: {total_urls - successful_extractions}")
+    print(f"🚨 Postponed games detected: {len(postponed_games)}")
+    print(f"❌ Other failures: {total_urls - successful_extractions - len(postponed_games)}")
+    
+    # Handle postponements
+    if postponed_games:
+        print(f"\n🚨 POSTPONEMENT HANDLING")
+        print("=" * 40)
+        
+        print("Postponed games detected:")
+        for game in postponed_games:
+            print(f"  🚨 Game {game['game_id']}: {game['postponement_info']['reason']}")
+        
+        # Save postponement log
+        save_postponement_log(postponed_games, date_identifier)
+        
+        # Update next day's schedule
+        postponed_urls = [game['url'] for game in postponed_games]
+        if update_next_day_schedule(postponed_urls, tomorrow_filename):
+            print(f"✅ Successfully updated next day's schedule")
+        else:
+            print(f"❌ Failed to update next day's schedule")
     
     # Move the processed file to SCANNED directory
-    if successful_extractions > 0:
+    if successful_extractions > 0 or postponed_games:
         print(f"\n🗂️ Moving processed file to SCANNED directory...")
         if move_file_to_scanned(target_filename):
             print(f"✅ Successfully processed and archived {target_filename}")
         else:
             print(f"⚠️ File processing completed but archiving failed")
     else:
-        print(f"\n⚠️ No successful extractions - keeping file in place for manual review")
+        print(f"\n⚠️ No successful extractions or postponements detected - keeping file for manual review")
     
-    print("\n=== Script completed ===")
+    print(f"\n🏁 Enhanced scraper completed!")
+    if postponed_games:
+        print(f"📋 Remember to check {tomorrow_filename} for updated schedule")
+    print("=" * 60)

@@ -1,0 +1,8 @@
+# MLB Lineup Refresh - Every 30 minutes during baseball hours (9 AM to 11 PM)
+# This will update both dev (public) and production (build) directories
+
+# Every 30 minutes from 9 AM to 11:30 PM
+0,30 9-23 * * * cd /app/BaseballScraper && source venv/bin/activate && python3 fetch_starting_lineups.py >> /app/BaseballScraper/logs/lineup_cron.log 2>&1
+
+# Optional: Enhanced lineup scraper (for batting orders) - runs 5 minutes after the basic fetch
+# 5,35 9-23 * * * cd /app/BaseballScraper && source venv/bin/activate && python3 enhanced_lineup_scraper.py >> /app/BaseballScraper/logs/enhanced_lineup_cron.log 2>&1

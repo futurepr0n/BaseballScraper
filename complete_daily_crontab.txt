@@ -1,0 +1,25 @@
+# Complete Daily Baseball Analytics Automation
+# Combines odds tracking and Hellraiser analysis throughout the day
+
+# ========================================
+# ODDS TRACKING - Every 30 minutes from 6:30 AM to 11:30 PM
+# ========================================
+30 6-23 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/run_odds_cron.sh
+
+# ========================================  
+# HELLRAISER ANALYSIS - Strategic timing based on game schedules
+# ========================================
+
+# Major analysis runs every 2 hours during active period
+0 6,8,10,12,14,16,18,20,22 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/run_hellraiser_cron.sh
+
+# Additional targeted runs before typical game times
+30 12 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/run_hellraiser_cron.sh   # Before early afternoon games (1 PM)
+30 18 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/run_hellraiser_cron.sh   # Before evening games (7 PM)
+15 19 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/run_hellraiser_cron.sh   # Final check before 7:30 PM games
+
+# ========================================
+# DAILY MAINTENANCE - Weekly performance analysis
+# ========================================
+0 7 * * 1 cd /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper && . venv/bin/activate && python simple_performance_analyzer.py --days 7 >> logs/weekly_performance.log 2>&1
+
