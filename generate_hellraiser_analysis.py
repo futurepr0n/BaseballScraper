@@ -218,6 +218,90 @@ class HellraiserAnalysisGenerator:
         
         return pitcher_stats
 
+    def load_swing_path_data(self) -> Dict[str, Dict]:
+        """Load swing path data from CSV files for both RHP and LHP"""
+        swing_path_data = {}
+        
+        # Load RHP data
+        rhp_file = self.base_dir / "public" / "data" / "stats" / "bat-tracking-swing-path-RHP.csv"
+        lhp_file = self.base_dir / "public" / "data" / "stats" / "bat-tracking-swing-path-LHP.csv"
+        
+        try:
+            # Load RHP data
+            with open(rhp_file, 'r', encoding='utf-8-sig') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    # Handle "Lastname, Firstname" format
+                    player_name = row['name'].strip().strip('"')
+                    if ', ' in player_name:
+                        name_parts = player_name.split(', ')
+                        if len(name_parts) == 2:
+                            full_name = f"{name_parts[1].strip()} {name_parts[0].strip()}"
+                        else:
+                            full_name = player_name
+                    else:
+                        full_name = player_name
+                    
+                    # Initialize player entry if not exists
+                    if full_name not in swing_path_data:
+                        swing_path_data[full_name] = {'rhp': {}, 'lhp': {}}
+                    
+                    # Parse RHP data
+                    swing_path_data[full_name]['rhp'] = {
+                        'handedness': row['side'].strip().strip('"') if row['side'] else 'R',
+                        'avg_bat_speed': float(row['avg_bat_speed']) if row['avg_bat_speed'] else 0.0,
+                        'attack_angle': float(row['attack_angle']) if row['attack_angle'] else 0.0,
+                        'ideal_attack_angle_rate': float(row['ideal_attack_angle_rate']) if row['ideal_attack_angle_rate'] else 0.0,
+                        'swing_tilt': float(row['swing_tilt']) if row['swing_tilt'] else 0.0,
+                        'attack_direction': float(row['attack_direction']) if row['attack_direction'] else 0.0
+                    }
+            
+            print(f"✅ Loaded RHP swing path data for {len(swing_path_data)} players")
+            
+        except FileNotFoundError:
+            print("❌ RHP swing path file not found")
+        except Exception as e:
+            print(f"❌ Error loading RHP swing path data: {e}")
+        
+        try:
+            # Load LHP data
+            with open(lhp_file, 'r', encoding='utf-8-sig') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    # Handle "Lastname, Firstname" format
+                    player_name = row['name'].strip().strip('"')
+                    if ', ' in player_name:
+                        name_parts = player_name.split(', ')
+                        if len(name_parts) == 2:
+                            full_name = f"{name_parts[1].strip()} {name_parts[0].strip()}"
+                        else:
+                            full_name = player_name
+                    else:
+                        full_name = player_name
+                    
+                    # Initialize player entry if not exists
+                    if full_name not in swing_path_data:
+                        swing_path_data[full_name] = {'rhp': {}, 'lhp': {}}
+                    
+                    # Parse LHP data
+                    swing_path_data[full_name]['lhp'] = {
+                        'handedness': row['side'].strip().strip('"') if row['side'] else 'R',
+                        'avg_bat_speed': float(row['avg_bat_speed']) if row['avg_bat_speed'] else 0.0,
+                        'attack_angle': float(row['attack_angle']) if row['attack_angle'] else 0.0,
+                        'ideal_attack_angle_rate': float(row['ideal_attack_angle_rate']) if row['ideal_attack_angle_rate'] else 0.0,
+                        'swing_tilt': float(row['swing_tilt']) if row['swing_tilt'] else 0.0,
+                        'attack_direction': float(row['attack_direction']) if row['attack_direction'] else 0.0
+                    }
+            
+            print(f"✅ Loaded LHP swing path data for {len([p for p in swing_path_data.values() if p.get('lhp')])} players")
+            
+        except FileNotFoundError:
+            print("❌ LHP swing path file not found")
+        except Exception as e:
+            print(f"❌ Error loading LHP swing path data: {e}")
+        
+        return swing_path_data
+
     def create_player_team_mapping(self, roster_data: List[Dict]) -> Dict[str, str]:
         """Create comprehensive player name to team mapping"""
         player_team_map = {}
@@ -372,7 +456,7 @@ class HellraiserAnalysisGenerator:
 
     def calculate_hellraiser_score(self, player: Dict, pitcher_matchup: Dict, historical_stats: List[Dict], 
                                  advanced_hitter_stats: Dict = None, advanced_pitcher_stats: Dict = None, 
-                                 historical_odds: Dict = None) -> Tuple[int, str, List[str], List[str]]:
+                                 swing_path_data: Dict = None, historical_odds: Dict = None) -> Tuple[int, str, List[str], List[str]]:
         """Calculate Hellraiser confidence score using the three-pathway methodology with advanced metrics"""
         base_score = 50  # Lower base score for more realistic range
         reasoning = []
@@ -478,6 +562,72 @@ class HellraiserAnalysisGenerator:
                 reasoning.append(f"Strong hard contact ({ev95_pct:.1f}%)")
             elif ev95_pct < 15 and ev95_pct > 0:
                 risk_factors.append(f"Low hard contact rate ({ev95_pct:.1f}%)")
+        
+        # Swing Path Analysis (15% weight)
+        if swing_path_data and player_name in swing_path_data:
+            # Determine pitcher handedness - for now assume RHP unless specified
+            # This could be enhanced by determining actual pitcher handedness from pitcher data
+            pitcher_hand = 'rhp'  # Default to RHP for now
+            
+            swing_data = swing_path_data[player_name].get(pitcher_hand, {})
+            if swing_data:
+                # Bat speed analysis (5% weight)
+                bat_speed = swing_data.get('avg_bat_speed', 0)
+                if bat_speed >= 75:  # Elite bat speed
+                    base_score += 6
+                    reasoning.append(f"Elite bat speed ({bat_speed:.1f} mph)")
+                elif bat_speed >= 72:  # Above average
+                    base_score += 4
+                    reasoning.append(f"Strong bat speed ({bat_speed:.1f} mph)")
+                elif bat_speed >= 69:  # Average
+                    base_score += 2
+                    reasoning.append(f"Solid bat speed ({bat_speed:.1f} mph)")
+                elif bat_speed < 67 and bat_speed > 0:
+                    risk_factors.append(f"Below average bat speed ({bat_speed:.1f} mph)")
+                
+                # Attack angle analysis (5% weight) - ideal range is 5-20 degrees
+                attack_angle = swing_data.get('attack_angle', 0)
+                if 5 <= attack_angle <= 20:  # Ideal range for home runs
+                    base_score += 6
+                    reasoning.append(f"Optimal attack angle ({attack_angle:.1f}°)")
+                elif 3 <= attack_angle <= 25:  # Good range
+                    base_score += 3
+                    reasoning.append(f"Good attack angle ({attack_angle:.1f}°)")
+                elif attack_angle < 0 or attack_angle > 30:  # Poor range
+                    risk_factors.append(f"Poor attack angle ({attack_angle:.1f}°)")
+                
+                # Ideal attack angle rate (5% weight)
+                ideal_rate = swing_data.get('ideal_attack_angle_rate', 0)
+                if ideal_rate >= 0.5:  # High consistency
+                    base_score += 5
+                    reasoning.append(f"High ideal angle rate ({ideal_rate*100:.0f}%)")
+                elif ideal_rate >= 0.3:  # Good consistency
+                    base_score += 3
+                    reasoning.append(f"Good ideal angle rate ({ideal_rate*100:.0f}%)")
+                elif ideal_rate < 0.2 and ideal_rate > 0:
+                    risk_factors.append(f"Low ideal angle rate ({ideal_rate*100:.0f}%)")
+                
+                # Create comprehensive swing optimization score
+                swing_optimization_score = 0
+                if bat_speed > 0 and attack_angle > 0 and ideal_rate > 0:
+                    # Normalize bat speed (67-79 mph range to 0-100)
+                    bat_speed_norm = min(100, max(0, (bat_speed - 67) / 12 * 100))
+                    
+                    # Attack angle score (5-20 degrees is optimal)
+                    if 5 <= attack_angle <= 20:
+                        angle_score = 100
+                    elif 3 <= attack_angle <= 25:
+                        angle_score = 75
+                    elif 0 <= attack_angle <= 30:
+                        angle_score = 50
+                    else:
+                        angle_score = 25
+                    
+                    # Ideal rate score
+                    rate_score = min(100, ideal_rate * 200)  # 0.5 rate = 100 score
+                    
+                    # Weighted average
+                    swing_optimization_score = int((bat_speed_norm * 0.4) + (angle_score * 0.3) + (rate_score * 0.3))
         
         # Advanced Pitcher Analysis (25% weight)  
         if advanced_pitcher_stats and pitcher_name in advanced_pitcher_stats:
@@ -585,6 +735,7 @@ class HellraiserAnalysisGenerator:
         historical_stats = self.load_historical_stats()
         advanced_hitter_stats = self.load_advanced_hitter_stats()
         advanced_pitcher_stats = self.load_advanced_pitcher_stats()
+        swing_path_data = self.load_swing_path_data()
         historical_odds = self.load_historical_odds()
         
         if not odds_data:
@@ -622,7 +773,7 @@ class HellraiserAnalysisGenerator:
             # Calculate Hellraiser score with advanced metrics
             score, pathway, reasoning, risk_factors = self.calculate_hellraiser_score(
                 odds_player, pitcher_matchup, historical_stats, 
-                advanced_hitter_stats, advanced_pitcher_stats, historical_odds
+                advanced_hitter_stats, advanced_pitcher_stats, swing_path_data, historical_odds
             )
             
             # Create analysis pick
@@ -645,6 +796,45 @@ class HellraiserAnalysisGenerator:
                 },
                 'marketEfficiency': self.evaluate_market_efficiency(odds_player['odds'], score)
             }
+            
+            # Add swing path data if available
+            if swing_path_data and player_name in swing_path_data:
+                # Default to RHP for now - could be enhanced with actual pitcher handedness
+                pitcher_hand = 'rhp'
+                swing_data = swing_path_data[player_name].get(pitcher_hand, {})
+                
+                if swing_data:
+                    # Calculate swing optimization score
+                    bat_speed = swing_data.get('avg_bat_speed', 0)
+                    attack_angle = swing_data.get('attack_angle', 0)
+                    ideal_rate = swing_data.get('ideal_attack_angle_rate', 0)
+                    
+                    swing_optimization_score = 0
+                    if bat_speed > 0 and attack_angle > 0 and ideal_rate > 0:
+                        # Normalize bat speed (67-79 mph range to 0-100)
+                        bat_speed_norm = min(100, max(0, (bat_speed - 67) / 12 * 100))
+                        
+                        # Attack angle score (5-20 degrees is optimal)
+                        if 5 <= attack_angle <= 20:
+                            angle_score = 100
+                        elif 3 <= attack_angle <= 25:
+                            angle_score = 75
+                        elif 0 <= attack_angle <= 30:
+                            angle_score = 50
+                        else:
+                            angle_score = 25
+                        
+                        # Ideal rate score
+                        rate_score = min(100, ideal_rate * 200)  # 0.5 rate = 100 score
+                        
+                        # Weighted average
+                        swing_optimization_score = int((bat_speed_norm * 0.4) + (angle_score * 0.3) + (rate_score * 0.3))
+                    
+                    # Add swing path fields to the pick
+                    pick['swing_bat_speed'] = bat_speed
+                    pick['swing_attack_angle'] = attack_angle
+                    pick['swing_optimization_score'] = swing_optimization_score
+                    pick['swing_ideal_rate'] = ideal_rate
             
             analysis_picks.append(pick)
             processed_count += 1
