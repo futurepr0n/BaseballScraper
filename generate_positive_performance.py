@@ -137,11 +137,12 @@ class PositivePerformanceAnalyzer:
             print(f"❌ Error writing to {file_path}: {e}")
             return False
     
-    def load_season_data(self):
-        """Load all season data efficiently"""
-        print("📊 Loading season data...")
+    def load_season_data(self, cutoff_date=None):
+        """Load all season data efficiently up to (but not including) the cutoff date"""
+        cutoff_str = cutoff_date.strftime('%Y-%m-%d') if cutoff_date else None
+        print(f"📊 Loading season data{f' up to {cutoff_str}' if cutoff_str else ''}...")
         
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         total_dates = 0
         
         for month in months:
@@ -151,10 +152,15 @@ class PositivePerformanceAnalyzer:
                 for file_path in json_files:
                     data = self.load_json_file(file_path)
                     if data and 'date' in data:
+                        # Filter out dates on or after the cutoff date
+                        if cutoff_date:
+                            data_date = datetime.strptime(data['date'], '%Y-%m-%d').date()
+                            if data_date >= cutoff_date.date():
+                                continue  # Skip this date
                         self.season_data[data['date']] = data
                         total_dates += 1
         
-        print(f"✅ Loaded data for {total_dates} dates")
+        print(f"✅ Loaded data for {total_dates} dates{f' up to {cutoff_str}' if cutoff_str else ''}")
         return total_dates
     
     def fuzzy_match_player_name(self, roster_name, roster_full_name, data_name, team):
@@ -1288,8 +1294,8 @@ class PositivePerformanceAnalyzer:
             print("❌ Failed to load roster data")
             return False
         
-        # Load season data
-        dates_loaded = self.load_season_data()
+        # Load season data (exclude target_date to match JavaScript behavior)
+        dates_loaded = self.load_season_data(target_date)
         if dates_loaded == 0:
             print("❌ No season data loaded")
             return False
@@ -1402,8 +1408,18 @@ def main():
     """Main execution function"""
     analyzer = PositivePerformanceAnalyzer()
     
+    # Parse command line arguments for target date
+    target_date = datetime.now()
+    if len(sys.argv) > 1:
+        try:
+            date_str = sys.argv[1]
+            target_date = datetime.strptime(date_str, '%Y-%m-%d')
+            print(f"📅 Using target date from command line: {target_date.strftime('%Y-%m-%d')}")
+        except ValueError:
+            print(f"⚠️ Invalid date format '{sys.argv[1]}'. Expected YYYY-MM-DD. Using today.")
+    
     try:
-        success = analyzer.generate_predictions()
+        success = analyzer.generate_predictions(target_date)
         if success:
             print("\n✅ Python positive performance analysis completed successfully!")
             print("🚀 Performance benefits: 10-50x faster than Node.js version")
