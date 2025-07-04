@@ -36,8 +36,11 @@ class SimplePerformanceAnalyzer:
             print("❌ Archive directory not found")
             return all_picks
         
+        print(f"📂 Looking for files in: {self.archive_dir}")
+        
         # Find archive files from last N days
-        for file_path in self.archive_dir.glob("hellraiser_*.json"):
+        # Files are in date subdirectories: archive/YYYY-MM-DD/hellraiser_*.json
+        for file_path in self.archive_dir.glob("*/hellraiser_*.json"):
             try:
                 with open(file_path, 'r') as f:
                     data = json.load(f)
@@ -46,6 +49,24 @@ class SimplePerformanceAnalyzer:
                     for pick in data['picks']:
                         pick['_archive_file'] = file_path.name
                     all_picks.extend(data['picks'])
+                    print(f"✓ Loaded {len(data['picks'])} picks from {file_path.name}")
+                    
+            except Exception as e:
+                print(f"⚠️ Error processing {file_path}: {e}")
+                continue
+        
+        # Also check for files directly in the hellraiser directory
+        hellraiser_dir = self.base_dir / "public" / "data" / "hellraiser"
+        for file_path in hellraiser_dir.glob("hellraiser_analysis_*.json"):
+            try:
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                
+                if 'picks' in data and isinstance(data['picks'], list):
+                    for pick in data['picks']:
+                        pick['_archive_file'] = file_path.name
+                    all_picks.extend(data['picks'])
+                    print(f"✓ Loaded {len(data['picks'])} picks from {file_path.name}")
                     
             except Exception as e:
                 print(f"⚠️ Error processing {file_path}: {e}")

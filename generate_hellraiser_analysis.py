@@ -223,8 +223,8 @@ class HellraiserAnalysisGenerator:
         swing_path_data = {}
         
         # Load RHP data
-        rhp_file = self.base_dir / "public" / "data" / "stats" / "bat-tracking-swing-path-RHP.csv"
-        lhp_file = self.base_dir / "public" / "data" / "stats" / "bat-tracking-swing-path-LHP.csv"
+        rhp_file = self.base_dir / "public" / "data" / "stats" / "batters-swing-path-RHP.csv"
+        lhp_file = self.base_dir / "public" / "data" / "stats" / "batters-swing-path-LHP.csv"
         
         try:
             # Load RHP data
