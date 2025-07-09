@@ -52,6 +52,10 @@ class HellraiserAnalysisGenerator:
         self.output_dir = self.base_dir / "public" / "data" / "hellraiser"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
+        # Also create build directory for live application updates
+        self.build_output_dir = self.base_dir / "build" / "data" / "hellraiser"
+        self.build_output_dir.mkdir(parents=True, exist_ok=True)
+        
         self.today = datetime.now().strftime("%Y-%m-%d")
         print(f"🔥 Hellraiser Analysis Generator - {self.today}")
         
@@ -1039,16 +1043,27 @@ class HellraiserAnalysisGenerator:
             filename = f"hellraiser_analysis_{self.today}.json"
             archive_filename = f"hellraiser_analysis_{self.today}_{timestamp}.json"
         
-        # Save current version (for React app)
+        # Save current version to both public and build directories
         output_path = self.output_dir / filename
         with open(output_path, 'w') as f:
             json.dump(analysis, f, indent=2)
         
+        # Also save to build directory for live application
+        build_output_path = self.build_output_dir / filename
+        with open(build_output_path, 'w') as f:
+            json.dump(analysis, f, indent=2)
+        
         # Archive timestamped version
         if archive:
+            # Archive to public directory
             archive_dir = self.output_dir / "archive" / self.today
             archive_dir.mkdir(parents=True, exist_ok=True)
             archive_path = archive_dir / archive_filename
+            
+            # Also archive to build directory
+            build_archive_dir = self.build_output_dir / "archive" / self.today
+            build_archive_dir.mkdir(parents=True, exist_ok=True)
+            build_archive_path = build_archive_dir / archive_filename
             
             # Add run metadata to archived version
             archived_analysis = {
@@ -1062,14 +1077,21 @@ class HellraiserAnalysisGenerator:
                 }
             }
             
+            # Save to both archive locations
             with open(archive_path, 'w') as f:
                 json.dump(archived_analysis, f, indent=2)
             
+            with open(build_archive_path, 'w') as f:
+                json.dump(archived_analysis, f, indent=2)
+            
             print(f"✅ Analysis saved to {output_path}")
+            print(f"✅ Also saved to {build_output_path}")
             print(f"📁 Archived to {archive_path}")
+            print(f"📁 Also archived to {build_archive_path}")
             return str(output_path)
         
         print(f"✅ Analysis saved to {output_path}")
+        print(f"✅ Also saved to {build_output_path}")
         return str(output_path)
 
     def calculate_hours_to_first_game(self) -> float:
