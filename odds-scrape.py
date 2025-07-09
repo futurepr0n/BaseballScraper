@@ -117,11 +117,16 @@ def calculate_movement_and_trends(player_name, current_odds, tracking_info, curr
         
         # Calculate movement from previous odds
         if result['previous_odds']:
-            result.update(calculate_single_movement(result['previous_odds'], current_odds, 'previous'))
+            previous_movement = calculate_single_movement(result['previous_odds'], current_odds, 'previous')
+            result['movement_from_previous'] = previous_movement['movement']
+            result['previous_delta'] = previous_movement['delta']
+            result['previous_delta_display'] = previous_movement['delta_display']
+            result['favorable_vs_previous'] = previous_movement['favorable']
         
         # Calculate movement from opening odds  
         if result['opening_odds']:
             opening_movement = calculate_single_movement(result['opening_odds'], current_odds, 'opening')
+            result['movement_from_opening'] = opening_movement['movement']
             result['opening_delta'] = opening_movement['delta']
             result['opening_delta_display'] = opening_movement['delta_display']
             result['favorable_vs_opening'] = opening_movement['favorable']
