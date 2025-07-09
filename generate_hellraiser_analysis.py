@@ -54,6 +54,28 @@ class HellraiserAnalysisGenerator:
         
         self.today = datetime.now().strftime("%Y-%m-%d")
         print(f"🔥 Hellraiser Analysis Generator - {self.today}")
+        
+        # Accent normalization map
+        self.accent_map = {
+            'á': 'a', 'à': 'a', 'ä': 'a', 'â': 'a', 'ā': 'a', 'ą': 'a', 'å': 'a', 'ã': 'a',
+            'é': 'e', 'è': 'e', 'ë': 'e', 'ê': 'e', 'ē': 'e', 'ę': 'e',
+            'í': 'i', 'ì': 'i', 'ï': 'i', 'î': 'i', 'ī': 'i', 'į': 'i',
+            'ó': 'o', 'ò': 'o', 'ö': 'o', 'ô': 'o', 'ō': 'o', 'ø': 'o', 'õ': 'o',
+            'ú': 'u', 'ù': 'u', 'ü': 'u', 'û': 'u', 'ū': 'u', 'ų': 'u',
+            'ñ': 'n', 'ń': 'n', 'ç': 'c', 'č': 'c', 'ć': 'c',
+            'Á': 'A', 'À': 'A', 'Ä': 'A', 'Â': 'A', 'Ā': 'A', 'Ą': 'A', 'Å': 'A', 'Ã': 'A',
+            'É': 'E', 'È': 'E', 'Ë': 'E', 'Ê': 'E', 'Ē': 'E', 'Ę': 'E',
+            'Í': 'I', 'Ì': 'I', 'Ï': 'I', 'Î': 'I', 'Ī': 'I', 'Į': 'I',
+            'Ó': 'O', 'Ò': 'O', 'Ö': 'O', 'Ô': 'O', 'Ō': 'O', 'Ø': 'O', 'Õ': 'O',
+            'Ú': 'U', 'Ù': 'U', 'Ü': 'U', 'Û': 'U', 'Ū': 'U', 'Ų': 'U',
+            'Ñ': 'N', 'Ń': 'N', 'Ç': 'C', 'Č': 'C', 'Ć': 'C'
+        }
+    
+    def normalize_accents(self, text: str) -> str:
+        """Normalize accented characters to plain English"""
+        if not text:
+            return ''
+        return ''.join(self.accent_map.get(char, char) for char in text)
 
     def load_current_odds(self) -> List[Dict]:
         """Load current HR odds data"""
@@ -339,7 +361,7 @@ class HellraiserAnalysisGenerator:
         return player_team_map
 
     def find_player_team(self, player_name: str, player_team_map: Dict[str, str]) -> Optional[str]:
-        """Find team for a player using enhanced fuzzy matching"""
+        """Find team for a player using enhanced fuzzy matching with accent normalization"""
         # Direct match
         if player_name in player_team_map:
             return player_team_map[player_name]
@@ -348,35 +370,56 @@ class HellraiserAnalysisGenerator:
         if player_name.lower() in player_team_map:
             return player_team_map[player_name.lower()]
         
+        # Normalize accents for enhanced matching
+        normalized_player_name = self.normalize_accents(player_name)
+        
+        # Try normalized matching
+        for map_name, team in player_team_map.items():
+            normalized_map_name = self.normalize_accents(map_name)
+            if normalized_player_name.lower() == normalized_map_name.lower():
+                print(f"🔍 Found accent-normalized match: '{player_name}' -> '{map_name}' ({team})")
+                return team
+        
         # Handle common name variations
         player_parts = player_name.split()
         if len(player_parts) >= 2:
             first_name = player_parts[0]
             last_name = player_parts[-1]
             
-            # Try "F. Lastname" format (common in rosters)
+            # Try "F. Lastname" format (common in rosters) with accent normalization
             abbreviated = f"{first_name[0]}. {last_name}"
-            if abbreviated in player_team_map:
-                return player_team_map[abbreviated]
-            if abbreviated.lower() in player_team_map:
-                return player_team_map[abbreviated.lower()]
+            abbreviated_normalized = self.normalize_accents(abbreviated)
             
-            # Try just last name matching
             for map_name, team in player_team_map.items():
-                if last_name.lower() in map_name.lower() and len(last_name) > 4:
+                normalized_map_name = self.normalize_accents(map_name)
+                if abbreviated_normalized.lower() == normalized_map_name.lower():
+                    print(f"🔍 Found abbreviated + accent match: '{player_name}' -> '{abbreviated}' -> '{map_name}' ({team})")
+                    return team
+            
+            # Try just last name matching with accent normalization
+            normalized_last_name = self.normalize_accents(last_name)
+            for map_name, team in player_team_map.items():
+                normalized_map_name = self.normalize_accents(map_name)
+                if normalized_last_name.lower() in normalized_map_name.lower() and len(last_name) > 4:
                     # Additional check: make sure it's not a super common last name
-                    if last_name.lower() not in ['rodriguez', 'martinez', 'garcia', 'lopez', 'hernandez']:
+                    if normalized_last_name.lower() not in ['rodriguez', 'martinez', 'garcia', 'lopez', 'hernandez']:
+                        print(f"🔍 Found last name + accent match: '{player_name}' -> '{map_name}' ({team})")
                         return team
                     # For common names, need first name match too
-                    elif first_name[0].lower() in map_name.lower():
+                    elif self.normalize_accents(first_name[0]).lower() in normalized_map_name.lower():
+                        print(f"🔍 Found common name + accent match: '{player_name}' -> '{map_name}' ({team})")
                         return team
         
-        # Fuzzy matching for full names
+        # Fuzzy matching for full names with accent normalization
+        normalized_player_name = self.normalize_accents(player_name)
         for map_name, team in player_team_map.items():
-            if (player_name.lower() in map_name.lower() or 
-                map_name.lower() in player_name.lower()):
+            normalized_map_name = self.normalize_accents(map_name)
+            if (normalized_player_name.lower() in normalized_map_name.lower() or 
+                normalized_map_name.lower() in normalized_player_name.lower()):
+                print(f"🔍 Found fuzzy + accent match: '{player_name}' -> '{map_name}' ({team})")
                 return team
         
+        print(f"❌ No team found for player: '{player_name}'")
         return None
 
     def get_pitcher_matchup(self, team: str, lineup_data: Dict) -> Optional[Dict]:
