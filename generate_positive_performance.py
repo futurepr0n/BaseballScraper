@@ -203,6 +203,7 @@ class PositivePerformanceAnalyzer:
         total_hits = 0
         total_abs = 0
         match_methods = []
+        seen_dates = set()  # Track processed dates to prevent duplicates
         
         for date_str, day_data in self.season_data.items():
             if 'players' in day_data:
@@ -228,7 +229,8 @@ class PositivePerformanceAnalyzer:
                         hits = player_data.get('H', 0)  # Note: Capital H in data
                         abs_val = player_data.get('AB', 0)  # Note: Capital AB in data
                         
-                        if abs_val > 0:  # Valid game data
+                        if abs_val > 0 and date_str not in seen_dates:  # Valid game data and not duplicate date
+                            seen_dates.add(date_str)  # Mark this date as processed
                             player_games.append({
                                 'date': date_str,
                                 'hits': hits,
@@ -244,6 +246,8 @@ class PositivePerformanceAnalyzer:
                             # Track match methods used
                             if match_result['method'] not in match_methods:
                                 match_methods.append(match_result['method'])
+                        elif date_str in seen_dates:
+                            print(f"WARNING: Duplicate date {date_str} found for {player_name} ({team}) - skipping")
         
         # Calculate season average
         season_avg = total_hits / total_abs if total_abs > 0 else 0
