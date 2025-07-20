@@ -288,7 +288,7 @@ def save_data_to_csv(all_teams_data, date_identifier, game_id):
 
                 df_output = df[output_columns]
                 # Include gameId in filename
-                filename = f"{team_abbr.lower()}_{data_type}_{date_identifier}_{game_id}.csv"
+                filename = f"{team_abbr.upper()}_{data_type}_{date_identifier}_{game_id}.csv"
                 try:
                     df_output.to_csv(filename, index=False, encoding='utf-8')
                     print(f"Successfully saved data to {filename}")
@@ -397,8 +397,8 @@ def fetch_espn_schedule(target_date: datetime) -> List[str]:
             if boxscore_url not in game_urls:
                 game_urls.append(boxscore_url)
     
-    # Method 3: Look for any gameId references in the page
-    game_id_pattern = re.compile(r'gameId[=/](\d+)')
+    # Method 3: Look for specific boxscore gameId references in the page (more restrictive)
+    game_id_pattern = re.compile(r'(?:boxscore|game).*?gameId[=/](\d+)')
     matches = game_id_pattern.findall(html_content)
     for game_id in matches:
         boxscore_url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
