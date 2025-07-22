@@ -2,6 +2,11 @@
 """
 Enhanced Baseball Scraper with Postponement Detection
 Automatically detects postponed games and updates next day's schedule
+
+Usage:
+  python enhanced_scrape.py                    # Process yesterday's games (automatic)
+  python enhanced_scrape.py july_12_2025.txt  # Process specific file
+  python enhanced_scrape.py --days-ago 8      # Process games from 8 days ago
 """
 
 import requests
@@ -16,6 +21,8 @@ import os
 import glob
 import shutil
 import json
+import argparse
+import sys
 from typing import List, Dict
 
 # --- (Keep TEAM_ABBREVIATIONS dictionary as is) ---
@@ -502,21 +509,70 @@ def save_postponement_log(postponed_games: List[Dict], date_identifier: str):
     except Exception as e:
         print(f"❌ Error saving postponement log: {e}")
 
+def parse_arguments():
+    """Parse command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="Enhanced Baseball Scraper with Postponement Detection",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  %(prog)s                    # Process yesterday's games (automatic)
+  %(prog)s july_12_2025.txt  # Process specific file
+  %(prog)s --days-ago 8      # Process games from 8 days ago
+        """
+    )
+    
+    # Mutually exclusive group for file specification
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        'filename', 
+        nargs='?', 
+        help='Specific schedule file to process (e.g., july_12_2025.txt)'
+    )
+    group.add_argument(
+        '--days-ago', 
+        type=int, 
+        help='Number of days ago to process (e.g., --days-ago 8 for 8 days ago)'
+    )
+    
+    return parser.parse_args()
+
+def determine_target_filename(args):
+    """Determine which file to process based on arguments"""
+    if args.filename:
+        # User specified a specific filename
+        target_filename = args.filename
+        print(f"🎯 User specified file: {target_filename}")
+        
+    elif args.days_ago is not None:
+        # User specified days ago
+        target_filename = get_date_filename(-args.days_ago)
+        print(f"🎯 Processing file from {args.days_ago} days ago: {target_filename}")
+        
+    else:
+        # Default behavior - yesterday's file
+        target_filename = get_yesterday_filename()
+        print(f"🔍 Using default (yesterday's file): {target_filename}")
+    
+    return target_filename
+
 # --- Enhanced Main execution block ---
 if __name__ == "__main__":
     print("🏟️ Enhanced Baseball Scraper with Postponement Detection")
     print("=" * 60)
     
-    # Get yesterday's filename
-    target_filename = get_yesterday_filename()
+    # Parse command-line arguments
+    args = parse_arguments()
+    
+    # Determine target filename based on arguments
+    target_filename = determine_target_filename(args)
     tomorrow_filename = get_tomorrow_filename()
     
-    print(f"🔍 Looking for yesterday's file: {target_filename}")
     print(f"📅 Tomorrow's file: {tomorrow_filename}")
     
     # Check if the target file exists
     if not os.path.exists(target_filename):
-        print(f"❌ Yesterday's file '{target_filename}' not found.")
+        print(f"❌ Target file '{target_filename}' not found.")
         print("Available .txt files in directory:")
         available_files = glob.glob("*_*_*.txt")
         if available_files:
@@ -524,7 +580,18 @@ if __name__ == "__main__":
                 print(f"  - {file}")
         else:
             print("  No .txt files found")
-        exit(1)
+        
+        # Provide helpful suggestions
+        if args.filename:
+            print(f"\n💡 Tip: Make sure the filename '{args.filename}' exists in the current directory.")
+        elif args.days_ago:
+            print(f"\n💡 Tip: File for {args.days_ago} days ago might not exist or might use a different date format.")
+        else:
+            print(f"\n💡 Tip: Yesterday's file might not exist yet. Try specifying a specific file with:")
+            if available_files:
+                print(f"  python {sys.argv[0]} {available_files[0]}")
+        
+        sys.exit(1)
     
     # Validate the filename format
     base_name = os.path.basename(target_filename)
