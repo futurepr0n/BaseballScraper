@@ -365,127 +365,48 @@ def move_file_to_scanned(filename):
         print(f"❌ Error moving file to SCANNED: {e}")
         return False
 
-def fetch_espn_schedule(target_date: datetime) -> List[str]:
-    """
-    Fetch game URLs from ESPN schedule for a specific date
-    Returns list of boxscore URLs
-    """
-    # Format date for ESPN schedule URL
-    date_str = target_date.strftime("%Y%m%d")
-    schedule_url = f"https://www.espn.com/mlb/schedule/_/date/{date_str}"
-    
-    print(f"🔍 Fetching schedule from: {schedule_url}")
-    
-    html_content = get_page_content(schedule_url)
-    if not html_content:
-        print(f"❌ Could not fetch schedule from ESPN")
-        return []
-    
-    soup = BeautifulSoup(html_content, 'html.parser')
-    
-    # Look for game links - ESPN uses various patterns
-    game_urls = []
-    
-    # Method 1: Look for boxscore links directly
-    boxscore_links = soup.find_all('a', href=re.compile(r'/mlb/boxscore/_/gameId/\d+'))
-    for link in boxscore_links:
-        href = link.get('href')
-        if href and '/gameId/' in href:
-            if not href.startswith('http'):
-                href = 'https://www.espn.com' + href
-            game_urls.append(href)
-    
-    # Method 2: Look for game containers with data attributes
-    game_containers = soup.find_all('div', attrs={'data-game-id': True})
-    for container in game_containers:
-        game_id = container.get('data-game-id')
-        if game_id:
-            boxscore_url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
-            if boxscore_url not in game_urls:
-                game_urls.append(boxscore_url)
-    
-    # Method 3: Look for specific boxscore gameId references in the page (more restrictive)
-    game_id_pattern = re.compile(r'(?:boxscore|game).*?gameId[=/](\d+)')
-    matches = game_id_pattern.findall(html_content)
-    for game_id in matches:
-        boxscore_url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
-        if boxscore_url not in game_urls:
-            game_urls.append(boxscore_url)
-    
-    # Remove duplicates while preserving order
-    unique_urls = []
-    seen = set()
-    for url in game_urls:
-        if url not in seen:
-            unique_urls.append(url)
-            seen.add(url)
-    
-    print(f"✅ Found {len(unique_urls)} game URLs for {target_date.strftime('%Y-%m-%d')}")
-    return unique_urls
+# fetch_espn_schedule function removed - no longer automatically updating schedules
 
-def update_next_day_schedule(postponed_games: List[str], next_day_filename: str) -> bool:
+def write_postponement_notification(postponed_games: List[Dict], date_identifier: str, next_day_filename: str) -> bool:
     """
-    Update next day's schedule file with new games from ESPN schedule
+    Write a notification file indicating which games were postponed
+    No longer attempts to automatically update schedules
     """
-    tomorrow_date = datetime.now() + timedelta(days=1)
+    print(f"\n📝 Writing postponement notification for {len(postponed_games)} postponed games")
     
-    print(f"\n🔄 Updating schedule for {next_day_filename}")
-    print(f"   Found {len(postponed_games)} postponed games to potentially reschedule")
+    notification_filename = f"postponed_games_notification_{date_identifier}.txt"
     
-    # Fetch fresh schedule from ESPN
-    fresh_schedule = fetch_espn_schedule(tomorrow_date)
-    
-    if not fresh_schedule:
-        print("❌ Could not fetch fresh schedule from ESPN")
-        return False
-    
-    # Read existing schedule if it exists
-    existing_urls = []
-    if os.path.exists(next_day_filename):
-        existing_urls = read_urls_from_file(next_day_filename)
-        print(f"📋 Existing schedule has {len(existing_urls)} games")
-    
-    # Find new games that aren't in existing schedule
-    new_games = []
-    for url in fresh_schedule:
-        if url not in existing_urls:
-            new_games.append(url)
-    
-    if not new_games:
-        print("✅ No new games found - schedule is up to date")
-        return True
-    
-    print(f"🆕 Found {len(new_games)} new games to add to schedule")
-    
-    # Combine existing and new games
-    all_games = existing_urls + new_games
-    
-    # Create backup of existing file
-    if os.path.exists(next_day_filename):
-        backup_name = f"{next_day_filename}.backup.{int(time.time())}"
-        shutil.copy2(next_day_filename, backup_name)
-        print(f"💾 Created backup: {backup_name}")
-    
-    # Write updated schedule
     try:
-        with open(next_day_filename, 'w') as f:
-            for url in all_games:
-                f.write(f"{url}\n")
+        with open(notification_filename, 'w') as f:
+            f.write(f"POSTPONED GAMES NOTIFICATION\n")
+            f.write(f"==========================\n")
+            f.write(f"Date: {date_identifier}\n")
+            f.write(f"Total postponed games: {len(postponed_games)}\n")
+            f.write(f"Notification generated: {datetime.now().isoformat()}\n\n")
+            
+            f.write(f"POSTPONED GAMES:\n")
+            f.write(f"---------------\n")
+            
+            for game in postponed_games:
+                f.write(f"Game ID: {game['game_id']}\n")
+                f.write(f"URL: {game['url']}\n")
+                f.write(f"Reason: {game['postponement_info']['reason']}\n")
+                f.write(f"Status: {game['postponement_info']['status']}\n")
+                f.write(f"Index in schedule: {game['index']}\n")
+                f.write(f"-" * 50 + "\n")
+            
+            f.write(f"\nACTION REQUIRED:\n")
+            f.write(f"- Manually check ESPN schedule for rescheduled games\n")
+            f.write(f"- Update {next_day_filename} if new games are scheduled\n")
+            f.write(f"- Verify postponement reasons are accurate\n")
+            f.write(f"- Check for makeup game announcements\n")
         
-        print(f"✅ Updated {next_day_filename} with {len(all_games)} total games")
-        print(f"   Added {len(new_games)} new games")
-        
-        # Log the new games
-        if new_games:
-            print("🆕 New games added:")
-            for i, url in enumerate(new_games, 1):
-                game_id = extract_game_id_from_url(url)
-                print(f"   {i}. gameId: {game_id}")
-        
+        print(f"✅ Postponement notification written to: {notification_filename}")
+        print(f"📋 Manual action required to update {next_day_filename}")
         return True
         
     except Exception as e:
-        print(f"❌ Error updating schedule file: {e}")
+        print(f"❌ Error writing postponement notification: {e}")
         return False
 
 def save_postponement_log(postponed_games: List[Dict], date_identifier: str):
@@ -675,12 +596,11 @@ if __name__ == "__main__":
         # Save postponement log
         save_postponement_log(postponed_games, date_identifier)
         
-        # Update next day's schedule
-        postponed_urls = [game['url'] for game in postponed_games]
-        if update_next_day_schedule(postponed_urls, tomorrow_filename):
-            print(f"✅ Successfully updated next day's schedule")
+        # Write postponement notification (no longer auto-updating schedules)
+        if write_postponement_notification(postponed_games, date_identifier, tomorrow_filename):
+            print(f"✅ Postponement notification created - manual schedule review required")
         else:
-            print(f"❌ Failed to update next day's schedule")
+            print(f"❌ Failed to write postponement notification")
     
     # Move the processed file to SCANNED directory
     if successful_extractions > 0 or postponed_games:
@@ -694,5 +614,6 @@ if __name__ == "__main__":
     
     print(f"\n🏁 Enhanced scraper completed!")
     if postponed_games:
-        print(f"📋 Remember to check {tomorrow_filename} for updated schedule")
+        print(f"📋 MANUAL ACTION REQUIRED: Check postponement notification files")
+        print(f"📅 Review {tomorrow_filename} and manually update if needed")
     print("=" * 60)
