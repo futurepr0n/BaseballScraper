@@ -14,6 +14,8 @@ import sys
 from typing import Dict, List, Optional, Any
 import time
 import re
+import unicodedata
+from difflib import SequenceMatcher
 
 # Add BaseballTracker path for access to team/roster data
 sys.path.append('../BaseballTracker/src/services')
@@ -29,6 +31,25 @@ class StartingLineupFetcher:
         # Load team and roster data for validation
         self.teams_data = self.load_teams_data()
         self.rosters_data = self.load_rosters_data()
+        
+        # Initialize tracking variables
+        self.last_batter_updates = 0
+        
+        # Enhanced name matching setup
+        self.accent_map = {
+            'á': 'a', 'à': 'a', 'ä': 'a', 'â': 'a', 'ā': 'a', 'ã': 'a',
+            'é': 'e', 'è': 'e', 'ë': 'e', 'ê': 'e', 'ē': 'e',
+            'í': 'i', 'ì': 'i', 'ï': 'i', 'î': 'i', 'ī': 'i',
+            'ó': 'o', 'ò': 'o', 'ö': 'o', 'ô': 'o', 'ō': 'o', 'õ': 'o',
+            'ú': 'u', 'ù': 'u', 'ü': 'u', 'û': 'u', 'ū': 'u',
+            'ñ': 'n', 'ç': 'c', 'ß': 'ss',
+            'Á': 'A', 'À': 'A', 'Ä': 'A', 'Â': 'A', 'Ā': 'A', 'Ã': 'A',
+            'É': 'E', 'È': 'E', 'Ë': 'E', 'Ê': 'E', 'Ē': 'E',
+            'Í': 'I', 'Ì': 'I', 'Ï': 'I', 'Î': 'I', 'Ī': 'I',
+            'Ó': 'O', 'Ò': 'O', 'Ö': 'O', 'Ô': 'O', 'Ō': 'O', 'Õ': 'O',
+            'Ú': 'U', 'Ù': 'U', 'Ü': 'U', 'Û': 'U', 'Ū': 'U',
+            'Ñ': 'N', 'Ç': 'C'
+        }
         
     def load_teams_data(self) -> Dict:
         """Load team data from BaseballTracker"""
@@ -131,7 +152,7 @@ class StartingLineupFetcher:
                 "weather": {},
                 "teams": self.extract_teams_info(game.get('teams', {})),
                 "pitchers": self.extract_pitchers_info(game.get('teams', {})),
-                "lineups": self.extract_lineups_info(game.get('lineups', {})),
+                "lineups": None,  # Will be set below with update tracking
                 "updates": [],
                 "matchupKey": "",
                 "pitcherMatchup": ""
@@ -275,20 +296,76 @@ class StartingLineupFetcher:
     
     def extract_lineups_info(self, lineups: Dict) -> Dict:
         """Extract lineup information from API response"""
-        # Lineups might not always be available from Stats API
-        # Use enhanced_lineup_scraper.py to populate batting_order arrays
-        return {
+        lineup_data = {
             "home": {
-                "confirmed": bool(lineups.get('home')),
+                "confirmed": bool(lineups.get('homePlayers')),
                 "lastUpdated": datetime.datetime.now().isoformat(),
-                "batting_order": []  # Populated by enhanced_lineup_scraper.py
+                "batting_order": []
             },
             "away": {
-                "confirmed": bool(lineups.get('away')),
+                "confirmed": bool(lineups.get('awayPlayers')),
                 "lastUpdated": datetime.datetime.now().isoformat(),
-                "batting_order": []  # Populated by enhanced_lineup_scraper.py
+                "batting_order": []
             }
         }
+        
+        # Process actual lineup data if available
+        batter_updates = 0
+        for team_side in ['home', 'away']:
+            players_key = f'{team_side}Players'
+            team_players = lineups.get(players_key, [])
+            
+            for i, player in enumerate(team_players):
+                if isinstance(player, dict) and player.get('fullName'):
+                    player_name = player.get('fullName', '')
+                    
+                    # Get player handedness from MLB person API
+                    player_handedness = self.get_player_handedness_from_api(player.get('id'))
+                    
+                    if player_handedness:
+                        # Update roster with batter handedness
+                        if self.update_roster_with_batter_handedness(
+                            player_name, player_handedness, 'LINEUP'
+                        ):
+                            batter_updates += 1
+                    
+                    # Add to batting order (basic info for now)
+                    lineup_data[team_side]["batting_order"].append({
+                        "position": i + 1,
+                        "name": player_name,
+                        "fieldPosition": player.get('primaryPosition', {}).get('abbreviation', ''),
+                        "handedness": player_handedness
+                    })
+        
+        if batter_updates > 0:
+            print(f"📝 Updated {batter_updates} batter handedness entries from lineup data")
+        
+        return lineup_data, batter_updates
+    
+    def get_player_handedness_from_api(self, player_id: int) -> str:
+        """Get player handedness from MLB person API"""
+        try:
+            if not player_id:
+                return ""
+            
+            url = f"{self.api_base_url}/people/{player_id}"
+            response = self.session.get(url, timeout=10)
+            response.raise_for_status()
+            
+            data = response.json()
+            people = data.get('people', [])
+            
+            if people:
+                person = people[0]
+                # Get batting handedness
+                bat_side = person.get('batSide', {})
+                return bat_side.get('code', '')
+                
+        except Exception as e:
+            # Don't print errors for every player to avoid spam
+            pass
+            
+        return ""
     
     def extract_team_info(self, container, game_data: Dict):
         """Extract team information from container"""
@@ -381,6 +458,131 @@ class StartingLineupFetcher:
                 pitcher_info["throws"] = player.get("throws", "")
                 break
     
+    def normalize_name(self, name: str) -> str:
+        """Remove accents and normalize name for matching"""
+        if not name:
+            return ""
+        
+        # Method 1: Unicode normalization
+        try:
+            normalized = unicodedata.normalize('NFD', name)
+            ascii_version = ''.join(
+                char for char in normalized 
+                if unicodedata.category(char) != 'Mn'
+            )
+            return ascii_version.strip()
+        except:
+            # Method 2: Manual mapping fallback
+            return ''.join(self.accent_map.get(char, char) for char in name).strip()
+    
+    def create_name_variants(self, full_name: str) -> List[str]:
+        """Generate possible name variants for matching"""
+        variants = []
+        
+        if not full_name:
+            return variants
+        
+        # Add normalized version
+        normalized = self.normalize_name(full_name)
+        variants.append(normalized.lower())
+        
+        # Parse name components
+        parts = normalized.split()
+        if len(parts) >= 2:
+            first = parts[0]
+            last = parts[-1]
+            
+            # Add common variants
+            variants.append(f"{first} {last}".lower())           # First Last
+            variants.append(f"{first[0]}. {last}".lower())       # F. Last
+            variants.append(f"{last}, {first}".lower())          # Last, First
+            variants.append(f"{last}, {first[0]}.".lower())      # Last, F.
+            variants.append(last.lower())                        # Last only
+        
+        return list(set(variants))  # Remove duplicates
+    
+    def find_player_in_roster_enhanced(self, api_name: str, player_type: str = "any", team_abbr: str = None) -> Optional[Dict]:
+        """Enhanced player lookup with accent and format handling, including team disambiguation"""
+        if not api_name:
+            return None
+        
+        # Create search variants
+        search_variants = self.create_name_variants(api_name)
+        potential_matches = []
+        
+        # Search through roster
+        for player in self.rosters_data:
+            if player_type != "any" and player.get("type") != player_type:
+                continue
+            
+            # Get player name variants
+            player_names = [player.get("name", ""), player.get("fullName", "")]
+            
+            for player_name in player_names:
+                if not player_name:
+                    continue
+                
+                player_variants = self.create_name_variants(player_name)
+                
+                # Check for variant matches
+                if any(sv in player_variants for sv in search_variants):
+                    potential_matches.append(player)
+                    break  # Found match for this player, move to next
+        
+        # If we have multiple matches and a team is specified, use team for disambiguation
+        if len(potential_matches) > 1 and team_abbr:
+            team_matches = []
+            for match in potential_matches:
+                player_team = match.get("team_abbr", "").upper()
+                if player_team == team_abbr.upper():
+                    team_matches.append(match)
+            
+            if len(team_matches) == 1:
+                return team_matches[0]
+            elif len(team_matches) > 1:
+                # Multiple players on same team with similar names - return first match
+                print(f"⚠️ Multiple players on {team_abbr} match '{api_name}' - using first match")
+                return team_matches[0]
+            else:
+                print(f"⚠️ No team match for '{api_name}' on {team_abbr} - using first variant match")
+                return potential_matches[0]
+        
+        # Return first match if only one found or no team specified
+        return potential_matches[0] if potential_matches else None
+    
+    def should_update_full_name(self, current_name: str, current_full_name: str, api_name: str) -> bool:
+        """Determine if we should update roster name with fuller API name"""
+        if not api_name:
+            return False
+        
+        # Use the more complete of current_name or current_full_name for comparison
+        current_best = current_full_name if current_full_name else current_name
+        if not current_best:
+            return True  # No current name, definitely update
+        
+        # Check if API name has more words (fuller name)
+        current_words = len(current_best.split())
+        api_words = len(api_name.split())
+        
+        if api_words > current_words:
+            # Check if they match through variant generation (same player)
+            current_variants = self.create_name_variants(current_best)
+            api_variants = self.create_name_variants(api_name)
+            
+            if any(cv in api_variants for cv in current_variants):
+                return True
+        
+        # Special case: Check if current name is abbreviated format (has period)
+        if '.' in current_best and api_words >= current_words:
+            # Check if API name matches and is fuller (no periods)
+            current_variants = self.create_name_variants(current_best)
+            api_variants = self.create_name_variants(api_name)
+            
+            if any(cv in api_variants for cv in current_variants) and '.' not in api_name:
+                return True
+        
+        return False
+    
     def update_roster_with_handedness(self, pitcher_name: str, throws: str, team_abbr: str):
         """Update roster data with pitcher handedness from MLB API when missing"""
         if not throws or not pitcher_name or throws == "":
@@ -395,17 +597,76 @@ class StartingLineupFetcher:
         
         roster_handedness = handedness_map.get(throws, throws)
         updated = False
+        updates = []
         
-        for player in self.rosters_data:
-            if (player.get("type") == "pitcher" and 
-                player.get("fullName") == pitcher_name):
-                
-                # Check if handedness is missing or empty
-                if not player.get("ph") or player.get("ph") == "":
-                    player["ph"] = roster_handedness
-                    updated = True
-                    print(f"✅ Updated {pitcher_name} handedness: {roster_handedness} ({team_abbr})")
-                break
+        # Use enhanced name matching to find the player
+        player = self.find_player_in_roster_enhanced(pitcher_name, "pitcher", team_abbr)
+        if player:
+            # Check if handedness is missing or empty
+            if not player.get("ph") or player.get("ph") == "":
+                player["ph"] = roster_handedness
+                updated = True
+                updates.append(f"handedness: {roster_handedness}")
+            
+            # Update full name if roster has abbreviated name and API has full name
+            current_name = player.get("name", "")
+            current_full_name = player.get("fullName", "")
+            
+            # Check if we should update with fuller name from API
+            if self.should_update_full_name(current_name, current_full_name, pitcher_name):
+                old_name = current_full_name if current_full_name else current_name
+                player["fullName"] = pitcher_name
+                # Keep the name field as-is (don't update the display name)
+                updated = True
+                updates.append(f"fullName: '{old_name}' → '{pitcher_name}'")
+            
+            if updates:
+                print(f"✅ Updated {pitcher_name} ({team_abbr}): {', '.join(updates)}")
+        
+        return updated
+    
+    def update_roster_with_batter_handedness(self, batter_name: str, bats: str, team_abbr: str):
+        """Update roster data with batter handedness from MLB API when missing or incorrect"""
+        if not bats or not batter_name or bats == "":
+            return False
+            
+        # Convert MLB API bats code to roster format
+        handedness_map = {
+            'L': 'L',  # Left-handed
+            'R': 'R',  # Right-handed  
+            'S': 'B'   # Switch (both)
+        }
+        
+        roster_handedness = handedness_map.get(bats, bats)
+        updated = False
+        updates = []
+        
+        # Use enhanced name matching to find the player  
+        player = self.find_player_in_roster_enhanced(batter_name, "hitter", team_abbr)
+        if player:
+            current_bats = player.get("bats", "")
+            
+            # Update if missing or different
+            if not current_bats or current_bats != roster_handedness:
+                old_value = current_bats if current_bats else "MISSING"
+                player["bats"] = roster_handedness
+                updated = True
+                updates.append(f"handedness: {old_value} → {roster_handedness}")
+            
+            # Update full name if roster has abbreviated name and API has full name
+            current_name = player.get("name", "")
+            current_full_name = player.get("fullName", "")
+            
+            # Check if we should update with fuller name from API
+            if self.should_update_full_name(current_name, current_full_name, batter_name):
+                old_name = current_full_name if current_full_name else current_name
+                player["fullName"] = batter_name
+                # Keep the name field as-is (don't update the display name)
+                updated = True
+                updates.append(f"fullName: '{old_name}' → '{batter_name}'")
+            
+            if updates:
+                print(f"✅ Updated {batter_name} ({team_abbr}): {', '.join(updates)}")
         
         return updated
     
@@ -570,6 +831,15 @@ class StartingLineupFetcher:
             print("⚠️ No games found in API response")
             return None
         
+        # Extract lineups and track batter updates
+        total_batter_updates = 0
+        for i, game in enumerate(games):
+            # Get the original lineup data from API response
+            api_game = api_data.get('dates', [{}])[0].get('games', [])[i] if i < len(api_data.get('dates', [{}])[0].get('games', [])) else {}
+            lineup_data, batter_updates = self.extract_lineups_info(api_game.get('lineups', {}))
+            game["lineups"] = lineup_data
+            total_batter_updates += batter_updates
+        
         # Enhance roster data with pitcher handedness from MLB API
         roster_updates = 0
         for game in games:
@@ -583,12 +853,19 @@ class StartingLineupFetcher:
                         pitcher['name'], pitcher['throws'], team_abbr):
                         roster_updates += 1
         
+        # Debug: Check what updates we have
+        print(f"🔍 SAVE CHECK - roster_updates: {roster_updates}, batter_updates: {total_batter_updates}")
+        
         # Save updated roster data if any changes were made
-        if roster_updates > 0:
+        if roster_updates > 0 or total_batter_updates > 0:
+            total_updates = roster_updates + total_batter_updates
+            print(f"📤 Attempting to save {total_updates} roster updates...")
             if self.save_updated_roster_data():
-                print(f"💾 Updated roster data with {roster_updates} pitcher handedness entries")
+                print(f"💾 Updated roster data with {total_updates} entries (pitchers: {roster_updates}, batters: {total_batter_updates})")
             else:
-                print(f"⚠️ Failed to save {roster_updates} roster updates")
+                print(f"⚠️ Failed to save {total_updates} roster updates")
+        else:
+            print(f"ℹ️ No roster updates to save")
         
         # Generate complete data structure
         lineup_data = self.generate_lineup_data(games)
