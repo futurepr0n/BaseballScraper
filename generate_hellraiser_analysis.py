@@ -162,12 +162,14 @@ class DashboardCompatibleHellraiserAnalyzer(EnhancedHellraiserAnalyzer):
         
         # Create dashboard-compatible pick
         dashboard_pick = {
-            # Core fields (with proper naming)
+            # Core fields (with proper naming for frontend compatibility)
             'player_name': pick.get('playerName', ''),
+            'playerName': pick.get('playerName', ''),  # Frontend expects this field
             'team': pick.get('team', ''),
             'matchup_team': pick.get('opponent', ''),
             'matchup_pitcher': pitcher_info.get('pitcher_name', 'TBD'),
-            'pitcher_name': pitcher_info.get('pitcher_name', 'TBD'),  # Alternative field
+            'pitcher_name': pitcher_info.get('pitcher_name', 'TBD'),
+            'pitcher': pitcher_info.get('pitcher_name', 'TBD'),  # Frontend expects this field
             'opponent': pick.get('opponent', ''),
             'is_home': pick.get('is_home', False),
             
@@ -232,7 +234,17 @@ class DashboardCompatibleHellraiserAnalyzer(EnhancedHellraiserAnalyzer):
             'data_sources_used': pick.get('data_sources_used', []),
             
             # Reasoning (for transparency)
-            'reasoning': self._generate_pick_reasoning(pick, confidence_score, badge_boost)
+            'reasoning': self._generate_pick_reasoning(pick, confidence_score, badge_boost),
+            
+            # Frontend-specific fields
+            'game': f"{pick.get('opponent', 'TBD')} vs {pick.get('team', 'TBD')}",
+            'odds': {
+                'american': '+350',  # Default odds - would integrate with odds data
+                'decimal': '4.50',
+                'source': 'estimated'
+            },
+            'riskFactors': [],  # Would be populated with actual risk analysis
+            'marketEfficiency': 'Fair Value'  # Would be calculated from odds vs confidence
         }
         
         return dashboard_pick
