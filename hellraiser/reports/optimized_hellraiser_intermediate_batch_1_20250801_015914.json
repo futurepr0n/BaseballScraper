@@ -1,0 +1,3858 @@
+{
+  "optimized_system": {
+    "version": "v2.0_agent_optimized",
+    "total_predictions": 534,
+    "successful_predictions": 68,
+    "accuracy_rate": 0.0,
+    "daily_results": [
+      {
+        "total_predictions": 6,
+        "successful_predictions": 2,
+        "accuracy_rate": 0.3333333333333333,
+        "team_results": {
+          "CHC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "player_successes": {
+          "I. Happ": false,
+          "S. Suzuki": false,
+          "K. Tucker": false,
+          "S. Ohtani": true,
+          "T. Edman": true,
+          "T. Hern\u00e1ndez": false
+        }
+      },
+      {
+        "total_predictions": 75,
+        "successful_predictions": 10,
+        "accuracy_rate": 0.13333333333333333,
+        "team_results": {
+          "NYY": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "A. Wells": true,
+          "A. Judge": false,
+          "C. Bellinger": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "A. Rutschman": true,
+          "J. Westburg": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "C. Abrams": false,
+          "J. Wood": false,
+          "L. Garcia Jr.": false,
+          "T. Turner": false,
+          "B. Harper": true,
+          "A. Bohm": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": true,
+          "S. Kwan": false,
+          "J. Ramirez": false,
+          "L. Thomas": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": true,
+          "M. Olson": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "J. Bride": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "L. Nootbaar": true,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "S. Ohtani": true,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": true,
+          "A. Ibanez": false,
+          "G. Torres": false,
+          "R. Greene": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": true,
+          "K. Tucker": false,
+          "S. Suzuki": false
+        }
+      },
+      {
+        "total_predictions": 48,
+        "successful_predictions": 6,
+        "accuracy_rate": 0.125,
+        "team_results": {
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "C. Mead": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "A. Rutschman": false,
+          "J. Westburg": false,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "J. Bride": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "F. Lindor": false,
+          "J. Soto": true,
+          "P. Alonso": false,
+          "C. Carroll": false,
+          "K. Marte": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": false,
+          "K. Tucker": false,
+          "S. Suzuki": false,
+          "F. Tatis Jr.": true,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false,
+          "S. Ohtani": false,
+          "M. Betts": true,
+          "F. Freeman": true,
+          "G. Torres": true,
+          "J. Baez": false,
+          "K. Carpenter": false
+        }
+      },
+      {
+        "total_predictions": 81,
+        "successful_predictions": 8,
+        "accuracy_rate": 0.09876543209876543,
+        "team_results": {
+          "NYY": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "P. Goldschmidt": true,
+          "O. Cabrera": false,
+          "C. Bellinger": true,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "I. Collins": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": true,
+          "A. Rutschman": false,
+          "R. O'Hearn": false,
+          "C. Abrams": false,
+          "D. Crews": false,
+          "J. Wood": false,
+          "K. Schwarber": true,
+          "K. Clemens": false,
+          "A. Bohm": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": false,
+          "S. Kwan": true,
+          "J. Ramirez": false,
+          "G. Arias": false,
+          "T. Friedl": false,
+          "M. McLain": true,
+          "E. De La Cruz": false,
+          "H. Ramos": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "J. Caminero": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "X. Edwards": false,
+          "O. Lopez": false,
+          "J. Bride": false,
+          "J. Bae": false,
+          "A. McCutchen": false,
+          "T. Pham": false,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "J. Altuve": false,
+          "B. Rodgers": false,
+          "I. Paredes": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": false,
+          "K. Tucker": true,
+          "S. Suzuki": false,
+          "S. Ohtani": false,
+          "T. Hern\u00e1ndez": false,
+          "F. Freeman": true,
+          "Z. McKinstry": false,
+          "R. Greene": false,
+          "S. Torkelson": false
+        }
+      },
+      {
+        "total_predictions": 69,
+        "successful_predictions": 7,
+        "accuracy_rate": 0.10144927536231885,
+        "team_results": {
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "C. Abrams": false,
+          "J. Wood": false,
+          "L. Garcia Jr.": false,
+          "K. Schwarber": false,
+          "A. Bohm": false,
+          "B. Harper": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "P. Reyes": false,
+          "B. Turang": false,
+          "J. Chourio": false,
+          "I. Collins": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "G. Sanchez": false,
+          "A. Rutschman": false,
+          "M. McLain": true,
+          "S. Espinal": false,
+          "E. De La Cruz": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "Y. Diaz": false,
+          "J. Mangum": false,
+          "B. Lowe": true,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "X. Edwards": false,
+          "O. Lopez": false,
+          "D. Myers": false,
+          "A. Frazier": false,
+          "B. Reynolds": false,
+          "T. Pham": false,
+          "J. India": false,
+          "M. Melendez": false,
+          "B. Witt Jr.": false,
+          "S. Kwan": false,
+          "L. Thomas": false,
+          "K. Manzardo": true,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "E. Julien": false,
+          "M. Semien": false,
+          "W. Langford": true,
+          "J. Pederson": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "T. Story": false,
+          "K. Marte": false,
+          "G. Perdomo": false,
+          "L. Gurriel Jr.": true,
+          "I. Happ": false,
+          "S. Suzuki": true,
+          "K. Tucker": true,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 75,
+        "successful_predictions": 13,
+        "accuracy_rate": 0.17333333333333334,
+        "team_results": {
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "B. Buxton": false,
+          "E. Julien": false,
+          "C. Correa": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "J. India": false,
+          "C. Biggio": false,
+          "B. Witt Jr.": false,
+          "J. Westburg": false,
+          "A. Rutschman": false,
+          "T. O'Neill": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "K. Schwarber": true,
+          "A. Bohm": false,
+          "B. Harper": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "T. Friedl": false,
+          "J. Hurtubise": false,
+          "M. McLain": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "J. Ornelas": false,
+          "X. Edwards": false,
+          "G. Conine": false,
+          "O. Lopez": true,
+          "S. Marte": true,
+          "J. Soto": false,
+          "P. Alonso": true,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "J. Caminero": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": true,
+          "J. Wood": true,
+          "K. Ruiz": false,
+          "L. Nootbaar": true,
+          "L. Baker": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Ramirez": true,
+          "L. Thomas": false,
+          "V. Robles": false,
+          "J. Rodriguez": false,
+          "C. Raleigh": true,
+          "J. Malloy": false,
+          "K. Carpenter": false,
+          "R. Greene": true,
+          "S. Ohtani": false,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": true,
+          "M. Harris": true,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 69,
+        "successful_predictions": 8,
+        "accuracy_rate": 0.11594202898550725,
+        "team_results": {
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": true,
+          "X. Edwards": false,
+          "K. Stowers": true,
+          "O. Lopez": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "Y. Diaz": false,
+          "B. Lowe": true,
+          "J. Caminero": false,
+          "J. Suwinski": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "A. Judge": false,
+          "C. Carroll": true,
+          "K. Marte": false,
+          "P. Smith": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": false,
+          "J. Wood": false,
+          "K. Ruiz": false,
+          "M. Wallner": false,
+          "D. Keirsey Jr.": false,
+          "C. Correa": false,
+          "B. Turang": false,
+          "J. Chourio": false,
+          "C. Yelich": true,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "M. Massey": false,
+          "L. Nootbaar": false,
+          "A. Burleson": false,
+          "L. Baker": false,
+          "T. Ward": false,
+          "L. Rengifo": false,
+          "M. Trout": false,
+          "J. Altuve": true,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "L. Wade Jr.": false,
+          "C. Schmitt": false,
+          "W. Adames": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Rodriguez": false,
+          "J. Ramirez": false,
+          "V. Robles": false,
+          "C. Raleigh": false,
+          "Z. McKinstry": false,
+          "R. Greene": true,
+          "S. Torkelson": false,
+          "S. Ohtani": false,
+          "M. Betts": true,
+          "T. Edman": false,
+          "M. Harris": false,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 81,
+        "successful_predictions": 10,
+        "accuracy_rate": 0.12345679012345678,
+        "team_results": {
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "M. Semien": false,
+          "W. Langford": false,
+          "J. Pederson": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "C. Mead": false,
+          "A. Frazier": false,
+          "B. Reynolds": false,
+          "O. Cruz": true,
+          "B. Turang": false,
+          "J. Chourio": true,
+          "I. Collins": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "L. Baker": false,
+          "T. Ward": false,
+          "L. Rengifo": false,
+          "M. Trout": true,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": true,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": true,
+          "A. Rosario": false,
+          "L. Garcia Jr.": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": true,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Ramirez": false,
+          "K. Manzardo": false,
+          "V. Robles": false,
+          "J. Rodriguez": false,
+          "C. Raleigh": false,
+          "Z. McKinstry": false,
+          "R. Greene": false,
+          "S. Torkelson": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "H. Ramos": false,
+          "W. Adames": false,
+          "W. Flores": true,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "G. Conine": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": true,
+          "J. Westburg": false,
+          "A. Rutschman": false,
+          "T. O'Neill": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "T. Turner": false,
+          "B. Harper": false,
+          "A. Bohm": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "A. Judge": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": true,
+          "S. Ohtani": true,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": false,
+          "O. Albies": false,
+          "M. Ozuna": false,
+          "A. Riley": false
+        }
+      },
+      {
+        "total_predictions": 30,
+        "successful_predictions": 4,
+        "accuracy_rate": 0.13333333333333333,
+        "team_results": {
+          "BAL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "C. Mullins": true,
+          "A. Rutschman": false,
+          "J. Westburg": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": true,
+          "K. Schwarber": true,
+          "T. Turner": false,
+          "B. Harper": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "J. Altuve": false,
+          "J. Meyers": false,
+          "I. Paredes": false,
+          "B. Rice": false,
+          "O. Peraza": false,
+          "C. Bellinger": false,
+          "C. Carroll": false,
+          "G. Perdomo": true,
+          "P. Smith": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false
+        }
+      }
+    ],
+    "pattern_success_rates": {},
+    "confidence_calibration": [],
+    "agent_enhancement_impact": {}
+  },
+  "enhanced_system": {
+    "version": "v1.0_enhanced",
+    "total_predictions": 534,
+    "successful_predictions": 68,
+    "accuracy_rate": 0.0,
+    "daily_results": [
+      {
+        "total_predictions": 6,
+        "successful_predictions": 2,
+        "accuracy_rate": 0.3333333333333333,
+        "team_results": {
+          "CHC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "player_successes": {
+          "I. Happ": false,
+          "S. Suzuki": false,
+          "K. Tucker": false,
+          "S. Ohtani": true,
+          "T. Edman": true,
+          "T. Hern\u00e1ndez": false
+        }
+      },
+      {
+        "total_predictions": 75,
+        "successful_predictions": 10,
+        "accuracy_rate": 0.13333333333333333,
+        "team_results": {
+          "NYY": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "A. Wells": true,
+          "A. Judge": false,
+          "C. Bellinger": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "A. Rutschman": true,
+          "J. Westburg": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "C. Abrams": false,
+          "J. Wood": false,
+          "L. Garcia Jr.": false,
+          "T. Turner": false,
+          "B. Harper": true,
+          "A. Bohm": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": true,
+          "S. Kwan": false,
+          "J. Ramirez": false,
+          "L. Thomas": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": true,
+          "M. Olson": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "J. Bride": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "L. Nootbaar": true,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "S. Ohtani": true,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": true,
+          "A. Ibanez": false,
+          "G. Torres": false,
+          "R. Greene": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": true,
+          "K. Tucker": false,
+          "S. Suzuki": false
+        }
+      },
+      {
+        "total_predictions": 48,
+        "successful_predictions": 6,
+        "accuracy_rate": 0.125,
+        "team_results": {
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "C. Mead": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "A. Rutschman": false,
+          "J. Westburg": false,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "J. Bride": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "F. Lindor": false,
+          "J. Soto": true,
+          "P. Alonso": false,
+          "C. Carroll": false,
+          "K. Marte": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": false,
+          "K. Tucker": false,
+          "S. Suzuki": false,
+          "F. Tatis Jr.": true,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false,
+          "S. Ohtani": false,
+          "M. Betts": true,
+          "F. Freeman": true,
+          "G. Torres": true,
+          "J. Baez": false,
+          "K. Carpenter": false
+        }
+      },
+      {
+        "total_predictions": 81,
+        "successful_predictions": 8,
+        "accuracy_rate": 0.09876543209876543,
+        "team_results": {
+          "NYY": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "P. Goldschmidt": true,
+          "O. Cabrera": false,
+          "C. Bellinger": true,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "I. Collins": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": true,
+          "A. Rutschman": false,
+          "R. O'Hearn": false,
+          "C. Abrams": false,
+          "D. Crews": false,
+          "J. Wood": false,
+          "K. Schwarber": true,
+          "K. Clemens": false,
+          "A. Bohm": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": false,
+          "S. Kwan": true,
+          "J. Ramirez": false,
+          "G. Arias": false,
+          "T. Friedl": false,
+          "M. McLain": true,
+          "E. De La Cruz": false,
+          "H. Ramos": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "J. Caminero": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "X. Edwards": false,
+          "O. Lopez": false,
+          "J. Bride": false,
+          "J. Bae": false,
+          "A. McCutchen": false,
+          "T. Pham": false,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "J. Altuve": false,
+          "B. Rodgers": false,
+          "I. Paredes": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": false,
+          "I. Happ": false,
+          "K. Tucker": true,
+          "S. Suzuki": false,
+          "S. Ohtani": false,
+          "T. Hern\u00e1ndez": false,
+          "F. Freeman": true,
+          "Z. McKinstry": false,
+          "R. Greene": false,
+          "S. Torkelson": false
+        }
+      },
+      {
+        "total_predictions": 69,
+        "successful_predictions": 7,
+        "accuracy_rate": 0.10144927536231885,
+        "team_results": {
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CHC": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "C. Abrams": false,
+          "J. Wood": false,
+          "L. Garcia Jr.": false,
+          "K. Schwarber": false,
+          "A. Bohm": false,
+          "B. Harper": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "P. Reyes": false,
+          "B. Turang": false,
+          "J. Chourio": false,
+          "I. Collins": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Cowser": false,
+          "G. Sanchez": false,
+          "A. Rutschman": false,
+          "M. McLain": true,
+          "S. Espinal": false,
+          "E. De La Cruz": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "Y. Diaz": false,
+          "J. Mangum": false,
+          "B. Lowe": true,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "X. Edwards": false,
+          "O. Lopez": false,
+          "D. Myers": false,
+          "A. Frazier": false,
+          "B. Reynolds": false,
+          "T. Pham": false,
+          "J. India": false,
+          "M. Melendez": false,
+          "B. Witt Jr.": false,
+          "S. Kwan": false,
+          "L. Thomas": false,
+          "K. Manzardo": true,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "B. Donovan": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "E. Julien": false,
+          "M. Semien": false,
+          "W. Langford": true,
+          "J. Pederson": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "T. Story": false,
+          "K. Marte": false,
+          "G. Perdomo": false,
+          "L. Gurriel Jr.": true,
+          "I. Happ": false,
+          "S. Suzuki": true,
+          "K. Tucker": true,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "J. Profar": false,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 75,
+        "successful_predictions": 13,
+        "accuracy_rate": 0.17333333333333334,
+        "team_results": {
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 2,
+            "accuracy": 0.6666666666666666
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "player_successes": {
+          "B. Buxton": false,
+          "E. Julien": false,
+          "C. Correa": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "J. India": false,
+          "C. Biggio": false,
+          "B. Witt Jr.": false,
+          "J. Westburg": false,
+          "A. Rutschman": false,
+          "T. O'Neill": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "K. Schwarber": true,
+          "A. Bohm": false,
+          "B. Harper": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "T. Friedl": false,
+          "J. Hurtubise": false,
+          "M. McLain": true,
+          "M. Semien": false,
+          "C. Seager": false,
+          "J. Ornelas": false,
+          "X. Edwards": false,
+          "G. Conine": false,
+          "O. Lopez": true,
+          "S. Marte": true,
+          "J. Soto": false,
+          "P. Alonso": true,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "J. Caminero": false,
+          "T. Pham": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": true,
+          "J. Wood": true,
+          "K. Ruiz": false,
+          "L. Nootbaar": true,
+          "L. Baker": false,
+          "T. Ward": false,
+          "N. Schanuel": false,
+          "M. Trout": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "L. Wade Jr.": false,
+          "W. Adames": false,
+          "J. Lee": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Ramirez": true,
+          "L. Thomas": false,
+          "V. Robles": false,
+          "J. Rodriguez": false,
+          "C. Raleigh": true,
+          "J. Malloy": false,
+          "K. Carpenter": false,
+          "R. Greene": true,
+          "S. Ohtani": false,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": true,
+          "M. Harris": true,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 69,
+        "successful_predictions": 8,
+        "accuracy_rate": 0.11594202898550725,
+        "team_results": {
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "M. Semien": false,
+          "C. Seager": false,
+          "W. Langford": true,
+          "X. Edwards": false,
+          "K. Stowers": true,
+          "O. Lopez": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": false,
+          "Y. Diaz": false,
+          "B. Lowe": true,
+          "J. Caminero": false,
+          "J. Suwinski": false,
+          "B. Reynolds": false,
+          "O. Cruz": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "A. Judge": false,
+          "C. Carroll": true,
+          "K. Marte": false,
+          "P. Smith": false,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": false,
+          "J. Wood": false,
+          "K. Ruiz": false,
+          "M. Wallner": false,
+          "D. Keirsey Jr.": false,
+          "C. Correa": false,
+          "B. Turang": false,
+          "J. Chourio": false,
+          "C. Yelich": true,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "M. Massey": false,
+          "L. Nootbaar": false,
+          "A. Burleson": false,
+          "L. Baker": false,
+          "T. Ward": false,
+          "L. Rengifo": false,
+          "M. Trout": false,
+          "J. Altuve": true,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "L. Wade Jr.": false,
+          "C. Schmitt": false,
+          "W. Adames": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": false,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Rodriguez": false,
+          "J. Ramirez": false,
+          "V. Robles": false,
+          "C. Raleigh": false,
+          "Z. McKinstry": false,
+          "R. Greene": true,
+          "S. Torkelson": false,
+          "S. Ohtani": false,
+          "M. Betts": true,
+          "T. Edman": false,
+          "M. Harris": false,
+          "A. Riley": false,
+          "M. Olson": false
+        }
+      },
+      {
+        "total_predictions": 81,
+        "successful_predictions": 10,
+        "accuracy_rate": 0.12345679012345678,
+        "team_results": {
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TEX": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "TB": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PIT": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "KC": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "STL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "LAA": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "TOR": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "WSH": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "SD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "CLE": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SEA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "DET": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "SF": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIA": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYM": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BAL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "LAD": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "ATL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false,
+          "M. Semien": false,
+          "W. Langford": false,
+          "J. Pederson": false,
+          "Y. Diaz": false,
+          "B. Lowe": false,
+          "C. Mead": false,
+          "A. Frazier": false,
+          "B. Reynolds": false,
+          "O. Cruz": true,
+          "B. Turang": false,
+          "J. Chourio": true,
+          "I. Collins": false,
+          "J. India": false,
+          "B. Witt Jr.": false,
+          "V. Pasquantino": false,
+          "L. Nootbaar": false,
+          "W. Contreras": false,
+          "L. Baker": false,
+          "T. Ward": false,
+          "L. Rengifo": false,
+          "M. Trout": true,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": true,
+          "B. Bichette": false,
+          "V. Guerrero Jr.": false,
+          "A. Santander": false,
+          "C. Abrams": true,
+          "A. Rosario": false,
+          "L. Garcia Jr.": false,
+          "F. Tatis Jr.": false,
+          "L. Arraez": true,
+          "M. Machado": false,
+          "S. Kwan": false,
+          "J. Ramirez": false,
+          "K. Manzardo": false,
+          "V. Robles": false,
+          "J. Rodriguez": false,
+          "C. Raleigh": false,
+          "Z. McKinstry": false,
+          "R. Greene": false,
+          "S. Torkelson": false,
+          "J. Altuve": false,
+          "I. Paredes": false,
+          "Y. Alvarez": false,
+          "H. Ramos": false,
+          "W. Adames": false,
+          "W. Flores": true,
+          "X. Edwards": false,
+          "K. Stowers": false,
+          "G. Conine": false,
+          "F. Lindor": false,
+          "J. Soto": false,
+          "P. Alonso": true,
+          "J. Westburg": false,
+          "A. Rutschman": false,
+          "T. O'Neill": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": false,
+          "T. Turner": false,
+          "B. Harper": false,
+          "A. Bohm": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "P. Goldschmidt": false,
+          "C. Bellinger": false,
+          "A. Judge": false,
+          "K. Marte": false,
+          "C. Carroll": false,
+          "L. Gurriel Jr.": true,
+          "S. Ohtani": true,
+          "M. Betts": false,
+          "T. Hern\u00e1ndez": false,
+          "O. Albies": false,
+          "M. Ozuna": false,
+          "A. Riley": false
+        }
+      },
+      {
+        "total_predictions": 30,
+        "successful_predictions": 4,
+        "accuracy_rate": 0.13333333333333333,
+        "team_results": {
+          "BAL": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "BOS": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "PHI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "COL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "MIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "HOU": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "NYY": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "ARI": {
+            "predictions": 3,
+            "successes": 1,
+            "accuracy": 0.3333333333333333
+          },
+          "MIL": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          },
+          "CIN": {
+            "predictions": 3,
+            "successes": 0,
+            "accuracy": 0.0
+          }
+        },
+        "player_successes": {
+          "C. Mullins": true,
+          "A. Rutschman": false,
+          "J. Westburg": false,
+          "J. Duran": false,
+          "R. Devers": false,
+          "A. Bregman": true,
+          "K. Schwarber": true,
+          "T. Turner": false,
+          "B. Harper": false,
+          "B. Doyle": false,
+          "E. Tovar": false,
+          "R. McMahon": false,
+          "M. Wallner": false,
+          "C. Correa": false,
+          "B. Buxton": false,
+          "J. Altuve": false,
+          "J. Meyers": false,
+          "I. Paredes": false,
+          "B. Rice": false,
+          "O. Peraza": false,
+          "C. Bellinger": false,
+          "C. Carroll": false,
+          "G. Perdomo": true,
+          "P. Smith": false,
+          "J. Chourio": false,
+          "C. Yelich": false,
+          "W. Contreras": false,
+          "T. Friedl": false,
+          "M. McLain": false,
+          "E. De La Cruz": false
+        }
+      }
+    ]
+  },
+  "original_system": {
+    "version": "original_hellraiser",
+    "total_predictions": 0,
+    "successful_predictions": 0,
+    "accuracy_rate": 0.0,
+    "daily_results": []
+  },
+  "individual_patterns": {
+    "power_cluster_success": [
+      {
+        "player_name": "S. Ohtani",
+        "team": "LAD",
+        "date": "2025-03-19",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "T. Edman",
+        "team": "LAD",
+        "date": "2025-03-19",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "A. Wells",
+        "team": "NYY",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "A. Rutschman",
+        "team": "BAL",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Westburg",
+        "team": "BAL",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "B. Harper",
+        "team": "PHI",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "V. Pasquantino",
+        "team": "KC",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "A. Riley",
+        "team": "ATL",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "L. Nootbaar",
+        "team": "STL",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "S. Ohtani",
+        "team": "LAD",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "T. Hern\u00e1ndez",
+        "team": "LAD",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "I. Happ",
+        "team": "CHC",
+        "date": "2025-03-27",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "O. Cruz",
+        "team": "PIT",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Soto",
+        "team": "NYM",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "F. Tatis Jr.",
+        "team": "SD",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. Betts",
+        "team": "LAD",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "F. Freeman",
+        "team": "LAD",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "G. Torres",
+        "team": "DET",
+        "date": "2025-03-28",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "P. Goldschmidt",
+        "team": "NYY",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Bellinger",
+        "team": "NYY",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Cowser",
+        "team": "BAL",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Schwarber",
+        "team": "PHI",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "S. Kwan",
+        "team": "CLE",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. McLain",
+        "team": "CIN",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Tucker",
+        "team": "CHC",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "F. Freeman",
+        "team": "LAD",
+        "date": "2025-03-29",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. McLain",
+        "team": "CIN",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "B. Lowe",
+        "team": "TB",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Manzardo",
+        "team": "CLE",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "W. Langford",
+        "team": "TEX",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "L. Gurriel Jr.",
+        "team": "ARI",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "S. Suzuki",
+        "team": "CHC",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Tucker",
+        "team": "CHC",
+        "date": "2025-03-30",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Schwarber",
+        "team": "PHI",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. McLain",
+        "team": "CIN",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "O. Lopez",
+        "team": "MIA",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "S. Marte",
+        "team": "NYM",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "P. Alonso",
+        "team": "NYM",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Abrams",
+        "team": "WSH",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Wood",
+        "team": "WSH",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "L. Nootbaar",
+        "team": "STL",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Ramirez",
+        "team": "CLE",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Raleigh",
+        "team": "SEA",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "R. Greene",
+        "team": "DET",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "T. Hern\u00e1ndez",
+        "team": "LAD",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. Harris",
+        "team": "ATL",
+        "date": "2025-03-31",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "W. Langford",
+        "team": "TEX",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Stowers",
+        "team": "MIA",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "B. Lowe",
+        "team": "TB",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Carroll",
+        "team": "ARI",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Yelich",
+        "team": "MIL",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Altuve",
+        "team": "HOU",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "R. Greene",
+        "team": "DET",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. Betts",
+        "team": "LAD",
+        "date": "2025-04-01",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "O. Cruz",
+        "team": "PIT",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "J. Chourio",
+        "team": "MIL",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "M. Trout",
+        "team": "LAA",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "B. Buxton",
+        "team": "MIN",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Abrams",
+        "team": "WSH",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "L. Arraez",
+        "team": "SD",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "W. Flores",
+        "team": "SF",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "P. Alonso",
+        "team": "NYM",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "L. Gurriel Jr.",
+        "team": "ARI",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "S. Ohtani",
+        "team": "LAD",
+        "date": "2025-04-02",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "C. Mullins",
+        "team": "BAL",
+        "date": "2025-04-03",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "A. Bregman",
+        "team": "BOS",
+        "date": "2025-04-03",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "K. Schwarber",
+        "team": "PHI",
+        "date": "2025-04-03",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      },
+      {
+        "player_name": "G. Perdomo",
+        "team": "ARI",
+        "date": "2025-04-03",
+        "patterns": {
+          "power_cluster": 50.0,
+          "contact_quality": 50.0,
+          "due_factor": 50.0
+        },
+        "classification": "power_cluster",
+        "success": true
+      }
+    ],
+    "contact_quality_success": [],
+    "due_factor_success": [],
+    "hit_streak_patterns": [],
+    "individual_trend_analysis": {}
+  },
+  "comparative_analysis": {},
+  "statistical_significance": {}
+}
