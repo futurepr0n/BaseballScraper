@@ -3,16 +3,23 @@
 Enhanced Hellraiser Algorithm with PinheadsPlayhouse Dashboard Field Compatibility
 Includes all field mappings and reasoning for dashboard card integration
 
-This is the main Hellraiser analysis script that:
-1. Analyzes daily MLB matchups for HR predictions
-2. Provides 6-component weighted scoring with strategic intelligence
-3. Outputs dashboard-compatible JSON for PinheadsPlayhouse integration
-4. Achieves 12.7% accuracy vs 0% baseline (validated across full season)
+This is the main Hellraiser PREDICTION script that:
+1. Predicts HR opportunities for TODAY's MLB games using historical performance data
+2. Uses today's confirmed lineups/pitchers to analyze specific matchups
+3. Provides 6-component weighted scoring with strategic intelligence badges
+4. Outputs dashboard-compatible JSON for PinheadsPlayhouse integration
+5. Achieves 12.7% accuracy vs 0% baseline (validated across full season)
+
+Prediction Logic:
+- Loads TODAY's starting lineups and confirmed pitchers
+- Analyzes all available historical performance data for batter vs pitcher matchups
+- Applies 6-component scoring system with 27 enhanced weight factors
+- Generates Strategic Intelligence badges based on current form and trends
 
 Usage:
-    python generate_hellraiser_analysis.py              # Analyze yesterday's games
-    python generate_hellraiser_analysis.py 2025-03-28  # Analyze specific date
-    python generate_hellraiser_analysis.py --no-api    # Run without BaseballAPI
+    python generate_hellraiser_analysis.py              # Predict today's games
+    python generate_hellraiser_analysis.py 2025-08-05  # Predict games for specific date
+    python generate_hellraiser_analysis.py --no-api    # Run without BaseballAPI integration
 """
 
 import json
@@ -155,12 +162,14 @@ class DashboardCompatibleHellraiserAnalyzer(EnhancedHellraiserAnalyzer):
         
         # Create dashboard-compatible pick
         dashboard_pick = {
-            # Core fields (with proper naming)
+            # Core fields (with proper naming for frontend compatibility)
             'player_name': pick.get('playerName', ''),
+            'playerName': pick.get('playerName', ''),  # Frontend expects this field
             'team': pick.get('team', ''),
             'matchup_team': pick.get('opponent', ''),
             'matchup_pitcher': pitcher_info.get('pitcher_name', 'TBD'),
-            'pitcher_name': pitcher_info.get('pitcher_name', 'TBD'),  # Alternative field
+            'pitcher_name': pitcher_info.get('pitcher_name', 'TBD'),
+            'pitcher': pitcher_info.get('pitcher_name', 'TBD'),  # Frontend expects this field
             'opponent': pick.get('opponent', ''),
             'is_home': pick.get('is_home', False),
             
@@ -225,7 +234,17 @@ class DashboardCompatibleHellraiserAnalyzer(EnhancedHellraiserAnalyzer):
             'data_sources_used': pick.get('data_sources_used', []),
             
             # Reasoning (for transparency)
-            'reasoning': self._generate_pick_reasoning(pick, confidence_score, badge_boost)
+            'reasoning': self._generate_pick_reasoning(pick, confidence_score, badge_boost),
+            
+            # Frontend-specific fields
+            'game': f"{pick.get('opponent', 'TBD')} vs {pick.get('team', 'TBD')}",
+            'odds': {
+                'american': '+350',  # Default odds - would integrate with odds data
+                'decimal': '4.50',
+                'source': 'estimated'
+            },
+            'riskFactors': [],  # Would be populated with actual risk analysis
+            'marketEfficiency': 'Fair Value'  # Would be calculated from odds vs confidence
         }
         
         return dashboard_pick
@@ -338,12 +357,12 @@ def main():
     """Enhanced Hellraiser Analysis with Dashboard Compatibility"""
     import argparse
     
-    # Default to yesterday's date (typical use case for morning runs)
-    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    # Default to TODAY's date (predict today's games using historical data)
+    today = datetime.now().strftime('%Y-%m-%d')
     
     parser = argparse.ArgumentParser(description='Enhanced Hellraiser HR Prediction Analysis')
-    parser.add_argument('date', nargs='?', type=str, help='Date to analyze (YYYY-MM-DD)', 
-                       default=yesterday)
+    parser.add_argument('date', nargs='?', type=str, help='Date to predict games for (YYYY-MM-DD)', 
+                       default=today)
     parser.add_argument('--save', action='store_true', default=True,
                        help='Save results to file (default: True)')
     parser.add_argument('--output-dir', type=str, help='Output directory for results',
