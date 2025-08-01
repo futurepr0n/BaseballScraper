@@ -1,0 +1,8072 @@
+{
+  "analysis_date": "2025-08-01T00:35:56.948565",
+  "data_source": "BaseballTracker JSON files with player stats",
+  "summary": {
+    "total_days": 10,
+    "team_success_rate": 0.0,
+    "prediction_accuracy": 0.0,
+    "total_teams": 240,
+    "successful_teams": 0,
+    "total_predictions": 716,
+    "successful_predictions": 0,
+    "total_successful_matches": 0,
+    "total_missed_opportunities": 145
+  },
+  "successful_matches": [],
+  "missed_opportunities": [
+    {
+      "team": "LAA",
+      "actual_hr_players": [
+        "j soler"
+      ],
+      "top3_predictions": [
+        "Mike Trout",
+        "Jo Adell",
+        "Taylor Ward"
+      ]
+    },
+    {
+      "team": "HOU",
+      "actual_hr_players": [
+        "b matthews"
+      ],
+      "top3_predictions": [
+        "Christian Walker",
+        "Yainer Diaz",
+        "Jose Altuve"
+      ]
+    },
+    {
+      "team": "SF",
+      "actual_hr_players": [
+        "w flores",
+        "c schmitt"
+      ],
+      "top3_predictions": [
+        "Rafael Devers",
+        "Matt Chapman",
+        "Willy Adames"
+      ]
+    },
+    {
+      "team": "NYY",
+      "actual_hr_players": [
+        "b rice",
+        "j chisholm",
+        "c bellinger"
+      ],
+      "top3_predictions": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Austin Wells"
+      ]
+    },
+    {
+      "team": "WSH",
+      "actual_hr_players": [
+        "j bell"
+      ],
+      "top3_predictions": [
+        "James Wood",
+        "Josh Bell",
+        "CJ Abrams"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "c montgomery"
+      ],
+      "top3_predictions": [
+        "Andrew Benintendi",
+        "Miguel Vargas",
+        "Lenyn Sosa"
+      ]
+    },
+    {
+      "team": "BOS",
+      "actual_hr_players": [
+        "r refsnyder"
+      ],
+      "top3_predictions": [
+        "Trevor Story",
+        "Ceddanne Rafaela",
+        "Alex Bregman"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "j ramirez"
+      ],
+      "top3_predictions": [
+        "Kyle Manzardo",
+        "Carlos Santana",
+        "Daniel Schneemann"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "m moniak",
+        "r mcmahon"
+      ],
+      "top3_predictions": [
+        "Hunter Goodman",
+        "Ryan McMahon",
+        "Mickey Moniak"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "a pages",
+        "s ohtani"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Andy Pages",
+        "Mookie Betts"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "j jones",
+        "j rogers"
+      ],
+      "top3_predictions": [
+        "Riley Greene",
+        "Spencer Torkelson",
+        "Colt Keith"
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "m kepler",
+        "k schwarber"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Max Kepler"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "c raleigh"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Jorge Polanco",
+        "Randy Arozarena"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "r laureano"
+      ],
+      "top3_predictions": [
+        "Gunnar Henderson",
+        "Cedric Mullins",
+        "Jackson Holliday"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "l butler"
+      ],
+      "top3_predictions": [
+        "Nick Kurtz",
+        "Shea Langeliers",
+        "Lawrence Butler"
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "m semien",
+        "a garc\u00eda",
+        "c seager"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Marcus Semien",
+        "Wyatt Langford"
+      ]
+    },
+    {
+      "team": "NYM",
+      "actual_hr_players": [
+        "f alvarez"
+      ],
+      "top3_predictions": [
+        "Pete Alonso",
+        "Brandon Nimmo",
+        "Juan Soto"
+      ]
+    },
+    {
+      "team": "LAA",
+      "actual_hr_players": [
+        "m trout"
+      ],
+      "top3_predictions": [
+        "Mike Trout",
+        "Jo Adell",
+        "Zach Neto"
+      ]
+    },
+    {
+      "team": "TB",
+      "actual_hr_players": [
+        "y diaz",
+        "j caminero"
+      ],
+      "top3_predictions": [
+        "Junior Caminero",
+        "Jonathan Aranda",
+        "Josh Lowe"
+      ]
+    },
+    {
+      "team": "ARI",
+      "actual_hr_players": [
+        "k marte"
+      ],
+      "top3_predictions": [
+        "Ketel Marte",
+        "Corbin Carroll",
+        "Lourdes Gurriel Jr."
+      ]
+    },
+    {
+      "team": "PIT",
+      "actual_hr_players": [
+        "s horwitz",
+        "a mccutchen"
+      ],
+      "top3_predictions": [
+        "Oneil Cruz",
+        "Bryan Reynolds",
+        "Andrew McCutchen"
+      ]
+    },
+    {
+      "team": "SF",
+      "actual_hr_players": [
+        "m chapman",
+        "r devers"
+      ],
+      "top3_predictions": [
+        "Rafael Devers",
+        "Willy Adames",
+        "Matt Chapman"
+      ]
+    },
+    {
+      "team": "NYY",
+      "actual_hr_players": [
+        "a judge",
+        "j dominguez",
+        "a volpe"
+      ],
+      "top3_predictions": [
+        "Aaron Judge",
+        "Trent Grisham",
+        "Cody Bellinger"
+      ]
+    },
+    {
+      "team": "CHC",
+      "actual_hr_players": [
+        "m shaw",
+        "p crow-armstrong"
+      ],
+      "top3_predictions": [
+        "Michael Busch",
+        "Seiya Suzuki",
+        "Pete Crow-Armstrong"
+      ]
+    },
+    {
+      "team": "MIN",
+      "actual_hr_players": [
+        "r lewis"
+      ],
+      "top3_predictions": [
+        "Byron Buxton",
+        "Matt Wallner",
+        "Ryan Jeffers"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "c montgomery",
+        "k teel"
+      ],
+      "top3_predictions": [
+        "Miguel Vargas",
+        "Andrew Benintendi",
+        "Lenyn Sosa"
+      ]
+    },
+    {
+      "team": "BOS",
+      "actual_hr_players": [
+        "c narvaez",
+        "r gonzalez"
+      ],
+      "top3_predictions": [
+        "Alex Bregman",
+        "Wilyer Abreu",
+        "Trevor Story"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "s ohtani"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Mookie Betts",
+        "Freddie Freeman"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "e tovar"
+      ],
+      "top3_predictions": [
+        "Mickey Moniak",
+        "Michael Toglia",
+        "Ryan McMahon"
+      ]
+    },
+    {
+      "team": "TOR",
+      "actual_hr_players": [
+        "b bichette"
+      ],
+      "top3_predictions": [
+        "Vladimir Guerrero Jr.",
+        "George Springer",
+        "Alejandro Kirk"
+      ]
+    },
+    {
+      "team": "KC",
+      "actual_hr_players": [
+        "s perez",
+        "v pasquantino",
+        "t tolbert"
+      ],
+      "top3_predictions": [
+        "Bobby Witt Jr.",
+        "Salvador Perez",
+        "Vinnie Pasquantino"
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "jt realmuto",
+        "b stott",
+        "k schwarber",
+        "n castellanos",
+        "b harper"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Max Kepler"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "j holliday"
+      ],
+      "top3_predictions": [
+        "Gunnar Henderson",
+        "Cedric Mullins",
+        "Ryan O'Hearn"
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "c seager"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Wyatt Langford",
+        "Josh Jung"
+      ]
+    },
+    {
+      "team": "MIA",
+      "actual_hr_players": [
+        "j s\u00e1nchez"
+      ],
+      "top3_predictions": [
+        "Kyle Stowers",
+        "Otto Lopez",
+        "Javier Sanoja"
+      ]
+    },
+    {
+      "team": "NYM",
+      "actual_hr_players": [
+        "p alonso",
+        "b nimmo"
+      ],
+      "top3_predictions": [
+        "Pete Alonso",
+        "Juan Soto",
+        "Francisco Lindor"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "s kwan"
+      ],
+      "top3_predictions": [
+        "Julio Rodriguez"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "j jones",
+        "s torkelson"
+      ],
+      "top3_predictions": [
+        "Spencer Torkelson",
+        "Gleyber Torres",
+        "Riley Greene"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "l urias"
+      ],
+      "top3_predictions": [
+        "Nick Kurtz",
+        "Brent Rooker",
+        "Shea Langeliers"
+      ]
+    },
+    {
+      "team": "STL",
+      "actual_hr_players": [
+        "i herrera",
+        "b donovan",
+        "w contreras"
+      ],
+      "top3_predictions": [
+        "Willson Contreras",
+        "Alec Burleson",
+        "Brendan Donovan"
+      ]
+    },
+    {
+      "team": "TOR",
+      "actual_hr_players": [
+        "n lukes",
+        "j loperfido",
+        "e clement"
+      ],
+      "top3_predictions": [
+        "Addison Barger",
+        "George Springer",
+        "Vladimir Guerrero Jr."
+      ]
+    },
+    {
+      "team": "SD",
+      "actual_hr_players": [
+        "f tatis",
+        "m machado"
+      ],
+      "top3_predictions": [
+        "Manny Machado",
+        "Fernando Tatis Jr.",
+        "Gavin Sheets"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "j polanco",
+        "j rodriguez",
+        "r arozarena"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Randy Arozarena",
+        "Jorge Polanco"
+      ]
+    },
+    {
+      "team": "HOU",
+      "actual_hr_players": [
+        "z short"
+      ],
+      "top3_predictions": [
+        "Christian Walker",
+        "Yainer Diaz",
+        "Jose Altuve"
+      ]
+    },
+    {
+      "team": "ATL",
+      "actual_hr_players": [
+        "m harris"
+      ],
+      "top3_predictions": [
+        "Matt Olson",
+        "Sean Murphy",
+        "Austin Riley"
+      ]
+    },
+    {
+      "team": "MIL",
+      "actual_hr_players": [
+        "j chourio"
+      ],
+      "top3_predictions": [
+        "Jackson Chourio",
+        "Christian Yelich",
+        "Brice Turang"
+      ]
+    },
+    {
+      "team": "NYY",
+      "actual_hr_players": [
+        "a wells",
+        "c bellinger",
+        "a volpe",
+        "g stanton"
+      ],
+      "top3_predictions": [
+        "Aaron Judge",
+        "Ben Rice",
+        "Austin Wells"
+      ]
+    },
+    {
+      "team": "CHC",
+      "actual_hr_players": [
+        "r mcguire"
+      ],
+      "top3_predictions": [
+        "Michael Busch",
+        "Seiya Suzuki",
+        "Pete Crow-Armstrong"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "c meidroth",
+        "c montgomery",
+        "a slater",
+        "m tauchman"
+      ],
+      "top3_predictions": [
+        "Miguel Vargas",
+        "Lenyn Sosa",
+        "Chase Meidroth"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "s torkelson"
+      ],
+      "top3_predictions": [
+        "Riley Greene",
+        "Spencer Torkelson",
+        "Gleyber Torres"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "t hern\u00e1ndez"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Mookie Betts",
+        "Freddie Freeman"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "m moniak",
+        "e tovar",
+        "t estrada"
+      ],
+      "top3_predictions": [
+        "Ryan McMahon",
+        "Mickey Moniak",
+        "Hunter Goodman"
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "jt realmuto",
+        "k schwarber"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Max Kepler"
+      ]
+    },
+    {
+      "team": "CIN",
+      "actual_hr_players": [
+        "t stephenson",
+        "t friedl"
+      ],
+      "top3_predictions": [
+        "Elly De La Cruz",
+        "Austin Hays",
+        "Matt McLain"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "j rodriguez"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Randy Arozarena",
+        "Jorge Polanco"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "j westburg",
+        "c mayo",
+        "a jackson",
+        "t o'neill"
+      ],
+      "top3_predictions": [
+        "Gunnar Henderson",
+        "Jackson Holliday",
+        "Cedric Mullins"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "s langeliers",
+        "t soderstrom",
+        "n kurtz"
+      ],
+      "top3_predictions": [
+        "Nick Kurtz",
+        "Shea Langeliers",
+        "Brent Rooker"
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "j heim"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Wyatt Langford",
+        "Marcus Semien"
+      ]
+    },
+    {
+      "team": "MIA",
+      "actual_hr_players": [
+        "k stowers"
+      ],
+      "top3_predictions": [
+        "Kyle Stowers",
+        "Otto Lopez",
+        "Dane Myers"
+      ]
+    },
+    {
+      "team": "NYM",
+      "actual_hr_players": [
+        "f lindor"
+      ],
+      "top3_predictions": [
+        "Pete Alonso",
+        "Juan Soto",
+        "Brandon Nimmo"
+      ]
+    },
+    {
+      "team": "LAA",
+      "actual_hr_players": [
+        "t ward"
+      ],
+      "top3_predictions": [
+        "Mike Trout",
+        "Jo Adell",
+        "Zach Neto"
+      ]
+    },
+    {
+      "team": "TB",
+      "actual_hr_players": [
+        "y diaz"
+      ],
+      "top3_predictions": [
+        "Junior Caminero",
+        "Jonathan Aranda",
+        "Danny Jansen"
+      ]
+    },
+    {
+      "team": "PIT",
+      "actual_hr_players": [
+        "o cruz"
+      ],
+      "top3_predictions": [
+        "Oneil Cruz",
+        "Andrew McCutchen",
+        "Bryan Reynolds"
+      ]
+    },
+    {
+      "team": "ATL",
+      "actual_hr_players": [
+        "m harris"
+      ],
+      "top3_predictions": [
+        "Matt Olson",
+        "Sean Murphy",
+        "Austin Riley"
+      ]
+    },
+    {
+      "team": "MIL",
+      "actual_hr_players": [
+        "a vaughn"
+      ],
+      "top3_predictions": [
+        "Jackson Chourio",
+        "Christian Yelich",
+        "Brice Turang"
+      ]
+    },
+    {
+      "team": "NYY",
+      "actual_hr_players": [
+        "g stanton"
+      ],
+      "top3_predictions": [
+        "Aaron Judge",
+        "Paul Goldschmidt",
+        "Cody Bellinger"
+      ]
+    },
+    {
+      "team": "CHC",
+      "actual_hr_players": [
+        "m shaw",
+        "i happ"
+      ],
+      "top3_predictions": [
+        "Michael Busch",
+        "Seiya Suzuki",
+        "Kyle Tucker"
+      ]
+    },
+    {
+      "team": "WSH",
+      "actual_hr_players": [
+        "a call",
+        "l garcia"
+      ],
+      "top3_predictions": [
+        "James Wood",
+        "Josh Bell",
+        "CJ Abrams"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "m tauchman"
+      ],
+      "top3_predictions": [
+        "Miguel Vargas",
+        "Lenyn Sosa",
+        "Andrew Benintendi"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "s kwan"
+      ],
+      "top3_predictions": [
+        "Kyle Manzardo",
+        "Bo Naylor",
+        "Carlos Santana"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "s ohtani",
+        "t hern\u00e1ndez"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Freddie Freeman",
+        "Tommy Edman"
+      ]
+    },
+    {
+      "team": "TOR",
+      "actual_hr_players": [
+        "n lukes",
+        "g springer",
+        "v guerrero"
+      ],
+      "top3_predictions": [
+        "Addison Barger",
+        "George Springer",
+        "Vladimir Guerrero Jr."
+      ]
+    },
+    {
+      "team": "KC",
+      "actual_hr_players": [
+        "f fermin",
+        "b witt"
+      ],
+      "top3_predictions": [
+        "Bobby Witt Jr.",
+        "Salvador Perez",
+        "Bobby Witt Jr."
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "e sosa",
+        "b harper"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Max Kepler"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "j rodriguez",
+        "r arozarena",
+        "c raleigh"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Randy Arozarena",
+        "Jorge Polanco"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "a jackson",
+        "c mullins",
+        "t o'neill"
+      ],
+      "top3_predictions": [
+        "Gunnar Henderson",
+        "Ryan O'Hearn",
+        "Jackson Holliday"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "l butler",
+        "s langeliers"
+      ],
+      "top3_predictions": [
+        "Shea Langeliers",
+        "Nick Kurtz",
+        "Tyler Soderstrom"
+      ]
+    },
+    {
+      "team": "MIA",
+      "actual_hr_players": [
+        "h hernandez",
+        "a ramirez",
+        "d myers"
+      ],
+      "top3_predictions": [
+        "Kyle Stowers",
+        "Eric Wagaman",
+        "Otto Lopez"
+      ]
+    },
+    {
+      "team": "LAA",
+      "actual_hr_players": [
+        "m trout"
+      ],
+      "top3_predictions": [
+        "Mike Trout",
+        "Jo Adell",
+        "Taylor Ward"
+      ]
+    },
+    {
+      "team": "TB",
+      "actual_hr_players": [
+        "t walls"
+      ],
+      "top3_predictions": [
+        "Jonathan Aranda",
+        "Junior Caminero",
+        "Josh Lowe"
+      ]
+    },
+    {
+      "team": "SF",
+      "actual_hr_players": [
+        "m chapman"
+      ],
+      "top3_predictions": [
+        "Rafael Devers",
+        "Matt Chapman",
+        "Heliot Ramos"
+      ]
+    },
+    {
+      "team": "WSH",
+      "actual_hr_players": [
+        "c abrams"
+      ],
+      "top3_predictions": [
+        "James Wood",
+        "Josh Bell",
+        "CJ Abrams"
+      ]
+    },
+    {
+      "team": "MIN",
+      "actual_hr_players": [
+        "m wallner"
+      ],
+      "top3_predictions": [
+        "Matt Wallner",
+        "Trevor Larnach",
+        "Carlos Correa"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "a benintendi"
+      ],
+      "top3_predictions": [
+        "Andrew Benintendi",
+        "Miguel Vargas",
+        "Lenyn Sosa"
+      ]
+    },
+    {
+      "team": "BOS",
+      "actual_hr_players": [
+        "a bregman"
+      ],
+      "top3_predictions": [
+        "Alex Bregman",
+        "Wilyer Abreu",
+        "Trevor Story"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "g arias"
+      ],
+      "top3_predictions": [
+        "Carlos Santana",
+        "Gabriel Arias",
+        "Bo Naylor"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "w bernabel"
+      ],
+      "top3_predictions": [
+        "Mickey Moniak",
+        "Ezequiel Tovar",
+        "Ryan McMahon"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "m conforto"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Andy Pages",
+        "Mookie Betts"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "g torres"
+      ],
+      "top3_predictions": [
+        "Kerry Carpenter",
+        "Riley Greene",
+        "Spencer Torkelson"
+      ]
+    },
+    {
+      "team": "KC",
+      "actual_hr_players": [
+        "m garcia"
+      ],
+      "top3_predictions": [
+        "Bobby Witt Jr.",
+        "Salvador Perez",
+        "Vinnie Pasquantino"
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "n castellanos",
+        "o kemp"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Trea Turner"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "c raleigh"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Randy Arozarena",
+        "Jorge Polanco"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "t o'neill"
+      ],
+      "top3_predictions": [
+        "Tyler O'Neill",
+        "Jordan Westburg",
+        "Gunnar Henderson"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "m andujar",
+        "s langeliers"
+      ],
+      "top3_predictions": [
+        "Brent Rooker",
+        "Shea Langeliers",
+        "Lawrence Butler"
+      ]
+    },
+    {
+      "team": "STL",
+      "actual_hr_players": [
+        "a burleson"
+      ],
+      "top3_predictions": [
+        "Willson Contreras",
+        "William Contreras",
+        "Alec Burleson"
+      ]
+    },
+    {
+      "team": "SD",
+      "actual_hr_players": [
+        "x bogaerts"
+      ],
+      "top3_predictions": [
+        "Jackson Merrill",
+        "Manny Machado",
+        "Fernando Tatis Jr."
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "j smith"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Marcus Semien",
+        "Wyatt Langford"
+      ]
+    },
+    {
+      "team": "MIA",
+      "actual_hr_players": [
+        "h hernandez"
+      ],
+      "top3_predictions": [
+        "Kyle Stowers",
+        "Otto Lopez",
+        "Jesus Sanchez"
+      ]
+    },
+    {
+      "team": "NYM",
+      "actual_hr_players": [
+        "j soto",
+        "r mauricio"
+      ],
+      "top3_predictions": [
+        "Juan Soto",
+        "Brandon Nimmo",
+        "Pete Alonso"
+      ]
+    },
+    {
+      "team": "LAA",
+      "actual_hr_players": [
+        "l rengifo",
+        "t ward",
+        "k newman"
+      ],
+      "top3_predictions": [
+        "Mike Trout",
+        "Jo Adell",
+        "Taylor Ward"
+      ]
+    },
+    {
+      "team": "TB",
+      "actual_hr_players": [
+        "j caminero"
+      ],
+      "top3_predictions": [
+        "Junior Caminero",
+        "Jonathan Aranda",
+        "Josh Lowe"
+      ]
+    },
+    {
+      "team": "ARI",
+      "actual_hr_players": [
+        "a thomas"
+      ],
+      "top3_predictions": [
+        "Corbin Carroll",
+        "Ketel Marte",
+        "Lourdes Gurriel Jr."
+      ]
+    },
+    {
+      "team": "PIT",
+      "actual_hr_players": [
+        "n gonzales",
+        "a mccutchen"
+      ],
+      "top3_predictions": [
+        "Bryan Reynolds",
+        "Andrew McCutchen",
+        "Ke'Bryan Hayes"
+      ]
+    },
+    {
+      "team": "ATL",
+      "actual_hr_players": [
+        "m ozuna",
+        "a riley",
+        "r acuna"
+      ],
+      "top3_predictions": [
+        "Austin Riley",
+        "Matt Olson",
+        "Sean Murphy"
+      ]
+    },
+    {
+      "team": "MIL",
+      "actual_hr_players": [
+        "c yelich",
+        "a vaughn",
+        "s frelick"
+      ],
+      "top3_predictions": [
+        "Jackson Chourio",
+        "Andrew Vaughn",
+        "Christian Yelich"
+      ]
+    },
+    {
+      "team": "WSH",
+      "actual_hr_players": [
+        "r adams"
+      ],
+      "top3_predictions": [
+        "James Wood",
+        "Josh Bell",
+        "CJ Abrams"
+      ]
+    },
+    {
+      "team": "MIN",
+      "actual_hr_players": [
+        "d keirsey"
+      ],
+      "top3_predictions": [
+        "Matt Wallner",
+        "Trevor Larnach",
+        "Carlos Correa"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "c montgomery",
+        "l robert"
+      ],
+      "top3_predictions": [
+        "Lenyn Sosa",
+        "Chase Meidroth",
+        "Andrew Benintendi"
+      ]
+    },
+    {
+      "team": "BOS",
+      "actual_hr_players": [
+        "a bregman"
+      ],
+      "top3_predictions": [
+        "Alex Bregman",
+        "Wilyer Abreu",
+        "Jarren Duran"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "b naylor"
+      ],
+      "top3_predictions": [
+        "Kyle Manzardo",
+        "Bo Naylor",
+        "Daniel Schneemann"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "h goodman",
+        "w bernabel"
+      ],
+      "top3_predictions": [
+        "Hunter Goodman",
+        "Mickey Moniak",
+        "Michael Toglia"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "d dingler",
+        "a ibanez"
+      ],
+      "top3_predictions": [
+        "Spencer Torkelson",
+        "Gleyber Torres",
+        "Riley Greene"
+      ]
+    },
+    {
+      "team": "TOR",
+      "actual_hr_players": [
+        "n lukes",
+        "v guerrero"
+      ],
+      "top3_predictions": [
+        "Addison Barger",
+        "George Springer",
+        "Vladimir Guerrero Jr."
+      ]
+    },
+    {
+      "team": "KC",
+      "actual_hr_players": [
+        "r grichuk"
+      ],
+      "top3_predictions": [
+        "Bobby Witt Jr.",
+        "Vinnie Pasquantino",
+        "Salvador Perez"
+      ]
+    },
+    {
+      "team": "SEA",
+      "actual_hr_players": [
+        "j naylor"
+      ],
+      "top3_predictions": [
+        "Cal Raleigh",
+        "Randy Arozarena",
+        "Josh Naylor"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "c mayo",
+        "c cowser",
+        "c mullins",
+        "r laureano"
+      ],
+      "top3_predictions": [
+        "Gunnar Henderson",
+        "Jackson Holliday",
+        "Cedric Mullins"
+      ]
+    },
+    {
+      "team": "STL",
+      "actual_hr_players": [
+        "a burleson"
+      ],
+      "top3_predictions": [
+        "Alec Burleson",
+        "Willson Contreras",
+        "William Contreras"
+      ]
+    },
+    {
+      "team": "SD",
+      "actual_hr_players": [
+        "l arraez"
+      ],
+      "top3_predictions": [
+        "Manny Machado",
+        "Fernando Tatis Jr.",
+        "Jackson Merrill"
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "j jung"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Marcus Semien",
+        "Wyatt Langford"
+      ]
+    },
+    {
+      "team": "NYM",
+      "actual_hr_players": [
+        "m vientos",
+        "r mauricio"
+      ],
+      "top3_predictions": [
+        "Juan Soto",
+        "Francisco Lindor",
+        "Brandon Nimmo"
+      ]
+    },
+    {
+      "team": "TB",
+      "actual_hr_players": [
+        "j aranda"
+      ],
+      "top3_predictions": [
+        "Junior Caminero",
+        "Jonathan Aranda",
+        "Taylor Walls"
+      ]
+    },
+    {
+      "team": "HOU",
+      "actual_hr_players": [
+        "y diaz"
+      ],
+      "top3_predictions": [
+        "Christian Walker",
+        "Yainer Diaz",
+        "Jose Altuve"
+      ]
+    },
+    {
+      "team": "PIT",
+      "actual_hr_players": [
+        "l peguero"
+      ],
+      "top3_predictions": [
+        "Oneil Cruz",
+        "Bryan Reynolds",
+        "Andrew McCutchen"
+      ]
+    },
+    {
+      "team": "ATL",
+      "actual_hr_players": [
+        "m ozuna",
+        "a riley"
+      ],
+      "top3_predictions": [
+        "Matt Olson",
+        "Austin Riley",
+        "Sean Murphy"
+      ]
+    },
+    {
+      "team": "SF",
+      "actual_hr_players": [
+        "w adames"
+      ],
+      "top3_predictions": [
+        "Matt Chapman",
+        "Heliot Ramos",
+        "Rafael Devers"
+      ]
+    },
+    {
+      "team": "MIL",
+      "actual_hr_players": [
+        "a vaughn"
+      ],
+      "top3_predictions": [
+        "Christian Yelich",
+        "Jackson Chourio",
+        "Andrew Vaughn"
+      ]
+    },
+    {
+      "team": "NYY",
+      "actual_hr_players": [
+        "c bellinger",
+        "a volpe"
+      ],
+      "top3_predictions": [
+        "Trent Grisham",
+        "Ben Rice",
+        "Cody Bellinger"
+      ]
+    },
+    {
+      "team": "CHC",
+      "actual_hr_players": [
+        "n hoerner"
+      ],
+      "top3_predictions": [
+        "Michael Busch",
+        "Kyle Tucker",
+        "Seiya Suzuki"
+      ]
+    },
+    {
+      "team": "WSH",
+      "actual_hr_players": [
+        "l garcia"
+      ],
+      "top3_predictions": [
+        "James Wood",
+        "Josh Bell",
+        "CJ Abrams"
+      ]
+    },
+    {
+      "team": "MIN",
+      "actual_hr_players": [
+        "b lee"
+      ],
+      "top3_predictions": [
+        "Byron Buxton",
+        "Matt Wallner",
+        "Trevor Larnach"
+      ]
+    },
+    {
+      "team": "CHW",
+      "actual_hr_players": [
+        "l sosa"
+      ],
+      "top3_predictions": [
+        "Miguel Vargas",
+        "Lenyn Sosa",
+        "Chase Meidroth"
+      ]
+    },
+    {
+      "team": "BOS",
+      "actual_hr_players": [
+        "j duran",
+        "t story"
+      ],
+      "top3_predictions": [
+        "Wilyer Abreu",
+        "Jarren Duran",
+        "Ceddanne Rafaela"
+      ]
+    },
+    {
+      "team": "CLE",
+      "actual_hr_players": [
+        "k manzardo"
+      ],
+      "top3_predictions": [
+        "Kyle Manzardo",
+        "Bo Naylor",
+        "Daniel Schneemann"
+      ]
+    },
+    {
+      "team": "DET",
+      "actual_hr_players": [
+        "r greene",
+        "g torres",
+        "z mckinstry"
+      ],
+      "top3_predictions": [
+        "Kerry Carpenter",
+        "Spencer Torkelson",
+        "Riley Greene"
+      ]
+    },
+    {
+      "team": "LAD",
+      "actual_hr_players": [
+        "t edman"
+      ],
+      "top3_predictions": [
+        "Shohei Ohtani",
+        "Andy Pages",
+        "Freddie Freeman"
+      ]
+    },
+    {
+      "team": "COL",
+      "actual_hr_players": [
+        "k farmer",
+        "m toglia",
+        "j beck"
+      ],
+      "top3_predictions": [
+        "Hunter Goodman",
+        "Jordan Beck",
+        "Brenton Doyle"
+      ]
+    },
+    {
+      "team": "TOR",
+      "actual_hr_players": [
+        "j loperfido",
+        "a barger"
+      ],
+      "top3_predictions": [
+        "George Springer",
+        "Vladimir Guerrero Jr.",
+        "Addison Barger"
+      ]
+    },
+    {
+      "team": "KC",
+      "actual_hr_players": [
+        "v pasquantino"
+      ],
+      "top3_predictions": [
+        "Bobby Witt Jr.",
+        "Salvador Perez",
+        "Vinnie Pasquantino"
+      ]
+    },
+    {
+      "team": "PHI",
+      "actual_hr_players": [
+        "b marsh",
+        "k schwarber"
+      ],
+      "top3_predictions": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "Max Kepler"
+      ]
+    },
+    {
+      "team": "CIN",
+      "actual_hr_players": [
+        "n marte",
+        "j fraley"
+      ],
+      "top3_predictions": [
+        "Elly De La Cruz",
+        "Matt McLain",
+        "Gavin Lux"
+      ]
+    },
+    {
+      "team": "BAL",
+      "actual_hr_players": [
+        "r urias",
+        "t o'neill",
+        "g henderson"
+      ],
+      "top3_predictions": [
+        "Tyler O'Neill",
+        "Jordan Westburg",
+        "Gunnar Henderson"
+      ]
+    },
+    {
+      "team": "OAK",
+      "actual_hr_players": [
+        "b rooker",
+        "s langeliers"
+      ],
+      "top3_predictions": [
+        "Nick Kurtz",
+        "Shea Langeliers",
+        "Brent Rooker"
+      ]
+    },
+    {
+      "team": "SD",
+      "actual_hr_players": [
+        "m machado"
+      ],
+      "top3_predictions": [
+        "Manny Machado",
+        "Fernando Tatis Jr.",
+        "Xander Bogaerts"
+      ]
+    },
+    {
+      "team": "TEX",
+      "actual_hr_players": [
+        "k higashioka"
+      ],
+      "top3_predictions": [
+        "Corey Seager",
+        "Wyatt Langford",
+        "Marcus Semien"
+      ]
+    },
+    {
+      "team": "MIA",
+      "actual_hr_players": [
+        "g pauley"
+      ],
+      "top3_predictions": [
+        "Kyle Stowers",
+        "Eric Wagaman",
+        "Otto Lopez"
+      ]
+    }
+  ],
+  "daily_results": [
+    {
+      "date": "2025-07-22",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Josh Lowe",
+              90
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ],
+            [
+              "Jose Altuve",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Lourdes Gurriel Jr.",
+              90
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Andrew McCutchen",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ],
+            [
+              "Drake Baldwin",
+              85
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Rafael Devers",
+              95
+            ],
+            [
+              "Matt Chapman",
+              95
+            ],
+            [
+              "Willy Adames",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Brice Turang",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Aaron Judge",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              95
+            ],
+            [
+              "Austin Wells",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Seiya Suzuki",
+              95
+            ],
+            [
+              "Kyle Tucker",
+              95
+            ],
+            [
+              "Pete Crow-Armstrong",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Byron Buxton",
+              95
+            ],
+            [
+              "Carlos Correa",
+              95
+            ],
+            [
+              "Trevor Larnach",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Andrew Benintendi",
+              95
+            ],
+            [
+              "Miguel Vargas",
+              94
+            ],
+            [
+              "Lenyn Sosa",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Trevor Story",
+              95
+            ],
+            [
+              "Ceddanne Rafaela",
+              95
+            ],
+            [
+              "Alex Bregman",
+              80
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              95
+            ],
+            [
+              "Carlos Santana",
+              95
+            ],
+            [
+              "Daniel Schneemann",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Hunter Goodman",
+              95
+            ],
+            [
+              "Ryan McMahon",
+              95
+            ],
+            [
+              "Mickey Moniak",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Andy Pages",
+              95
+            ],
+            [
+              "Mookie Betts",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Riley Greene",
+              95
+            ],
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Colt Keith",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ],
+            [
+              "Addison Barger",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Max Kepler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Matt McLain",
+              94
+            ],
+            [
+              "Tyler Stephenson",
+              89
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Gunnar Henderson",
+              95
+            ],
+            [
+              "Cedric Mullins",
+              95
+            ],
+            [
+              "Jackson Holliday",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Nolan Arenado",
+              95
+            ],
+            [
+              "Brendan Donovan",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Lawrence Butler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Jackson Merrill",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Eric Wagaman",
+              91
+            ],
+            [
+              "Otto Lopez",
+              90
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Pete Alonso",
+              95
+            ],
+            [
+              "Brandon Nimmo",
+              95
+            ],
+            [
+              "Juan Soto",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "LAA",
+          "actual_hr_players": [
+            "j soler"
+          ],
+          "top3_predictions": [
+            "Mike Trout",
+            "Jo Adell",
+            "Taylor Ward"
+          ]
+        },
+        {
+          "team": "HOU",
+          "actual_hr_players": [
+            "b matthews"
+          ],
+          "top3_predictions": [
+            "Christian Walker",
+            "Yainer Diaz",
+            "Jose Altuve"
+          ]
+        },
+        {
+          "team": "SF",
+          "actual_hr_players": [
+            "w flores",
+            "c schmitt"
+          ],
+          "top3_predictions": [
+            "Rafael Devers",
+            "Matt Chapman",
+            "Willy Adames"
+          ]
+        },
+        {
+          "team": "NYY",
+          "actual_hr_players": [
+            "b rice",
+            "j chisholm",
+            "c bellinger"
+          ],
+          "top3_predictions": [
+            "Aaron Judge",
+            "Cody Bellinger",
+            "Austin Wells"
+          ]
+        },
+        {
+          "team": "WSH",
+          "actual_hr_players": [
+            "j bell"
+          ],
+          "top3_predictions": [
+            "James Wood",
+            "Josh Bell",
+            "CJ Abrams"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "c montgomery"
+          ],
+          "top3_predictions": [
+            "Andrew Benintendi",
+            "Miguel Vargas",
+            "Lenyn Sosa"
+          ]
+        },
+        {
+          "team": "BOS",
+          "actual_hr_players": [
+            "r refsnyder"
+          ],
+          "top3_predictions": [
+            "Trevor Story",
+            "Ceddanne Rafaela",
+            "Alex Bregman"
+          ]
+        },
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "j ramirez"
+          ],
+          "top3_predictions": [
+            "Kyle Manzardo",
+            "Carlos Santana",
+            "Daniel Schneemann"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "m moniak",
+            "r mcmahon"
+          ],
+          "top3_predictions": [
+            "Hunter Goodman",
+            "Ryan McMahon",
+            "Mickey Moniak"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "a pages",
+            "s ohtani"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Andy Pages",
+            "Mookie Betts"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "j jones",
+            "j rogers"
+          ],
+          "top3_predictions": [
+            "Riley Greene",
+            "Spencer Torkelson",
+            "Colt Keith"
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "m kepler",
+            "k schwarber"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Max Kepler"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "c raleigh"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Jorge Polanco",
+            "Randy Arozarena"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "r laureano"
+          ],
+          "top3_predictions": [
+            "Gunnar Henderson",
+            "Cedric Mullins",
+            "Jackson Holliday"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "l butler"
+          ],
+          "top3_predictions": [
+            "Nick Kurtz",
+            "Shea Langeliers",
+            "Lawrence Butler"
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "m semien",
+            "a garc\u00eda",
+            "c seager"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Marcus Semien",
+            "Wyatt Langford"
+          ]
+        },
+        {
+          "team": "NYM",
+          "actual_hr_players": [
+            "f alvarez"
+          ],
+          "top3_predictions": [
+            "Pete Alonso",
+            "Brandon Nimmo",
+            "Juan Soto"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-23",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Zach Neto",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Josh Lowe",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ],
+            [
+              "Jose Altuve",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Lourdes Gurriel Jr.",
+              83
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ],
+            [
+              "Andrew McCutchen",
+              93
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ],
+            [
+              "Drake Baldwin",
+              89
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Rafael Devers",
+              95
+            ],
+            [
+              "Willy Adames",
+              95
+            ],
+            [
+              "Matt Chapman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Brice Turang",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Aaron Judge",
+              95
+            ],
+            [
+              "Trent Grisham",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              92
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Michael Busch",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ],
+            [
+              "Pete Crow-Armstrong",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "CJ Abrams",
+              95
+            ],
+            [
+              "Nathaniel Lowe",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Byron Buxton",
+              95
+            ],
+            [
+              "Matt Wallner",
+              95
+            ],
+            [
+              "Ryan Jeffers",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Andrew Benintendi",
+              94
+            ],
+            [
+              "Lenyn Sosa",
+              87
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Alex Bregman",
+              95
+            ],
+            [
+              "Wilyer Abreu",
+              95
+            ],
+            [
+              "Trevor Story",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              95
+            ],
+            [
+              "Bo Naylor",
+              95
+            ],
+            [
+              "Carlos Santana",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Gleyber Torres",
+              95
+            ],
+            [
+              "Dillon Dingler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Mookie Betts",
+              95
+            ],
+            [
+              "Freddie Freeman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Mickey Moniak",
+              95
+            ],
+            [
+              "Michael Toglia",
+              95
+            ],
+            [
+              "Ryan McMahon",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ],
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Alejandro Kirk",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Max Kepler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "TJ Friedl",
+              95
+            ],
+            [
+              "Gavin Lux",
+              93
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Ben Williamson",
+              84
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Gunnar Henderson",
+              95
+            ],
+            [
+              "Cedric Mullins",
+              95
+            ],
+            [
+              "Ryan O'Hearn",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Alec Burleson",
+              95
+            ],
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Brendan Donovan",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Brent Rooker",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Lawrence Butler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Gavin Sheets",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ],
+            [
+              "Josh Jung",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Otto Lopez",
+              90
+            ],
+            [
+              "Javier Sanoja",
+              74
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Pete Alonso",
+              95
+            ],
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Francisco Lindor",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "LAA",
+          "actual_hr_players": [
+            "m trout"
+          ],
+          "top3_predictions": [
+            "Mike Trout",
+            "Jo Adell",
+            "Zach Neto"
+          ]
+        },
+        {
+          "team": "TB",
+          "actual_hr_players": [
+            "y diaz",
+            "j caminero"
+          ],
+          "top3_predictions": [
+            "Junior Caminero",
+            "Jonathan Aranda",
+            "Josh Lowe"
+          ]
+        },
+        {
+          "team": "ARI",
+          "actual_hr_players": [
+            "k marte"
+          ],
+          "top3_predictions": [
+            "Ketel Marte",
+            "Corbin Carroll",
+            "Lourdes Gurriel Jr."
+          ]
+        },
+        {
+          "team": "PIT",
+          "actual_hr_players": [
+            "s horwitz",
+            "a mccutchen"
+          ],
+          "top3_predictions": [
+            "Oneil Cruz",
+            "Bryan Reynolds",
+            "Andrew McCutchen"
+          ]
+        },
+        {
+          "team": "SF",
+          "actual_hr_players": [
+            "m chapman",
+            "r devers"
+          ],
+          "top3_predictions": [
+            "Rafael Devers",
+            "Willy Adames",
+            "Matt Chapman"
+          ]
+        },
+        {
+          "team": "NYY",
+          "actual_hr_players": [
+            "a judge",
+            "j dominguez",
+            "a volpe"
+          ],
+          "top3_predictions": [
+            "Aaron Judge",
+            "Trent Grisham",
+            "Cody Bellinger"
+          ]
+        },
+        {
+          "team": "CHC",
+          "actual_hr_players": [
+            "m shaw",
+            "p crow-armstrong"
+          ],
+          "top3_predictions": [
+            "Michael Busch",
+            "Seiya Suzuki",
+            "Pete Crow-Armstrong"
+          ]
+        },
+        {
+          "team": "MIN",
+          "actual_hr_players": [
+            "r lewis"
+          ],
+          "top3_predictions": [
+            "Byron Buxton",
+            "Matt Wallner",
+            "Ryan Jeffers"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "c montgomery",
+            "k teel"
+          ],
+          "top3_predictions": [
+            "Miguel Vargas",
+            "Andrew Benintendi",
+            "Lenyn Sosa"
+          ]
+        },
+        {
+          "team": "BOS",
+          "actual_hr_players": [
+            "c narvaez",
+            "r gonzalez"
+          ],
+          "top3_predictions": [
+            "Alex Bregman",
+            "Wilyer Abreu",
+            "Trevor Story"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "s ohtani"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Mookie Betts",
+            "Freddie Freeman"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "e tovar"
+          ],
+          "top3_predictions": [
+            "Mickey Moniak",
+            "Michael Toglia",
+            "Ryan McMahon"
+          ]
+        },
+        {
+          "team": "TOR",
+          "actual_hr_players": [
+            "b bichette"
+          ],
+          "top3_predictions": [
+            "Vladimir Guerrero Jr.",
+            "George Springer",
+            "Alejandro Kirk"
+          ]
+        },
+        {
+          "team": "KC",
+          "actual_hr_players": [
+            "s perez",
+            "v pasquantino",
+            "t tolbert"
+          ],
+          "top3_predictions": [
+            "Bobby Witt Jr.",
+            "Salvador Perez",
+            "Vinnie Pasquantino"
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "jt realmuto",
+            "b stott",
+            "k schwarber",
+            "n castellanos",
+            "b harper"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Max Kepler"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "j holliday"
+          ],
+          "top3_predictions": [
+            "Gunnar Henderson",
+            "Cedric Mullins",
+            "Ryan O'Hearn"
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "c seager"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Wyatt Langford",
+            "Josh Jung"
+          ]
+        },
+        {
+          "team": "MIA",
+          "actual_hr_players": [
+            "j s\u00e1nchez"
+          ],
+          "top3_predictions": [
+            "Kyle Stowers",
+            "Otto Lopez",
+            "Javier Sanoja"
+          ]
+        },
+        {
+          "team": "NYM",
+          "actual_hr_players": [
+            "p alonso",
+            "b nimmo"
+          ],
+          "top3_predictions": [
+            "Pete Alonso",
+            "Juan Soto",
+            "Francisco Lindor"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-24",
+      "total_teams": 9,
+      "successful_teams": 0,
+      "total_predictions": 25,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Julio Rodriguez",
+              78
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Gleyber Torres",
+              95
+            ],
+            [
+              "Riley Greene",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Jose Altuve",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Brent Rooker",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ],
+            [
+              "Brendan Donovan",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "Addison Barger",
+              95
+            ],
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Gavin Sheets",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "s kwan"
+          ],
+          "top3_predictions": [
+            "Julio Rodriguez"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "j jones",
+            "s torkelson"
+          ],
+          "top3_predictions": [
+            "Spencer Torkelson",
+            "Gleyber Torres",
+            "Riley Greene"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "l urias"
+          ],
+          "top3_predictions": [
+            "Nick Kurtz",
+            "Brent Rooker",
+            "Shea Langeliers"
+          ]
+        },
+        {
+          "team": "STL",
+          "actual_hr_players": [
+            "i herrera",
+            "b donovan",
+            "w contreras"
+          ],
+          "top3_predictions": [
+            "Willson Contreras",
+            "Alec Burleson",
+            "Brendan Donovan"
+          ]
+        },
+        {
+          "team": "TOR",
+          "actual_hr_players": [
+            "n lukes",
+            "j loperfido",
+            "e clement"
+          ],
+          "top3_predictions": [
+            "Addison Barger",
+            "George Springer",
+            "Vladimir Guerrero Jr."
+          ]
+        },
+        {
+          "team": "SD",
+          "actual_hr_players": [
+            "f tatis",
+            "m machado"
+          ],
+          "top3_predictions": [
+            "Manny Machado",
+            "Fernando Tatis Jr.",
+            "Gavin Sheets"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "j polanco",
+            "j rodriguez",
+            "r arozarena"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Randy Arozarena",
+            "Jorge Polanco"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-25",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Josh Lowe",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Lourdes Gurriel Jr.",
+              85
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ],
+            [
+              "Jose Altuve",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ],
+            [
+              "Andrew McCutchen",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ],
+            [
+              "Austin Riley",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Rafael Devers",
+              95
+            ],
+            [
+              "Matt Chapman",
+              95
+            ],
+            [
+              "Mike Yastrzemski",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Brice Turang",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Aaron Judge",
+              95
+            ],
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Austin Wells",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Michael Busch",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ],
+            [
+              "Pete Crow-Armstrong",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Byron Buxton",
+              95
+            ],
+            [
+              "Ryan Jeffers",
+              95
+            ],
+            [
+              "Carlos Correa",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Lenyn Sosa",
+              95
+            ],
+            [
+              "Chase Meidroth",
+              93
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Alex Bregman",
+              95
+            ],
+            [
+              "Wilyer Abreu",
+              95
+            ],
+            [
+              "Jarren Duran",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              88
+            ],
+            [
+              "Bo Naylor",
+              85
+            ],
+            [
+              "Nolan Jones",
+              84
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Riley Greene",
+              95
+            ],
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Gleyber Torres",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Mookie Betts",
+              95
+            ],
+            [
+              "Freddie Freeman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Ryan McMahon",
+              95
+            ],
+            [
+              "Mickey Moniak",
+              95
+            ],
+            [
+              "Hunter Goodman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Addison Barger",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Max Kepler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Austin Hays",
+              95
+            ],
+            [
+              "Matt McLain",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Gunnar Henderson",
+              95
+            ],
+            [
+              "Jackson Holliday",
+              95
+            ],
+            [
+              "Cedric Mullins",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Brent Rooker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "William Contreras",
+              95
+            ],
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Gavin Sheets",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Otto Lopez",
+              85
+            ],
+            [
+              "Dane Myers",
+              73
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Pete Alonso",
+              95
+            ],
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Brandon Nimmo",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "HOU",
+          "actual_hr_players": [
+            "z short"
+          ],
+          "top3_predictions": [
+            "Christian Walker",
+            "Yainer Diaz",
+            "Jose Altuve"
+          ]
+        },
+        {
+          "team": "ATL",
+          "actual_hr_players": [
+            "m harris"
+          ],
+          "top3_predictions": [
+            "Matt Olson",
+            "Sean Murphy",
+            "Austin Riley"
+          ]
+        },
+        {
+          "team": "MIL",
+          "actual_hr_players": [
+            "j chourio"
+          ],
+          "top3_predictions": [
+            "Jackson Chourio",
+            "Christian Yelich",
+            "Brice Turang"
+          ]
+        },
+        {
+          "team": "NYY",
+          "actual_hr_players": [
+            "a wells",
+            "c bellinger",
+            "a volpe",
+            "g stanton"
+          ],
+          "top3_predictions": [
+            "Aaron Judge",
+            "Ben Rice",
+            "Austin Wells"
+          ]
+        },
+        {
+          "team": "CHC",
+          "actual_hr_players": [
+            "r mcguire"
+          ],
+          "top3_predictions": [
+            "Michael Busch",
+            "Seiya Suzuki",
+            "Pete Crow-Armstrong"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "c meidroth",
+            "c montgomery",
+            "a slater",
+            "m tauchman"
+          ],
+          "top3_predictions": [
+            "Miguel Vargas",
+            "Lenyn Sosa",
+            "Chase Meidroth"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "s torkelson"
+          ],
+          "top3_predictions": [
+            "Riley Greene",
+            "Spencer Torkelson",
+            "Gleyber Torres"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "t hern\u00e1ndez"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Mookie Betts",
+            "Freddie Freeman"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "m moniak",
+            "e tovar",
+            "t estrada"
+          ],
+          "top3_predictions": [
+            "Ryan McMahon",
+            "Mickey Moniak",
+            "Hunter Goodman"
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "jt realmuto",
+            "k schwarber"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Max Kepler"
+          ]
+        },
+        {
+          "team": "CIN",
+          "actual_hr_players": [
+            "t stephenson",
+            "t friedl"
+          ],
+          "top3_predictions": [
+            "Elly De La Cruz",
+            "Austin Hays",
+            "Matt McLain"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "j rodriguez"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Randy Arozarena",
+            "Jorge Polanco"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "j westburg",
+            "c mayo",
+            "a jackson",
+            "t o'neill"
+          ],
+          "top3_predictions": [
+            "Gunnar Henderson",
+            "Jackson Holliday",
+            "Cedric Mullins"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "s langeliers",
+            "t soderstrom",
+            "n kurtz"
+          ],
+          "top3_predictions": [
+            "Nick Kurtz",
+            "Shea Langeliers",
+            "Brent Rooker"
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "j heim"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Wyatt Langford",
+            "Marcus Semien"
+          ]
+        },
+        {
+          "team": "MIA",
+          "actual_hr_players": [
+            "k stowers"
+          ],
+          "top3_predictions": [
+            "Kyle Stowers",
+            "Otto Lopez",
+            "Dane Myers"
+          ]
+        },
+        {
+          "team": "NYM",
+          "actual_hr_players": [
+            "f lindor"
+          ],
+          "top3_predictions": [
+            "Pete Alonso",
+            "Juan Soto",
+            "Brandon Nimmo"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-26",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Zach Neto",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Danny Jansen",
+              88
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Josh Naylor",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Cam Smith",
+              95
+            ],
+            [
+              "Jose Altuve",
+              95
+            ],
+            [
+              "Christian Walker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Andrew McCutchen",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ],
+            [
+              "Austin Riley",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Matt Chapman",
+              95
+            ],
+            [
+              "Heliot Ramos",
+              95
+            ],
+            [
+              "Rafael Devers",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Brice Turang",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Aaron Judge",
+              95
+            ],
+            [
+              "Paul Goldschmidt",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Michael Busch",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ],
+            [
+              "Kyle Tucker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Byron Buxton",
+              95
+            ],
+            [
+              "Matt Wallner",
+              95
+            ],
+            [
+              "Ryan Jeffers",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Lenyn Sosa",
+              95
+            ],
+            [
+              "Andrew Benintendi",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Alex Bregman",
+              95
+            ],
+            [
+              "Trevor Story",
+              95
+            ],
+            [
+              "Ceddanne Rafaela",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              95
+            ],
+            [
+              "Bo Naylor",
+              90
+            ],
+            [
+              "Carlos Santana",
+              89
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Riley Greene",
+              95
+            ],
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Zach McKinstry",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Freddie Freeman",
+              95
+            ],
+            [
+              "Tommy Edman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Hunter Goodman",
+              95
+            ],
+            [
+              "Michael Toglia",
+              95
+            ],
+            [
+              "Jordan Beck",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "Addison Barger",
+              92
+            ],
+            [
+              "George Springer",
+              90
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              84
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Bobby Witt Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Max Kepler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Austin Hays",
+              95
+            ],
+            [
+              "Tyler Stephenson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Gunnar Henderson",
+              95
+            ],
+            [
+              "Ryan O'Hearn",
+              95
+            ],
+            [
+              "Jackson Holliday",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ],
+            [
+              "William Contreras",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Nick Kurtz",
+              94
+            ],
+            [
+              "Tyler Soderstrom",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Xander Bogaerts",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Eric Wagaman",
+              86
+            ],
+            [
+              "Otto Lopez",
+              85
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Pete Alonso",
+              95
+            ],
+            [
+              "Francisco Lindor",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "LAA",
+          "actual_hr_players": [
+            "t ward"
+          ],
+          "top3_predictions": [
+            "Mike Trout",
+            "Jo Adell",
+            "Zach Neto"
+          ]
+        },
+        {
+          "team": "TB",
+          "actual_hr_players": [
+            "y diaz"
+          ],
+          "top3_predictions": [
+            "Junior Caminero",
+            "Jonathan Aranda",
+            "Danny Jansen"
+          ]
+        },
+        {
+          "team": "PIT",
+          "actual_hr_players": [
+            "o cruz"
+          ],
+          "top3_predictions": [
+            "Oneil Cruz",
+            "Andrew McCutchen",
+            "Bryan Reynolds"
+          ]
+        },
+        {
+          "team": "ATL",
+          "actual_hr_players": [
+            "m harris"
+          ],
+          "top3_predictions": [
+            "Matt Olson",
+            "Sean Murphy",
+            "Austin Riley"
+          ]
+        },
+        {
+          "team": "MIL",
+          "actual_hr_players": [
+            "a vaughn"
+          ],
+          "top3_predictions": [
+            "Jackson Chourio",
+            "Christian Yelich",
+            "Brice Turang"
+          ]
+        },
+        {
+          "team": "NYY",
+          "actual_hr_players": [
+            "g stanton"
+          ],
+          "top3_predictions": [
+            "Aaron Judge",
+            "Paul Goldschmidt",
+            "Cody Bellinger"
+          ]
+        },
+        {
+          "team": "CHC",
+          "actual_hr_players": [
+            "m shaw",
+            "i happ"
+          ],
+          "top3_predictions": [
+            "Michael Busch",
+            "Seiya Suzuki",
+            "Kyle Tucker"
+          ]
+        },
+        {
+          "team": "WSH",
+          "actual_hr_players": [
+            "a call",
+            "l garcia"
+          ],
+          "top3_predictions": [
+            "James Wood",
+            "Josh Bell",
+            "CJ Abrams"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "m tauchman"
+          ],
+          "top3_predictions": [
+            "Miguel Vargas",
+            "Lenyn Sosa",
+            "Andrew Benintendi"
+          ]
+        },
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "s kwan"
+          ],
+          "top3_predictions": [
+            "Kyle Manzardo",
+            "Bo Naylor",
+            "Carlos Santana"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "s ohtani",
+            "t hern\u00e1ndez"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Freddie Freeman",
+            "Tommy Edman"
+          ]
+        },
+        {
+          "team": "TOR",
+          "actual_hr_players": [
+            "n lukes",
+            "g springer",
+            "v guerrero"
+          ],
+          "top3_predictions": [
+            "Addison Barger",
+            "George Springer",
+            "Vladimir Guerrero Jr."
+          ]
+        },
+        {
+          "team": "KC",
+          "actual_hr_players": [
+            "f fermin",
+            "b witt"
+          ],
+          "top3_predictions": [
+            "Bobby Witt Jr.",
+            "Salvador Perez",
+            "Bobby Witt Jr."
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "e sosa",
+            "b harper"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Max Kepler"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "j rodriguez",
+            "r arozarena",
+            "c raleigh"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Randy Arozarena",
+            "Jorge Polanco"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "a jackson",
+            "c mullins",
+            "t o'neill"
+          ],
+          "top3_predictions": [
+            "Gunnar Henderson",
+            "Ryan O'Hearn",
+            "Jackson Holliday"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "l butler",
+            "s langeliers"
+          ],
+          "top3_predictions": [
+            "Shea Langeliers",
+            "Nick Kurtz",
+            "Tyler Soderstrom"
+          ]
+        },
+        {
+          "team": "MIA",
+          "actual_hr_players": [
+            "h hernandez",
+            "a ramirez",
+            "d myers"
+          ],
+          "top3_predictions": [
+            "Kyle Stowers",
+            "Eric Wagaman",
+            "Otto Lopez"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-27",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Josh Lowe",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Alek Thomas",
+              86
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Cam Smith",
+              95
+            ],
+            [
+              "Victor Caratini",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ],
+            [
+              "Ke'Bryan Hayes",
+              93
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Austin Riley",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Rafael Devers",
+              95
+            ],
+            [
+              "Matt Chapman",
+              95
+            ],
+            [
+              "Heliot Ramos",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Brice Turang",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              95
+            ],
+            [
+              "Trent Grisham",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Kyle Tucker",
+              95
+            ],
+            [
+              "Pete Crow-Armstrong",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Matt Wallner",
+              95
+            ],
+            [
+              "Trevor Larnach",
+              95
+            ],
+            [
+              "Carlos Correa",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Andrew Benintendi",
+              95
+            ],
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Lenyn Sosa",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Alex Bregman",
+              95
+            ],
+            [
+              "Wilyer Abreu",
+              95
+            ],
+            [
+              "Trevor Story",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Carlos Santana",
+              95
+            ],
+            [
+              "Gabriel Arias",
+              95
+            ],
+            [
+              "Bo Naylor",
+              87
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Mickey Moniak",
+              95
+            ],
+            [
+              "Ezequiel Tovar",
+              95
+            ],
+            [
+              "Ryan McMahon",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Andy Pages",
+              95
+            ],
+            [
+              "Mookie Betts",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Kerry Carpenter",
+              95
+            ],
+            [
+              "Riley Greene",
+              95
+            ],
+            [
+              "Spencer Torkelson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ],
+            [
+              "Addison Barger",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Trea Turner",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Austin Hays",
+              95
+            ],
+            [
+              "Matt McLain",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Tyler O'Neill",
+              95
+            ],
+            [
+              "Jordan Westburg",
+              95
+            ],
+            [
+              "Gunnar Henderson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Brent Rooker",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Lawrence Butler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "William Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Jackson Merrill",
+              95
+            ],
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Otto Lopez",
+              95
+            ],
+            [
+              "Jesus Sanchez",
+              83
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Brandon Nimmo",
+              95
+            ],
+            [
+              "Pete Alonso",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "LAA",
+          "actual_hr_players": [
+            "m trout"
+          ],
+          "top3_predictions": [
+            "Mike Trout",
+            "Jo Adell",
+            "Taylor Ward"
+          ]
+        },
+        {
+          "team": "TB",
+          "actual_hr_players": [
+            "t walls"
+          ],
+          "top3_predictions": [
+            "Jonathan Aranda",
+            "Junior Caminero",
+            "Josh Lowe"
+          ]
+        },
+        {
+          "team": "SF",
+          "actual_hr_players": [
+            "m chapman"
+          ],
+          "top3_predictions": [
+            "Rafael Devers",
+            "Matt Chapman",
+            "Heliot Ramos"
+          ]
+        },
+        {
+          "team": "WSH",
+          "actual_hr_players": [
+            "c abrams"
+          ],
+          "top3_predictions": [
+            "James Wood",
+            "Josh Bell",
+            "CJ Abrams"
+          ]
+        },
+        {
+          "team": "MIN",
+          "actual_hr_players": [
+            "m wallner"
+          ],
+          "top3_predictions": [
+            "Matt Wallner",
+            "Trevor Larnach",
+            "Carlos Correa"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "a benintendi"
+          ],
+          "top3_predictions": [
+            "Andrew Benintendi",
+            "Miguel Vargas",
+            "Lenyn Sosa"
+          ]
+        },
+        {
+          "team": "BOS",
+          "actual_hr_players": [
+            "a bregman"
+          ],
+          "top3_predictions": [
+            "Alex Bregman",
+            "Wilyer Abreu",
+            "Trevor Story"
+          ]
+        },
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "g arias"
+          ],
+          "top3_predictions": [
+            "Carlos Santana",
+            "Gabriel Arias",
+            "Bo Naylor"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "w bernabel"
+          ],
+          "top3_predictions": [
+            "Mickey Moniak",
+            "Ezequiel Tovar",
+            "Ryan McMahon"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "m conforto"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Andy Pages",
+            "Mookie Betts"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "g torres"
+          ],
+          "top3_predictions": [
+            "Kerry Carpenter",
+            "Riley Greene",
+            "Spencer Torkelson"
+          ]
+        },
+        {
+          "team": "KC",
+          "actual_hr_players": [
+            "m garcia"
+          ],
+          "top3_predictions": [
+            "Bobby Witt Jr.",
+            "Salvador Perez",
+            "Vinnie Pasquantino"
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "n castellanos",
+            "o kemp"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Trea Turner"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "c raleigh"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Randy Arozarena",
+            "Jorge Polanco"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "t o'neill"
+          ],
+          "top3_predictions": [
+            "Tyler O'Neill",
+            "Jordan Westburg",
+            "Gunnar Henderson"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "m andujar",
+            "s langeliers"
+          ],
+          "top3_predictions": [
+            "Brent Rooker",
+            "Shea Langeliers",
+            "Lawrence Butler"
+          ]
+        },
+        {
+          "team": "STL",
+          "actual_hr_players": [
+            "a burleson"
+          ],
+          "top3_predictions": [
+            "Willson Contreras",
+            "William Contreras",
+            "Alec Burleson"
+          ]
+        },
+        {
+          "team": "SD",
+          "actual_hr_players": [
+            "x bogaerts"
+          ],
+          "top3_predictions": [
+            "Jackson Merrill",
+            "Manny Machado",
+            "Fernando Tatis Jr."
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "j smith"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Marcus Semien",
+            "Wyatt Langford"
+          ]
+        },
+        {
+          "team": "MIA",
+          "actual_hr_players": [
+            "h hernandez"
+          ],
+          "top3_predictions": [
+            "Kyle Stowers",
+            "Otto Lopez",
+            "Jesus Sanchez"
+          ]
+        },
+        {
+          "team": "NYM",
+          "actual_hr_players": [
+            "j soto",
+            "r mauricio"
+          ],
+          "top3_predictions": [
+            "Juan Soto",
+            "Brandon Nimmo",
+            "Pete Alonso"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-28",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Josh Lowe",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Lourdes Gurriel Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Victor Caratini",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Bryan Reynolds",
+              94
+            ],
+            [
+              "Andrew McCutchen",
+              88
+            ],
+            [
+              "Ke'Bryan Hayes",
+              70
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Austin Riley",
+              95
+            ],
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Rafael Devers",
+              95
+            ],
+            [
+              "Willy Adames",
+              95
+            ],
+            [
+              "Matt Chapman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Andrew Vaughn",
+              95
+            ],
+            [
+              "Christian Yelich",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              95
+            ],
+            [
+              "Trent Grisham",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Kyle Tucker",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ],
+            [
+              "Pete Crow-Armstrong",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              87
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Matt Wallner",
+              95
+            ],
+            [
+              "Trevor Larnach",
+              95
+            ],
+            [
+              "Carlos Correa",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Lenyn Sosa",
+              92
+            ],
+            [
+              "Chase Meidroth",
+              91
+            ],
+            [
+              "Andrew Benintendi",
+              90
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Alex Bregman",
+              95
+            ],
+            [
+              "Wilyer Abreu",
+              95
+            ],
+            [
+              "Jarren Duran",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              95
+            ],
+            [
+              "Bo Naylor",
+              95
+            ],
+            [
+              "Daniel Schneemann",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Hunter Goodman",
+              95
+            ],
+            [
+              "Mickey Moniak",
+              95
+            ],
+            [
+              "Michael Toglia",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Andy Pages",
+              95
+            ],
+            [
+              "Mookie Betts",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Gleyber Torres",
+              95
+            ],
+            [
+              "Riley Greene",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "Addison Barger",
+              95
+            ],
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Nick Castellanos",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Spencer Steer",
+              95
+            ],
+            [
+              "Tyler Stephenson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Josh Naylor",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Gunnar Henderson",
+              95
+            ],
+            [
+              "Jackson Holliday",
+              95
+            ],
+            [
+              "Cedric Mullins",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Brent Rooker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Alec Burleson",
+              95
+            ],
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "William Contreras",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Jackson Merrill",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Eric Wagaman",
+              82
+            ],
+            [
+              "Otto Lopez",
+              81
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Francisco Lindor",
+              95
+            ],
+            [
+              "Brandon Nimmo",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "LAA",
+          "actual_hr_players": [
+            "l rengifo",
+            "t ward",
+            "k newman"
+          ],
+          "top3_predictions": [
+            "Mike Trout",
+            "Jo Adell",
+            "Taylor Ward"
+          ]
+        },
+        {
+          "team": "TB",
+          "actual_hr_players": [
+            "j caminero"
+          ],
+          "top3_predictions": [
+            "Junior Caminero",
+            "Jonathan Aranda",
+            "Josh Lowe"
+          ]
+        },
+        {
+          "team": "ARI",
+          "actual_hr_players": [
+            "a thomas"
+          ],
+          "top3_predictions": [
+            "Corbin Carroll",
+            "Ketel Marte",
+            "Lourdes Gurriel Jr."
+          ]
+        },
+        {
+          "team": "PIT",
+          "actual_hr_players": [
+            "n gonzales",
+            "a mccutchen"
+          ],
+          "top3_predictions": [
+            "Bryan Reynolds",
+            "Andrew McCutchen",
+            "Ke'Bryan Hayes"
+          ]
+        },
+        {
+          "team": "ATL",
+          "actual_hr_players": [
+            "m ozuna",
+            "a riley",
+            "r acuna"
+          ],
+          "top3_predictions": [
+            "Austin Riley",
+            "Matt Olson",
+            "Sean Murphy"
+          ]
+        },
+        {
+          "team": "MIL",
+          "actual_hr_players": [
+            "c yelich",
+            "a vaughn",
+            "s frelick"
+          ],
+          "top3_predictions": [
+            "Jackson Chourio",
+            "Andrew Vaughn",
+            "Christian Yelich"
+          ]
+        },
+        {
+          "team": "WSH",
+          "actual_hr_players": [
+            "r adams"
+          ],
+          "top3_predictions": [
+            "James Wood",
+            "Josh Bell",
+            "CJ Abrams"
+          ]
+        },
+        {
+          "team": "MIN",
+          "actual_hr_players": [
+            "d keirsey"
+          ],
+          "top3_predictions": [
+            "Matt Wallner",
+            "Trevor Larnach",
+            "Carlos Correa"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "c montgomery",
+            "l robert"
+          ],
+          "top3_predictions": [
+            "Lenyn Sosa",
+            "Chase Meidroth",
+            "Andrew Benintendi"
+          ]
+        },
+        {
+          "team": "BOS",
+          "actual_hr_players": [
+            "a bregman"
+          ],
+          "top3_predictions": [
+            "Alex Bregman",
+            "Wilyer Abreu",
+            "Jarren Duran"
+          ]
+        },
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "b naylor"
+          ],
+          "top3_predictions": [
+            "Kyle Manzardo",
+            "Bo Naylor",
+            "Daniel Schneemann"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "h goodman",
+            "w bernabel"
+          ],
+          "top3_predictions": [
+            "Hunter Goodman",
+            "Mickey Moniak",
+            "Michael Toglia"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "d dingler",
+            "a ibanez"
+          ],
+          "top3_predictions": [
+            "Spencer Torkelson",
+            "Gleyber Torres",
+            "Riley Greene"
+          ]
+        },
+        {
+          "team": "TOR",
+          "actual_hr_players": [
+            "n lukes",
+            "v guerrero"
+          ],
+          "top3_predictions": [
+            "Addison Barger",
+            "George Springer",
+            "Vladimir Guerrero Jr."
+          ]
+        },
+        {
+          "team": "KC",
+          "actual_hr_players": [
+            "r grichuk"
+          ],
+          "top3_predictions": [
+            "Bobby Witt Jr.",
+            "Vinnie Pasquantino",
+            "Salvador Perez"
+          ]
+        },
+        {
+          "team": "SEA",
+          "actual_hr_players": [
+            "j naylor"
+          ],
+          "top3_predictions": [
+            "Cal Raleigh",
+            "Randy Arozarena",
+            "Josh Naylor"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "c mayo",
+            "c cowser",
+            "c mullins",
+            "r laureano"
+          ],
+          "top3_predictions": [
+            "Gunnar Henderson",
+            "Jackson Holliday",
+            "Cedric Mullins"
+          ]
+        },
+        {
+          "team": "STL",
+          "actual_hr_players": [
+            "a burleson"
+          ],
+          "top3_predictions": [
+            "Alec Burleson",
+            "Willson Contreras",
+            "William Contreras"
+          ]
+        },
+        {
+          "team": "SD",
+          "actual_hr_players": [
+            "l arraez"
+          ],
+          "top3_predictions": [
+            "Manny Machado",
+            "Fernando Tatis Jr.",
+            "Jackson Merrill"
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "j jung"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Marcus Semien",
+            "Wyatt Langford"
+          ]
+        },
+        {
+          "team": "NYM",
+          "actual_hr_players": [
+            "m vientos",
+            "r mauricio"
+          ],
+          "top3_predictions": [
+            "Juan Soto",
+            "Francisco Lindor",
+            "Brandon Nimmo"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-29",
+      "total_teams": 30,
+      "successful_teams": 0,
+      "total_predictions": 90,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Taylor Walls",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ARI",
+          "predictions": [
+            [
+              "Corbin Carroll",
+              95
+            ],
+            [
+              "Ketel Marte",
+              95
+            ],
+            [
+              "Alek Thomas",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Christian Walker",
+              95
+            ],
+            [
+              "Yainer Diaz",
+              95
+            ],
+            [
+              "Jose Altuve",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PIT",
+          "predictions": [
+            [
+              "Oneil Cruz",
+              95
+            ],
+            [
+              "Bryan Reynolds",
+              95
+            ],
+            [
+              "Andrew McCutchen",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Austin Riley",
+              95
+            ],
+            [
+              "Sean Murphy",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SF",
+          "predictions": [
+            [
+              "Matt Chapman",
+              95
+            ],
+            [
+              "Heliot Ramos",
+              95
+            ],
+            [
+              "Rafael Devers",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIL",
+          "predictions": [
+            [
+              "Christian Yelich",
+              95
+            ],
+            [
+              "Jackson Chourio",
+              95
+            ],
+            [
+              "Andrew Vaughn",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Trent Grisham",
+              95
+            ],
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Cody Bellinger",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHC",
+          "predictions": [
+            [
+              "Michael Busch",
+              95
+            ],
+            [
+              "Kyle Tucker",
+              95
+            ],
+            [
+              "Seiya Suzuki",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "WSH",
+          "predictions": [
+            [
+              "James Wood",
+              95
+            ],
+            [
+              "Josh Bell",
+              95
+            ],
+            [
+              "CJ Abrams",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIN",
+          "predictions": [
+            [
+              "Byron Buxton",
+              95
+            ],
+            [
+              "Matt Wallner",
+              95
+            ],
+            [
+              "Trevor Larnach",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Lenyn Sosa",
+              95
+            ],
+            [
+              "Chase Meidroth",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BOS",
+          "predictions": [
+            [
+              "Wilyer Abreu",
+              95
+            ],
+            [
+              "Jarren Duran",
+              95
+            ],
+            [
+              "Ceddanne Rafaela",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Kyle Manzardo",
+              95
+            ],
+            [
+              "Bo Naylor",
+              95
+            ],
+            [
+              "Daniel Schneemann",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "DET",
+          "predictions": [
+            [
+              "Kerry Carpenter",
+              95
+            ],
+            [
+              "Spencer Torkelson",
+              95
+            ],
+            [
+              "Riley Greene",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Andy Pages",
+              95
+            ],
+            [
+              "Freddie Freeman",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Hunter Goodman",
+              95
+            ],
+            [
+              "Jordan Beck",
+              95
+            ],
+            [
+              "Brenton Doyle",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TOR",
+          "predictions": [
+            [
+              "George Springer",
+              95
+            ],
+            [
+              "Vladimir Guerrero Jr.",
+              95
+            ],
+            [
+              "Addison Barger",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "KC",
+          "predictions": [
+            [
+              "Bobby Witt Jr.",
+              95
+            ],
+            [
+              "Salvador Perez",
+              95
+            ],
+            [
+              "Vinnie Pasquantino",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Max Kepler",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Matt McLain",
+              95
+            ],
+            [
+              "Gavin Lux",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "BAL",
+          "predictions": [
+            [
+              "Tyler O'Neill",
+              95
+            ],
+            [
+              "Jordan Westburg",
+              95
+            ],
+            [
+              "Gunnar Henderson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Brent Rooker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "William Contreras",
+              95
+            ],
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SD",
+          "predictions": [
+            [
+              "Manny Machado",
+              95
+            ],
+            [
+              "Fernando Tatis Jr.",
+              95
+            ],
+            [
+              "Xander Bogaerts",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Eric Wagaman",
+              86
+            ],
+            [
+              "Otto Lopez",
+              85
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYM",
+          "predictions": [
+            [
+              "Juan Soto",
+              95
+            ],
+            [
+              "Pete Alonso",
+              95
+            ],
+            [
+              "Francisco Lindor",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [
+        {
+          "team": "TB",
+          "actual_hr_players": [
+            "j aranda"
+          ],
+          "top3_predictions": [
+            "Junior Caminero",
+            "Jonathan Aranda",
+            "Taylor Walls"
+          ]
+        },
+        {
+          "team": "HOU",
+          "actual_hr_players": [
+            "y diaz"
+          ],
+          "top3_predictions": [
+            "Christian Walker",
+            "Yainer Diaz",
+            "Jose Altuve"
+          ]
+        },
+        {
+          "team": "PIT",
+          "actual_hr_players": [
+            "l peguero"
+          ],
+          "top3_predictions": [
+            "Oneil Cruz",
+            "Bryan Reynolds",
+            "Andrew McCutchen"
+          ]
+        },
+        {
+          "team": "ATL",
+          "actual_hr_players": [
+            "m ozuna",
+            "a riley"
+          ],
+          "top3_predictions": [
+            "Matt Olson",
+            "Austin Riley",
+            "Sean Murphy"
+          ]
+        },
+        {
+          "team": "SF",
+          "actual_hr_players": [
+            "w adames"
+          ],
+          "top3_predictions": [
+            "Matt Chapman",
+            "Heliot Ramos",
+            "Rafael Devers"
+          ]
+        },
+        {
+          "team": "MIL",
+          "actual_hr_players": [
+            "a vaughn"
+          ],
+          "top3_predictions": [
+            "Christian Yelich",
+            "Jackson Chourio",
+            "Andrew Vaughn"
+          ]
+        },
+        {
+          "team": "NYY",
+          "actual_hr_players": [
+            "c bellinger",
+            "a volpe"
+          ],
+          "top3_predictions": [
+            "Trent Grisham",
+            "Ben Rice",
+            "Cody Bellinger"
+          ]
+        },
+        {
+          "team": "CHC",
+          "actual_hr_players": [
+            "n hoerner"
+          ],
+          "top3_predictions": [
+            "Michael Busch",
+            "Kyle Tucker",
+            "Seiya Suzuki"
+          ]
+        },
+        {
+          "team": "WSH",
+          "actual_hr_players": [
+            "l garcia"
+          ],
+          "top3_predictions": [
+            "James Wood",
+            "Josh Bell",
+            "CJ Abrams"
+          ]
+        },
+        {
+          "team": "MIN",
+          "actual_hr_players": [
+            "b lee"
+          ],
+          "top3_predictions": [
+            "Byron Buxton",
+            "Matt Wallner",
+            "Trevor Larnach"
+          ]
+        },
+        {
+          "team": "CHW",
+          "actual_hr_players": [
+            "l sosa"
+          ],
+          "top3_predictions": [
+            "Miguel Vargas",
+            "Lenyn Sosa",
+            "Chase Meidroth"
+          ]
+        },
+        {
+          "team": "BOS",
+          "actual_hr_players": [
+            "j duran",
+            "t story"
+          ],
+          "top3_predictions": [
+            "Wilyer Abreu",
+            "Jarren Duran",
+            "Ceddanne Rafaela"
+          ]
+        },
+        {
+          "team": "CLE",
+          "actual_hr_players": [
+            "k manzardo"
+          ],
+          "top3_predictions": [
+            "Kyle Manzardo",
+            "Bo Naylor",
+            "Daniel Schneemann"
+          ]
+        },
+        {
+          "team": "DET",
+          "actual_hr_players": [
+            "r greene",
+            "g torres",
+            "z mckinstry"
+          ],
+          "top3_predictions": [
+            "Kerry Carpenter",
+            "Spencer Torkelson",
+            "Riley Greene"
+          ]
+        },
+        {
+          "team": "LAD",
+          "actual_hr_players": [
+            "t edman"
+          ],
+          "top3_predictions": [
+            "Shohei Ohtani",
+            "Andy Pages",
+            "Freddie Freeman"
+          ]
+        },
+        {
+          "team": "COL",
+          "actual_hr_players": [
+            "k farmer",
+            "m toglia",
+            "j beck"
+          ],
+          "top3_predictions": [
+            "Hunter Goodman",
+            "Jordan Beck",
+            "Brenton Doyle"
+          ]
+        },
+        {
+          "team": "TOR",
+          "actual_hr_players": [
+            "j loperfido",
+            "a barger"
+          ],
+          "top3_predictions": [
+            "George Springer",
+            "Vladimir Guerrero Jr.",
+            "Addison Barger"
+          ]
+        },
+        {
+          "team": "KC",
+          "actual_hr_players": [
+            "v pasquantino"
+          ],
+          "top3_predictions": [
+            "Bobby Witt Jr.",
+            "Salvador Perez",
+            "Vinnie Pasquantino"
+          ]
+        },
+        {
+          "team": "PHI",
+          "actual_hr_players": [
+            "b marsh",
+            "k schwarber"
+          ],
+          "top3_predictions": [
+            "Kyle Schwarber",
+            "Bryce Harper",
+            "Max Kepler"
+          ]
+        },
+        {
+          "team": "CIN",
+          "actual_hr_players": [
+            "n marte",
+            "j fraley"
+          ],
+          "top3_predictions": [
+            "Elly De La Cruz",
+            "Matt McLain",
+            "Gavin Lux"
+          ]
+        },
+        {
+          "team": "BAL",
+          "actual_hr_players": [
+            "r urias",
+            "t o'neill",
+            "g henderson"
+          ],
+          "top3_predictions": [
+            "Tyler O'Neill",
+            "Jordan Westburg",
+            "Gunnar Henderson"
+          ]
+        },
+        {
+          "team": "OAK",
+          "actual_hr_players": [
+            "b rooker",
+            "s langeliers"
+          ],
+          "top3_predictions": [
+            "Nick Kurtz",
+            "Shea Langeliers",
+            "Brent Rooker"
+          ]
+        },
+        {
+          "team": "SD",
+          "actual_hr_players": [
+            "m machado"
+          ],
+          "top3_predictions": [
+            "Manny Machado",
+            "Fernando Tatis Jr.",
+            "Xander Bogaerts"
+          ]
+        },
+        {
+          "team": "TEX",
+          "actual_hr_players": [
+            "k higashioka"
+          ],
+          "top3_predictions": [
+            "Corey Seager",
+            "Wyatt Langford",
+            "Marcus Semien"
+          ]
+        },
+        {
+          "team": "MIA",
+          "actual_hr_players": [
+            "g pauley"
+          ],
+          "top3_predictions": [
+            "Kyle Stowers",
+            "Eric Wagaman",
+            "Otto Lopez"
+          ]
+        }
+      ],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-30",
+      "total_teams": 15,
+      "successful_teams": 0,
+      "total_predictions": 43,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "LAA",
+          "predictions": [
+            [
+              "Mike Trout",
+              95
+            ],
+            [
+              "Jo Adell",
+              95
+            ],
+            [
+              "Taylor Ward",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "MIA",
+          "predictions": [
+            [
+              "Kyle Stowers",
+              95
+            ],
+            [
+              "Otto Lopez",
+              85
+            ],
+            [
+              "Dane Myers",
+              76
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CHW",
+          "predictions": [
+            [
+              "Miguel Vargas",
+              95
+            ],
+            [
+              "Andrew Benintendi",
+              95
+            ],
+            [
+              "Chase Meidroth",
+              91
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "PHI",
+          "predictions": [
+            [
+              "Kyle Schwarber",
+              95
+            ],
+            [
+              "Bryce Harper",
+              95
+            ],
+            [
+              "Nick Castellanos",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CLE",
+          "predictions": [
+            [
+              "Carlos Santana",
+              95
+            ],
+            [
+              "Gabriel Arias",
+              95
+            ],
+            [
+              "Nolan Jones",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Matt McLain",
+              95
+            ],
+            [
+              "Tyler Stephenson",
+              94
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "LAD",
+          "predictions": [
+            [
+              "Shohei Ohtani",
+              95
+            ],
+            [
+              "Michael Conforto",
+              95
+            ],
+            [
+              "Andy Pages",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Junior Caminero",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Brandon Lowe",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "COL",
+          "predictions": [
+            [
+              "Hunter Goodman",
+              95
+            ],
+            [
+              "Jordan Beck",
+              95
+            ],
+            [
+              "Brenton Doyle",
+              89
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "HOU",
+          "predictions": [
+            [
+              "Yandy Diaz",
+              78
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "OAK",
+          "predictions": [
+            [
+              "Nick Kurtz",
+              95
+            ],
+            [
+              "Shea Langeliers",
+              95
+            ],
+            [
+              "Brent Rooker",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "STL",
+          "predictions": [
+            [
+              "Willson Contreras",
+              95
+            ],
+            [
+              "Alec Burleson",
+              95
+            ],
+            [
+              "Brendan Donovan",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ],
+            [
+              "Marcus Semien",
+              92
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Jazz Chisholm",
+              95
+            ],
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Trent Grisham",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    },
+    {
+      "date": "2025-07-31",
+      "total_teams": 6,
+      "successful_teams": 0,
+      "total_predictions": 18,
+      "successful_predictions": 0,
+      "team_details": [
+        {
+          "team": "CIN",
+          "predictions": [
+            [
+              "Elly De La Cruz",
+              95
+            ],
+            [
+              "Tyler Stephenson",
+              95
+            ],
+            [
+              "Austin Hays",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TB",
+          "predictions": [
+            [
+              "Brandon Lowe",
+              95
+            ],
+            [
+              "Jonathan Aranda",
+              95
+            ],
+            [
+              "Junior Caminero",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "ATL",
+          "predictions": [
+            [
+              "Matt Olson",
+              95
+            ],
+            [
+              "Austin Riley",
+              95
+            ],
+            [
+              "Marcell Ozuna",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "TEX",
+          "predictions": [
+            [
+              "Corey Seager",
+              95
+            ],
+            [
+              "Marcus Semien",
+              95
+            ],
+            [
+              "Wyatt Langford",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "NYY",
+          "predictions": [
+            [
+              "Trent Grisham",
+              95
+            ],
+            [
+              "Ben Rice",
+              95
+            ],
+            [
+              "Austin Wells",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        },
+        {
+          "team": "SEA",
+          "predictions": [
+            [
+              "Cal Raleigh",
+              95
+            ],
+            [
+              "Randy Arozarena",
+              95
+            ],
+            [
+              "Jorge Polanco",
+              95
+            ]
+          ],
+          "successful": false,
+          "successful_players": []
+        }
+      ],
+      "successful_matches": [],
+      "missed_opportunities": [],
+      "team_accuracy": 0.0,
+      "prediction_accuracy": 0.0
+    }
+  ]
+}
