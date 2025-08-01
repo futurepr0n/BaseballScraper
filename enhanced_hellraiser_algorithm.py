@@ -136,8 +136,15 @@ class EnhancedHellraiserAnalyzer:
         
         # Analyze each game
         for game in games_data['games']:
-            home_team = game.get('homeTeam', '')
-            away_team = game.get('awayTeam', '')
+            # Handle both lineup data format and historical game data format
+            if 'teams' in game:
+                # Lineup data format: teams.home.abbr, teams.away.abbr
+                home_team = game.get('teams', {}).get('home', {}).get('abbr', '')
+                away_team = game.get('teams', {}).get('away', {}).get('abbr', '')
+            else:
+                # Historical game data format: homeTeam, awayTeam
+                home_team = game.get('homeTeam', '')
+                away_team = game.get('awayTeam', '')
             
             if not home_team or not away_team:
                 continue
@@ -185,14 +192,14 @@ class EnhancedHellraiserAnalyzer:
         
         print("📊 Loading comprehensive data sources...")
         
-        # 1. Daily player data (JSON files)
+        # 1. Historical player data (for predictions, use recent performance data)
         try:
-            player_data = self._load_player_data(date_str)
+            player_data = self._load_historical_performance_data(date_str)
             if player_data:
                 data_sources['daily_players'] = player_data
-                print(f"✅ Daily player data: {len(player_data)} players")
+                print(f"✅ Historical performance data: {len(player_data)} players")
         except Exception as e:
-            print(f"⚠️ Daily player data not available: {e}")
+            print(f"⚠️ Historical performance data not available: {e}")
         
         # 2. Odds data from CSV
         try:
@@ -703,7 +710,29 @@ class EnhancedHellraiserAnalyzer:
             return []
     
     def _load_game_data(self, date_str: str) -> Dict:
-        """Load game data for specific date"""
+        """Load lineup data for specific date (for predicting games)"""
+        # Load today's lineup data to get confirmed pitchers and matchups
+        lineup_file_path = os.path.join(
+            self.data_base_path,
+            "lineups",
+            f"starting_lineups_{date_str}.json"
+        )
+        
+        try:
+            with open(lineup_file_path, 'r') as f:
+                lineup_data = json.load(f)
+            print(f"✅ Loaded lineup data: {lineup_data.get('totalGames', 0)} games scheduled")
+            return lineup_data
+        except FileNotFoundError:
+            print(f"⚠️ No lineup file found for {date_str}")
+            # Fallback: try to load historical game data if lineups not available
+            return self._load_historical_game_data(date_str)
+        except Exception as e:
+            print(f"❌ Error loading lineup data: {e}")
+            return {}
+    
+    def _load_historical_game_data(self, date_str: str) -> Dict:
+        """Fallback: Load historical game data if lineup data not available"""
         date_obj = datetime.strptime(date_str, "%Y-%m-%d")
         year = date_obj.year
         month_name = date_obj.strftime("%B").lower()
@@ -718,9 +747,55 @@ class EnhancedHellraiserAnalyzer:
         
         try:
             with open(file_path, 'r') as f:
-                return json.load(f)
+                historical_data = json.load(f)
+            print(f"📊 Using historical game data as fallback: {len(historical_data.get('games', []))} games")
+            return historical_data
         except:
+            print(f"❌ No data available for {date_str}")
             return {}
+    
+    def _load_historical_performance_data(self, target_date_str: str) -> List[Dict]:
+        """Load recent historical player performance data for predictions"""
+        target_date = datetime.strptime(target_date_str, "%Y-%m-%d")
+        all_players = []
+        
+        # Load recent performance data (last 7 days before target date)
+        for days_back in range(1, 8):
+            try_date = target_date - timedelta(days=days_back)
+            try_date_str = try_date.strftime("%Y-%m-%d")
+            
+            players = self._load_player_data(try_date_str)
+            if players:
+                print(f"📊 Loaded {len(players)} players from {try_date_str}")
+                all_players.extend(players)
+                
+                # If we have enough data, stop early
+                if len(all_players) >= 200:  # Reasonable sample size
+                    break
+        
+        if not all_players:
+            print("⚠️ No historical performance data found, trying fallback dates")
+            # Fallback: try going back further
+            for days_back in range(8, 15):
+                try_date = target_date - timedelta(days=days_back)
+                try_date_str = try_date.strftime("%Y-%m-%d")
+                
+                players = self._load_player_data(try_date_str)
+                if players:
+                    print(f"📊 Fallback: Loaded {len(players)} players from {try_date_str}")
+                    all_players.extend(players)
+                    break
+        
+        # Remove duplicates (same player from multiple days - keep most recent)
+        unique_players = {}
+        for player in all_players:
+            player_key = f"{player.get('playerName', '')}_{player.get('team', '')}"
+            if player_key not in unique_players:
+                unique_players[player_key] = player
+        
+        result = list(unique_players.values())
+        print(f"📈 Historical analysis: {len(result)} unique players for prediction")
+        return result
     
     def _load_odds_data(self) -> Dict:
         """Load latest odds data from CSV"""
