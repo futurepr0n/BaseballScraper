@@ -52,6 +52,21 @@ python3 smart_morning_run.py --dry-run
 crontab crontab_sample.txt
 ```
 
+### Hellraiser Analysis Generation (DAILY PRODUCTION SCRIPT)
+```bash
+cd BaseballScraper
+
+# Generate daily hellraiser analysis (MAIN COMMAND)
+python3 enhanced_comprehensive_hellraiser.py
+
+# Set up automated hellraiser generation throughout the day
+./setup_hellraiser_automation.sh
+crontab hellraiser_crontab.txt
+
+# Monitor automation
+tail -f logs/hellraiser_cron.log
+```
+
 ### MLB Odds Tracking Setup (NEW)
 ```bash
 cd BaseballScraper

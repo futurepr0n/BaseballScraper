@@ -14,7 +14,7 @@ echo "📂 Project root: $PROJECT_ROOT"
 
 # Make sure our scripts are executable
 chmod +x "$SCRIPT_DIR/daily_hellraiser_scheduler.py"
-chmod +x "$SCRIPT_DIR/generate_hellraiser_analysis.py"
+chmod +x "$SCRIPT_DIR/enhanced_comprehensive_hellraiser.py"
 
 # Create logs directory if it doesn't exist
 mkdir -p "$SCRIPT_DIR/logs"
@@ -103,7 +103,7 @@ echo "   - Check archives: ls -la $PROJECT_ROOT/BaseballTracker/public/data/hell
 echo ""
 echo "🧪 To test manually:"
 echo "   - Run scheduler: $CRON_WRAPPER"
-echo "   - Generate analysis: cd $SCRIPT_DIR && python3 generate_hellraiser_analysis.py"
+echo "   - Generate analysis: cd $SCRIPT_DIR && python3 enhanced_comprehensive_hellraiser.py"
 
 echo ""
 echo "⚠️ Important Notes:"

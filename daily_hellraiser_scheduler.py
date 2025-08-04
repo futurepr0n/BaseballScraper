@@ -49,7 +49,7 @@ class HellraiserScheduler:
             
             result = subprocess.run([
                 python_executable, 
-                str(self.script_dir / "generate_hellraiser_analysis.py")
+                str(self.script_dir / "enhanced_comprehensive_hellraiser.py")
             ], capture_output=True, text=True, timeout=300)
             
             if result.returncode == 0:

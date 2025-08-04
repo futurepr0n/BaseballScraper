@@ -30,6 +30,47 @@ from collections import defaultdict
 import statistics
 import re
 
+# Team normalization utilities for CHW/CWS and other team abbreviation mismatches
+TEAM_MAPPINGS = {
+    # Forward mappings (less common → standard)
+    'ATH': 'OAK',  # Athletics
+    'CWS': 'CHW',  # White Sox  
+    'LAD': 'LA',   # Dodgers
+    'NYM': 'NYN',  # Mets
+    'NYY': 'NY',   # Yankees
+    'SD': 'SDN',   # Padres
+    'SF': 'SFN',   # Giants
+    'TB': 'TBR',   # Rays
+    'WSH': 'WAS',  # Nationals
+    
+    # Reverse mappings (standard → less common)
+    'OAK': 'ATH',
+    'CHW': 'CWS', 
+    'LA': 'LAD',
+    'NYN': 'NYM',
+    'NY': 'NYY',
+    'SDN': 'SD',
+    'SFN': 'SF',
+    'TBR': 'TB',
+    'WAS': 'WSH'
+}
+
+def teams_match(team1: str, team2: str) -> bool:
+    """Check if two team abbreviations refer to the same team"""
+    if not team1 or not team2:
+        return False
+    
+    team1_upper = team1.upper()
+    team2_upper = team2.upper()
+    
+    # Direct match
+    if team1_upper == team2_upper:
+        return True
+    
+    # Check if they map to each other
+    return (TEAM_MAPPINGS.get(team1_upper) == team2_upper or 
+            TEAM_MAPPINGS.get(team2_upper) == team1_upper)
+
 class EnhancedComprehensiveHellraiser:
     def __init__(self, base_dir: str = None):
         if base_dir is None:
@@ -2141,7 +2182,7 @@ class EnhancedComprehensiveHellraiser:
             home_team = teams.get('home', {}).get('abbr')
             away_team = teams.get('away', {}).get('abbr')
             
-            if team == home_team:
+            if teams_match(team, home_team):
                 away_pitcher = pitchers.get('away', {})
                 if away_pitcher.get('name'):
                     return {
@@ -2151,7 +2192,7 @@ class EnhancedComprehensiveHellraiser:
                         'game_time': game.get('gameTime', ''),
                         'is_home': True
                     }
-            elif team == away_team:
+            elif teams_match(team, away_team):
                 home_pitcher = pitchers.get('home', {})
                 if home_pitcher.get('name'):
                     return {
