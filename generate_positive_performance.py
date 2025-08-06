@@ -29,10 +29,13 @@ import math
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass
 
-# Configuration - Updated paths for BaseballScraper location
-ROSTER_PATH = "../BaseballTracker/public/data/rosters.json"
-SEASON_DATA_DIR = "../BaseballTracker/public/data/2025"
-OUTPUT_DIR = "../BaseballTracker/public/data/predictions"
+# Import centralized configuration
+from config import PATHS, DATA_PATH
+
+# Configuration - Use centralized paths
+ROSTER_PATH = PATHS['rosters']
+SEASON_DATA_DIR = DATA_PATH / '2025'
+OUTPUT_DIR = PATHS['predictions']
 
 # MLB Stadium Coordinates for Travel Analysis (from stadiumCoordinates.js)
 STADIUM_COORDINATES = {

@@ -3,8 +3,14 @@
 # Odds Update Cron Wrapper Script
 # Ensures proper environment and logging for cron execution
 
-# Set working directory
-cd "/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper"
+# Set working directory - handle both dev and production environments
+if [ -d "/app/BaseballScraper" ]; then
+    # Production environment
+    cd "/app/BaseballScraper"
+else
+    # Development environment
+    cd "/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper"
+fi
 
 # Activate virtual environment (REQUIRED)
 if [ -f "venv/bin/activate" ]; then

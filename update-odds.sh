@@ -67,13 +67,12 @@ if [ $? -eq 0 ]; then
         if [ $? -eq 0 ]; then
             echo "$(date): ✅ Odds update completed successfully"
             
-            # Check that output files were created
-            PUBLIC_ODDS="../BaseballTracker/public/data/odds/mlb-hr-odds-only.csv"
-            BUILD_ODDS="../BaseballTracker/build/data/odds/mlb-hr-odds-only.csv"
+            # Check that output files were created in centralized location
+            CENTRALIZED_ODDS="../BaseballData/data/odds/mlb-hr-odds-only.csv"
             
-            if [ -f "$PUBLIC_ODDS" ]; then
-                PLAYER_COUNT=$(tail -n +2 "$PUBLIC_ODDS" | wc -l)
-                echo "$(date): 📈 Processed $PLAYER_COUNT players in odds data"
+            if [ -f "$CENTRALIZED_ODDS" ]; then
+                PLAYER_COUNT=$(tail -n +2 "$CENTRALIZED_ODDS" | wc -l)
+                echo "$(date): 📈 Processed $PLAYER_COUNT players in odds data (centralized)"
             fi
             
             # Archive the JSON file with timestamp for debugging

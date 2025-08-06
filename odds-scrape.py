@@ -4,6 +4,9 @@ import os
 import shutil
 from datetime import datetime
 
+# Use centralized configuration for data paths
+from config import PATHS
+
 # Load the JSON data from the file
 file_path = 'mlb-batter-hr-props.json'
 try:
@@ -16,18 +19,9 @@ except json.JSONDecodeError:
     print(f"Error: Could not decode JSON from '{file_path}'. The file might be corrupted or not valid JSON.")
     exit()
 
-# Dual directory paths for development and production
-output_dirs = [
-    '../BaseballTracker/public/data/odds',  # Development
-    '../BaseballTracker/build/data/odds'    # Production build
-]
-
-# Create both directories
-for output_dir in output_dirs:
-    os.makedirs(output_dir, exist_ok=True)
-
-# Use primary directory for file paths (will copy to both)
-primary_dir = output_dirs[0]
+# Use centralized odds directory
+primary_dir = PATHS['odds']
+primary_dir.mkdir(parents=True, exist_ok=True)
 current_odds_file = os.path.join(primary_dir, 'mlb-hr-odds-only.csv')
 tracking_file = os.path.join(primary_dir, 'mlb-hr-odds-tracking.csv')
 historical_file = os.path.join(primary_dir, 'mlb-hr-odds-history.csv')

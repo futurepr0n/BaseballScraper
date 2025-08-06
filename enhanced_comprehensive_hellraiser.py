@@ -30,6 +30,9 @@ from collections import defaultdict
 import statistics
 import re
 
+# Use centralized configuration for data paths
+from config import PATHS
+
 # Team normalization utilities for CHW/CWS and other team abbreviation mismatches
 TEAM_MAPPINGS = {
     # Forward mappings (less common → standard)
@@ -73,19 +76,13 @@ def teams_match(team1: str, team2: str) -> bool:
 
 class EnhancedComprehensiveHellraiser:
     def __init__(self, base_dir: str = None):
-        if base_dir is None:
-            script_dir = Path(__file__).parent.absolute()
-            self.base_dir = script_dir.parent / "BaseballTracker"
-        else:
-            self.base_dir = Path(base_dir)
+        # Use centralized data paths
+        self.base_dir = PATHS['data']
         
-        self.output_dir = self.base_dir / "public" / "data" / "hellraiser"
+        self.output_dir = PATHS['hellraiser']
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
-        self.build_output_dir = self.base_dir / "build" / "data" / "hellraiser"
-        self.build_output_dir.mkdir(parents=True, exist_ok=True)
-        
-        self.stats_dir = self.base_dir / "public" / "data" / "stats"
+        self.stats_dir = PATHS['stats']
         self.today = datetime.now().strftime("%Y-%m-%d")
         
         print(f"🔥 Enhanced Comprehensive Hellraiser Generator - {self.today}")
@@ -688,7 +685,7 @@ class EnhancedComprehensiveHellraiser:
             year, month, day = date.split('-')
             month_name = datetime.strptime(month, '%m').strftime('%B').lower()
             
-            game_file = self.base_dir / "public" / "data" / year / month_name / f"{month_name}_{day.zfill(2)}_{year}.json"
+            game_file = self.base_dir / year / month_name / f"{month_name}_{day.zfill(2)}_{year}.json"
             
             if game_file.exists():
                 try:
@@ -1629,13 +1626,13 @@ class EnhancedComprehensiveHellraiser:
             return {'score': 5.0, 'trends': {}, 'context': 'Recent form analysis unavailable'}
 
     def _load_rolling_stats_data(self, player_name: str) -> Dict:
-        """Load rolling statistics data from BaseballTracker"""
+        """Load rolling statistics data from centralized location"""
         try:
             # Try to load from rolling stats files
             rolling_paths = [
-                self.base_dir / "public" / "data" / "rolling_stats" / "rolling_stats_last_7_latest.json",
-                self.base_dir / "public" / "data" / "rolling_stats" / "rolling_stats_last_30_latest.json",
-                self.base_dir / "public" / "data" / "rolling_stats" / "rolling_stats_season_latest.json"
+                PATHS['rolling_stats'] / "rolling_stats_last_7_latest.json",
+                PATHS['rolling_stats'] / "rolling_stats_last_30_latest.json",
+                PATHS['rolling_stats'] / "rolling_stats_season_latest.json"
             ]
             
             for path in rolling_paths:
@@ -2087,7 +2084,7 @@ class EnhancedComprehensiveHellraiser:
     # Load supporting data methods (odds, lineup, roster)
     def load_current_odds(self) -> List[Dict]:
         """Load current HR odds data"""
-        odds_file = self.base_dir / "public" / "data" / "odds" / "mlb-hr-odds-only.csv"
+        odds_file = self.base_dir / "odds" / "mlb-hr-odds-only.csv"
         odds_data = []
         
         try:
@@ -2112,7 +2109,7 @@ class EnhancedComprehensiveHellraiser:
         if date is None:
             date = self.today
             
-        lineup_file = self.base_dir / "public" / "data" / "lineups" / f"starting_lineups_{date}.json"
+        lineup_file = self.base_dir / "lineups" / f"starting_lineups_{date}.json"
         
         try:
             with open(lineup_file, 'r') as f:
@@ -2127,7 +2124,7 @@ class EnhancedComprehensiveHellraiser:
     
     def load_roster_data(self) -> List[Dict]:
         """Load roster data for player-team mapping"""
-        roster_file = self.base_dir / "public" / "data" / "rosters.json"
+        roster_file = self.base_dir / "rosters.json"
         
         try:
             with open(roster_file, 'r') as f:
@@ -2388,10 +2385,9 @@ class EnhancedComprehensiveHellraiser:
         else:
             filename = f"hellraiser_analysis_{self.today}.json"
         
-        # Save to both directories
+        # Save to centralized directory
         paths = [
-            self.output_dir / filename,
-            self.build_output_dir / filename
+            self.output_dir / filename
         ]
         
         for output_path in paths:
