@@ -3,8 +3,16 @@
 # Hellraiser Analysis Cron Wrapper Script
 # Ensures proper environment and logging for cron execution
 
-# Set working directory
-cd "/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper"
+# Set working directory - handle both dev and production environments
+if [ -d "/app/BaseballScraper" ]; then
+    # Production environment
+    cd "/app/BaseballScraper"
+    export PYTHONPATH="$PYTHONPATH:/app"
+else
+    # Development environment
+    cd "/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper"
+    export PYTHONPATH="$PYTHONPATH:/Users/futurepr0n/Development/Capping.Pro/Claude-Code"
+fi
 
 # Activate virtual environment (REQUIRED)
 if [ -f "venv/bin/activate" ]; then
@@ -15,9 +23,6 @@ else
     echo "$(date): Please set up venv: python3 -m venv venv && . venv/bin/activate && pip install requirements" >> logs/hellraiser_cron.log
     exit 1
 fi
-
-# Set Python path for project imports
-export PYTHONPATH="$PYTHONPATH:/Users/futurepr0n/Development/Capping.Pro/Claude-Code"
 
 # Run the Hellraiser scheduler (use venv's python)
 echo "$(date): Starting Hellraiser scheduler with venv python..." >> logs/hellraiser_cron.log

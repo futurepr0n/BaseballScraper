@@ -10,6 +10,10 @@ import json
 import re
 from datetime import datetime, timedelta
 import os
+from pathlib import Path
+
+# Import centralized configuration
+from config import PATHS
 
 class MLBLineupScraper:
     def __init__(self):
@@ -185,13 +189,11 @@ class MLBLineupScraper:
         return team_map.get(name)
     
     def update_lineup_file(self, date_str, scraped_lineups):
-        """Update existing lineup JSON files with scraped data in both dev and production"""
+        """Update existing lineup JSON files with scraped data using centralized path"""
         
-        # Files to update in both dev and production directories
-        lineup_files = [
-            f"../BaseballTracker/public/data/lineups/starting_lineups_{date_str}.json",  # Dev
-            f"../BaseballTracker/build/data/lineups/starting_lineups_{date_str}.json"   # Production
-        ]
+        # Use centralized lineup directory
+        lineup_file = PATHS['lineups'] / f"starting_lineups_{date_str}.json"
+        lineup_files = [lineup_file]  # Single centralized location
         
         updated_files = 0
         

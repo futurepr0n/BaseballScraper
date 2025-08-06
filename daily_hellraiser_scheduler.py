@@ -18,14 +18,17 @@ import os
 import shutil
 from pathlib import Path
 
+# Use centralized configuration for data paths
+from config import PATHS
+
 class HellraiserScheduler:
     def __init__(self):
         self.script_dir = Path(__file__).parent.absolute()
         self.log_file = self.script_dir / "logs" / "hellraiser_scheduler.log"
         self.log_file.parent.mkdir(parents=True, exist_ok=True)
         
-        # Set up archive directory for daily picks
-        self.archive_dir = self.script_dir.parent / "BaseballTracker" / "public" / "data" / "hellraiser" / "archive"
+        # Set up archive directory for daily picks using centralized path
+        self.archive_dir = PATHS['hellraiser'] / "archive"
         self.archive_dir.mkdir(parents=True, exist_ok=True)
         
         self.today = datetime.date.today().strftime("%Y-%m-%d")
@@ -71,8 +74,8 @@ class HellraiserScheduler:
     def archive_analysis_results(self, run_type: str):
         """Archive the current analysis results with timestamp"""
         try:
-            hellraiser_dir = self.script_dir.parent / "BaseballTracker" / "public" / "data" / "hellraiser"
-            current_analysis = hellraiser_dir / f"hellraiser_{self.today}.json"
+            hellraiser_dir = PATHS['hellraiser']
+            current_analysis = hellraiser_dir / f"hellraiser_analysis_{self.today}.json"
             
             if current_analysis.exists():
                 # Create timestamped filename
@@ -107,7 +110,7 @@ class HellraiserScheduler:
     def get_game_times_today(self) -> list:
         """Get today's game start times"""
         today = datetime.date.today().strftime("%Y-%m-%d")
-        lineup_file = self.script_dir.parent / "BaseballTracker" / "public" / "data" / "lineups" / f"starting_lineups_{today}.json"
+        lineup_file = PATHS['lineups'] / f"starting_lineups_{today}.json"
         
         game_times = []
         try:

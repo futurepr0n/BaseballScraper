@@ -17,8 +17,8 @@ import re
 import unicodedata
 from difflib import SequenceMatcher
 
-# Add BaseballTracker path for access to team/roster data
-sys.path.append('../BaseballTracker/src/services')
+# Use centralized configuration for data paths
+from config import PATHS
 
 class StartingLineupFetcher:
     def __init__(self):
@@ -52,10 +52,10 @@ class StartingLineupFetcher:
         }
         
     def load_teams_data(self) -> Dict:
-        """Load team data from BaseballTracker"""
+        """Load team data from centralized location"""
         try:
-            teams_path = "../BaseballTracker/public/data/teams.json"
-            if os.path.exists(teams_path):
+            teams_path = PATHS['data'] / 'teams.json'
+            if teams_path.exists():
                 with open(teams_path, 'r') as f:
                     return json.load(f)
         except Exception as e:
@@ -63,10 +63,10 @@ class StartingLineupFetcher:
         return {}
     
     def load_rosters_data(self) -> List:
-        """Load roster data from BaseballTracker"""
+        """Load roster data from centralized location"""
         try:
-            rosters_path = "../BaseballTracker/public/data/rosters.json"
-            if os.path.exists(rosters_path):
+            rosters_path = PATHS['rosters']
+            if rosters_path.exists():
                 with open(rosters_path, 'r') as f:
                     return json.load(f)
         except Exception as e:
@@ -673,7 +673,7 @@ class StartingLineupFetcher:
     def save_updated_roster_data(self):
         """Save updated roster data back to file"""
         try:
-            rosters_path = "../BaseballTracker/public/data/rosters.json"
+            rosters_path = PATHS['rosters']
             with open(rosters_path, 'w', encoding='utf-8') as f:
                 json.dump(self.rosters_data, f, indent=2, ensure_ascii=False)
             return True
@@ -778,42 +778,31 @@ class StartingLineupFetcher:
         return lineup_data
     
     def save_lineup_data(self, lineup_data: Dict, date_str: str = None) -> str:
-        """Save lineup data to JSON files in both dev and production directories"""
+        """Save lineup data to centralized location"""
         if not date_str:
             date_str = datetime.datetime.now().strftime("%Y-%m-%d")
             
         filename = f"starting_lineups_{date_str}.json"
         
-        # Save to both dev (public) and production (build) directories
-        directories = [
-            "../BaseballTracker/public/data/lineups",   # Dev environment
-            "../BaseballTracker/build/data/lineups"     # Production environment
-        ]
+        # Use centralized lineups directory
+        lineups_dir = PATHS['lineups']
         
-        saved_files = []
-        
-        for lineups_dir in directories:
-            try:
-                # Ensure directory exists
-                os.makedirs(lineups_dir, exist_ok=True)
-                
-                filepath = os.path.join(lineups_dir, filename)
-                
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    json.dump(lineup_data, f, indent=2, ensure_ascii=False)
-                
-                print(f"✅ Lineup data saved to {filepath}")
-                saved_files.append(filepath)
-                
-            except Exception as e:
-                print(f"❌ Error saving to {lineups_dir}: {e}")
-        
-        if saved_files:
+        try:
+            # Ensure directory exists
+            lineups_dir.mkdir(parents=True, exist_ok=True)
+            
+            filepath = lineups_dir / filename
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(lineup_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"✅ Lineup data saved to {filepath}")
             print(f"📊 Found {lineup_data['totalGames']} games with {lineup_data['gamesWithLineups']} having lineup info")
-            print(f"💾 Saved to {len(saved_files)} locations: dev + production")
-            return saved_files[0]  # Return first successful save path
-        else:
-            print("❌ Failed to save to any location")
+            print(f"💾 Saved to centralized location: {filepath}")
+            return str(filepath)
+            
+        except Exception as e:
+            print(f"❌ Error saving to {lineups_dir}: {e}")
             return ""
     
     def fetch_todays_lineups(self) -> Optional[Dict]:

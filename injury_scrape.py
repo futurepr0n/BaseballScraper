@@ -7,9 +7,12 @@ import shutil
 import hashlib
 import os
 
+# Use centralized configuration for data paths
+from config import PATHS
+
 # File paths
-ROSTERS_FILE = "/app/BaseballTracker/public/data/rosters.json"
-INJURIES_DIR = "/app/BaseballTracker/public/data/injuries"
+ROSTERS_FILE = PATHS['rosters']
+INJURIES_DIR = PATHS['injuries']
 
 # Team name mapping from full names to abbreviations
 TEAM_MAPPING = {

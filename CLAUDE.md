@@ -6,6 +6,14 @@ This file provides guidance to Claude Code when working with the BaseballScraper
 
 The **BaseballScraper** is a Python-based data collection system that scrapes MLB game data from ESPN boxscores and generates CSV files for the baseball analytics pipeline.
 
+## 🔄 CENTRALIZED OUTPUT (2025 UPDATE)
+
+**CRITICAL CHANGE:** BaseballScraper now outputs directly to centralized locations, eliminating data duplication:
+
+- **CSV Files**: `../BaseballData/CSV_BACKUPS/` (instead of local directory)
+- **Processed Schedules**: `../BaseballData/SCANNED/` (instead of local SCANNED/)
+- **All Python Scripts**: Updated to use centralized configuration from `config.py`
+
 ## Enhanced Features (2025 Update)
 
 ### Postponement Detection System
@@ -34,15 +42,17 @@ source venv/bin/activate
 pip install requests beautifulsoup4 pandas
 ```
 
-### Enhanced Setup with Postponement Detection (Recommended)
+### Enhanced Setup with Centralized Output (Recommended)
 ```bash
 cd BaseballScraper
 
-# 1. Run the setup
+# 1. Run the setup with centralized configuration
 ./setup_postponement_detection.sh
 
-# 2. Test the enhanced scraper
+# 2. Test the enhanced scraper (outputs to ../BaseballData/)
 python3 enhanced_scrape.py
+# 🎯 CSV files → ../BaseballData/CSV_BACKUPS/
+# 🎯 Processed schedules → ../BaseballData/SCANNED/
 
 # 3. Test automation (dry run)
 python3 smart_morning_run.py --dry-run

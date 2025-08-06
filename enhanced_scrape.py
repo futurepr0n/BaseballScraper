@@ -25,6 +25,9 @@ import argparse
 import sys
 from typing import List, Dict
 
+# Import centralized configuration
+from config import PATHS
+
 # --- (Keep TEAM_ABBREVIATIONS dictionary as is) ---
 TEAM_ABBREVIATIONS = {
     "Arizona Diamondbacks": "ARI", "D-backs": "ARI", "Diamondbacks": "ARI",
@@ -294,11 +297,14 @@ def save_data_to_csv(all_teams_data, date_identifier, game_id):
                      continue
 
                 df_output = df[output_columns]
-                # Include gameId in filename
+                # Include gameId in filename with centralized path
                 filename = f"{team_abbr.upper()}_{data_type}_{date_identifier}_{game_id}.csv"
+                csv_path = PATHS['csv_backups'] / filename
                 try:
-                    df_output.to_csv(filename, index=False, encoding='utf-8')
-                    print(f"Successfully saved data to {filename}")
+                    # Ensure CSV backups directory exists
+                    PATHS['csv_backups'].mkdir(parents=True, exist_ok=True)
+                    df_output.to_csv(csv_path, index=False, encoding='utf-8')
+                    print(f"Successfully saved data to {csv_path}")
                 except Exception as e:
                     print(f"Error saving {filename}: {e}")
             else:
@@ -345,20 +351,18 @@ def get_tomorrow_filename():
     return get_date_filename(1)
 
 def ensure_scanned_directory():
-    """Create SCANNED directory if it doesn't exist"""
-    scanned_dir = "SCANNED"
-    if not os.path.exists(scanned_dir):
-        os.makedirs(scanned_dir)
-        print(f"Created directory: {scanned_dir}")
+    """Create centralized SCANNED directory if it doesn't exist"""
+    scanned_dir = PATHS['scanned']
+    scanned_dir.mkdir(parents=True, exist_ok=True)
     return scanned_dir
 
 def move_file_to_scanned(filename):
-    """Move processed file to SCANNED directory"""
+    """Move processed file to centralized SCANNED directory"""
     scanned_dir = ensure_scanned_directory()
-    destination = os.path.join(scanned_dir, filename)
+    destination = scanned_dir / filename
     
     try:
-        shutil.move(filename, destination)
+        shutil.move(filename, str(destination))
         print(f"✅ Moved processed file to: {destination}")
         return True
     except Exception as e:

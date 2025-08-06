@@ -14,9 +14,12 @@ import sys
 from typing import Dict, Optional
 from fetch_starting_lineups import StartingLineupFetcher
 
+# Import centralized configuration
+from config import PATHS
+
 class LineupScheduler:
     def __init__(self):
-        self.lineups_dir = "../BaseballTracker/public/data/lineups"
+        self.lineups_dir = str(PATHS['lineups'])
         self.log_file = "lineup_updates.log"
         self.setup_logging()
         
