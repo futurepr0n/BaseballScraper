@@ -621,3 +621,50 @@ if __name__ == "__main__":
         print(f"📋 MANUAL ACTION REQUIRED: Check postponement notification files")
         print(f"📅 Review {tomorrow_filename} and manually update if needed")
     print("=" * 60)
+
+def archive_csv_files_to_backups(date_identifier: str = None) -> bool:
+    """
+    Archive CSV files to centralized backup directory
+    This function is called by enhanced_daily_automation.sh as part of the centralized workflow:
+    1. Scraper saves CSV files locally
+    2. Processing occurs from local files  
+    3. Archive to centralized backups
+    4. Clean up local files
+    """
+    try:
+        # Get current directory CSV files
+        csv_files = glob.glob('*.csv')
+        
+        if not csv_files:
+            print("ℹ️ No CSV files found to archive")
+            return True
+        
+        print(f"📦 Archiving {len(csv_files)} CSV files to centralized backup...")
+        
+        # Ensure centralized backup directory exists
+        csv_backups_dir = PATHS['csv_backups']
+        csv_backups_dir.mkdir(parents=True, exist_ok=True)
+        
+        archived_count = 0
+        
+        for csv_file in csv_files:
+            try:
+                # Copy file to centralized backup
+                backup_path = csv_backups_dir / csv_file
+                shutil.copy2(csv_file, backup_path)
+                
+                print(f"  ✅ Archived: {csv_file} → {backup_path}")
+                archived_count += 1
+                
+            except Exception as e:
+                print(f"  ❌ Failed to archive {csv_file}: {e}")
+                return False
+        
+        print(f"✅ Successfully archived {archived_count}/{len(csv_files)} CSV files to centralized backup")
+        print(f"📁 Backup location: {csv_backups_dir}")
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Archive operation failed: {e}")
+        return False
