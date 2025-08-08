@@ -1,0 +1,343 @@
+{
+  "test_info": {
+    "game_id": "401694974",
+    "teams": "ARI @ NYY",
+    "total_plays": 74,
+    "enhanced_descriptions": 21,
+    "basic_descriptions": 53,
+    "enhancement_rate": 28.37837837837838
+  },
+  "sample_plays": [
+    {
+      "play_sequence": 1,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Top",
+      "batter": "Corbin Carroll",
+      "pitcher": "Will Warren",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 3,
+          "result": "Strike Swinging",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Looking",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Ball",
+          "pitch_type": "Changeup",
+          "velocity": 86,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 6,
+          "result": "Strike Swinging",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 3,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "Carroll struck out swinging.",
+      "all_play_texts": [
+        "Top of the 1st inning",
+        "Will Warren pitches to Corbin Carroll",
+        "Pitch 1 : Ball 1",
+        "Pitch 2 : Ball 2",
+        "Pitch 3 : Strike 1 Swinging",
+        "Pitch 4 : Strike 2 Looking",
+        "Pitch 5 : Ball 3",
+        "Pitch 6 : Strike 3 Swinging",
+        "Carroll struck out swinging."
+      ]
+    },
+    {
+      "play_sequence": 2,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Top",
+      "batter": "Ketel Marte",
+      "pitcher": "Will Warren",
+      "play_description": "Pitch 3 : Ball In Play",
+      "play_result": "Groundout",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Foul Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ground Out",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 1
+        }
+      ],
+      "raw_text": "Marte grounded out to first.",
+      "all_play_texts": [
+        "Will Warren pitches to Ketel Marte",
+        "Pitch 1 : Ball 1",
+        "Pitch 2 : Strike 1 Foul",
+        "Pitch 3 : Ball In Play",
+        "Marte grounded out to first."
+      ]
+    },
+    {
+      "play_sequence": 3,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Mid",
+      "batter": "Pavin Smith",
+      "pitcher": "Will Warren",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Strike Looking",
+          "pitch_type": "Sweeper",
+          "velocity": 81,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Curve",
+          "velocity": 82,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 87,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 88,
+          "balls": 2,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "Smith struck out swinging.",
+      "all_play_texts": [
+        "Will Warren pitches to Pavin Smith",
+        "Pitch 1 : Ball 1",
+        "Pitch 2 : Strike 1 Looking",
+        "Pitch 3 : Ball 2",
+        "Pitch 4 : Strike 2 Swinging",
+        "Pitch 5 : Strike 3 Swinging",
+        "Smith struck out swinging.",
+        "Middle of the 1st inning"
+      ]
+    },
+    {
+      "play_sequence": 4,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Bottom",
+      "batter": "Paul Goldschmidt",
+      "pitcher": "Corbin Burnes",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 92,
+          "balls": 0,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 2,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 0,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Slider",
+          "velocity": 85,
+          "balls": 1,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 94,
+          "balls": 1,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "Goldschmidt struck out swinging.",
+      "all_play_texts": [
+        "Bottom of the 1st inning",
+        "Corbin Burnes pitches to Paul Goldschmidt",
+        "Pitch 1 : Strike 1 Foul",
+        "Pitch 2 : Strike 2 Swinging",
+        "Pitch 3 : Ball 1",
+        "Pitch 4 : Strike 3 Swinging",
+        "Goldschmidt struck out swinging."
+      ]
+    },
+    {
+      "play_sequence": 5,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Bottom",
+      "batter": "Cody Bellinger",
+      "pitcher": "Corbin Burnes",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Strike Looking",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 0,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 2,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 92,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 90,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 6,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 94,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 7,
+          "result": "Foul Ball",
+          "pitch_type": "Curve",
+          "velocity": 82,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 8,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 95,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 9,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 3,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "Bellinger struck out swinging.",
+      "all_play_texts": [
+        "Corbin Burnes pitches to Cody Bellinger",
+        "Pitch 1 : Strike 1 Looking",
+        "Pitch 2 : Ball 1",
+        "Pitch 3 : Ball 2",
+        "Pitch 4 : Strike 2 Swinging",
+        "Pitch 5 : Ball 3",
+        "Pitch 6 : Strike 2 Foul",
+        "Pitch 7 : Strike 2 Foul",
+        "Pitch 8 : Strike 2 Foul",
+        "Pitch 9 : Strike 3 Swinging",
+        "Bellinger struck out swinging."
+      ]
+    }
+  ]
+}

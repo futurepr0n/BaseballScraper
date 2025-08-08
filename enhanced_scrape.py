@@ -297,14 +297,13 @@ def save_data_to_csv(all_teams_data, date_identifier, game_id):
                      continue
 
                 df_output = df[output_columns]
-                # Include gameId in filename with centralized path
+                # Include gameId in filename - save to LOCAL directory first for automation
                 filename = f"{team_abbr.upper()}_{data_type}_{date_identifier}_{game_id}.csv"
-                csv_path = PATHS['csv_backups'] / filename
+                local_csv_path = filename  # Save to current directory for automation processing
                 try:
-                    # Ensure CSV backups directory exists
-                    PATHS['csv_backups'].mkdir(parents=True, exist_ok=True)
-                    df_output.to_csv(csv_path, index=False, encoding='utf-8')
-                    print(f"Successfully saved data to {csv_path}")
+                    # Save locally first for automation processing
+                    df_output.to_csv(local_csv_path, index=False, encoding='utf-8')
+                    print(f"Successfully saved data to {local_csv_path} (for processing)")
                 except Exception as e:
                     print(f"Error saving {filename}: {e}")
             else:

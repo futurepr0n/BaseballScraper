@@ -78,6 +78,32 @@ def extract_playbyplay_data_from_api(game_id: str) -> tuple:
         plays = api_data['plays']
         print(f"✅ Found {len(plays)} total plays in API data")
         
+        # Build player ID to name mapping from boxscore players data
+        player_id_to_name = {}
+        if 'boxscore' in api_data and 'players' in api_data['boxscore']:
+            print(f"📋 Building player name mapping from boxscore players...")
+            teams = api_data['boxscore']['players']
+            
+            for team in teams:
+                team_abbr = team.get('team', {}).get('abbreviation', 'Unknown')
+                statistics = team.get('statistics', [])
+                
+                for stat_group in statistics:
+                    if 'athletes' in stat_group:
+                        athletes = stat_group['athletes']
+                        for athlete_data in athletes:
+                            athlete = athlete_data.get('athlete', {})
+                            player_id = athlete.get('id')
+                            player_name = (athlete.get('displayName') or 
+                                         athlete.get('fullName') or 
+                                         athlete.get('shortName'))
+                            if player_id and player_name:
+                                player_id_to_name[str(player_id)] = player_name
+            
+            print(f"✅ Mapped {len(player_id_to_name)} player IDs to names")
+        else:
+            print(f"⚠️ No boxscore data available for player name mapping")
+        
         # Initialize game data structure
         game_data = {
             'metadata': {
@@ -131,7 +157,9 @@ def extract_playbyplay_data_from_api(game_id: str) -> tuple:
                     'play_description': None,
                     'play_result': None,
                     'pitches': [],
-                    'final_play': None
+                    'final_play': None,
+                    'play_texts': [],  # Store all play descriptions
+                    'result_description': None  # Best description for this at-bat
                 }
             
             current_ab = at_bats[at_bat_id]
@@ -141,14 +169,35 @@ def extract_playbyplay_data_from_api(game_id: str) -> tuple:
                 current_ab['inning'] = play['period'].get('number')
                 current_ab['inning_half'] = play['period'].get('type')
             
-            # Extract participants (batter/pitcher)
-            if 'participants' in play:
-                for participant in play['participants']:
-                    if participant.get('type') == 'batter':
-                        # We'll need to resolve athlete ID to name later
-                        current_ab['batter'] = participant.get('athlete', {}).get('id')
-                    elif participant.get('type') == 'pitcher':
-                        current_ab['pitcher'] = participant.get('athlete', {}).get('id')
+            # Extract participant information (batter and pitcher)
+            participants = play.get('participants', [])
+            for participant in participants:
+                athlete_id = participant.get('athlete', {}).get('id')
+                if participant.get('type') == 'batter' and athlete_id:
+                    # Resolve batter name from our mapping
+                    batter_name = player_id_to_name.get(str(athlete_id))
+                    if batter_name:
+                        current_ab['batter'] = batter_name
+                elif participant.get('type') == 'pitcher' and athlete_id:
+                    # Resolve pitcher name from our mapping
+                    pitcher_name = player_id_to_name.get(str(athlete_id))
+                    if pitcher_name:
+                        current_ab['pitcher'] = pitcher_name
+            
+            # Collect play descriptions - ESPN provides rich text descriptions
+            play_text = play.get('text', '').strip()
+            if play_text and play_text not in current_ab['play_texts']:
+                current_ab['play_texts'].append(play_text)
+                
+                # Identify result descriptions (non-pitch descriptions)
+                if not play_text.startswith('Pitch ') and not play_text.startswith('Top of') and not play_text.startswith('Bottom of'):
+                    # This looks like a meaningful play description, not just pitch tracking
+                    if (any(word in play_text.lower() for word in [
+                        'singles', 'doubles', 'triples', 'homers', 'strikes out', 'walks', 'flies out',
+                        'grounds out', 'lines out', 'pops out', 'reaches', 'safe', 'error', 'fielder',
+                        'pitches to', 'batting', 'intentional walk'
+                    ]) or 'out' in play_text.lower()):
+                        current_ab['result_description'] = play_text
             
             # Process pitch data
             play_type = play.get('type', {}).get('type', '')
@@ -208,17 +257,25 @@ def extract_playbyplay_data_from_api(game_id: str) -> tuple:
                 elif 'pop' in result_text and 'out' in result_text:
                     play_result = "Popout"
             
+            # Choose the best description to use
+            enhanced_description = (
+                at_bat['result_description'] or  # Rich ESPN description (preferred)
+                description or                    # Fallback to basic description
+                f"At-bat {at_bat_id}: {play_result}"  # Last resort
+            )
+            
             play_data = {
                 'play_sequence': play_sequence,
                 'game_id': game_id,
                 'inning': at_bat['inning'] or 1,
                 'inning_half': at_bat['inning_half'] or 'Unknown',
-                'batter': f"Batter_{at_bat['batter']}" if at_bat['batter'] else "Unknown",  # Will resolve names later
-                'pitcher': f"Pitcher_{at_bat['pitcher']}" if at_bat['pitcher'] else "Unknown",
+                'batter': at_bat['batter'] or "Unknown",  # Now contains actual names
+                'pitcher': at_bat['pitcher'] or "Unknown",
                 'play_description': description,
                 'play_result': play_result,
                 'pitch_sequence': at_bat['pitches'],
-                'raw_text': f"At-bat {at_bat_id}: {description}"
+                'raw_text': enhanced_description,  # Enhanced ESPN descriptions!
+                'all_play_texts': at_bat['play_texts']  # For debugging/analysis
             }
             
             game_data['plays'].append(play_data)
@@ -238,15 +295,13 @@ def extract_playbyplay_data_from_api(game_id: str) -> tuple:
 
 
 def extract_playbyplay_data(html_content: str, url: str) -> tuple:
-    """Extract detailed play-by-play data from ESPN pages (legacy HTML method)"""
+    """Extract detailed play-by-play data from ESPN pages with real player names"""
     if not html_content:
         return None, None, None, None
     
-    # Extract game ID and use API method instead
+    # Extract game ID but use HTML parsing since API doesn't have player names
     game_id = extract_game_id_from_url(url)
-    if game_id:
-        print(f"🔄 Using enhanced API method instead of HTML parsing for comprehensive data...")
-        return extract_playbyplay_data_from_api(game_id)
+    print(f"⚾ Using HTML parsing to extract real player names...")
     
     # Fallback to HTML parsing if game ID extraction fails
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -722,7 +777,7 @@ def save_playbyplay_data(game_data: Dict, date_identifier: str, game_id: str, aw
     team_matchup = f"{away_team}_vs_{home_team}"
     
     if format_type.lower() == 'json':
-        # Save JSON to BaseballData/data/playbyplay/
+        # Save JSON to BaseballData/data/play-by-play/
         filename = f"{team_matchup}_playbyplay_{date_identifier}_{game_id}.json"
         json_path = json_pbp_dir / filename
         

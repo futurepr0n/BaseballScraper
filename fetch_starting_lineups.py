@@ -544,11 +544,19 @@ class StartingLineupFetcher:
                 print(f"⚠️ Multiple players on {team_abbr} match '{api_name}' - using first match")
                 return team_matches[0]
             else:
-                print(f"⚠️ No team match for '{api_name}' on {team_abbr} - using first variant match")
-                return potential_matches[0]
+                # CRITICAL FIX: Don't return cross-team matches as they corrupt roster data
+                print(f"⚠️ No team match for '{api_name}' on {team_abbr} - no valid match found")
+                return None
         
-        # Return first match if only one found or no team specified
-        return potential_matches[0] if potential_matches else None
+        # Return first match only if we have exactly one match or no team specified for disambiguation
+        if len(potential_matches) == 1:
+            return potential_matches[0]
+        elif len(potential_matches) > 1 and not team_abbr:
+            # Multiple matches without team context - return first but warn
+            print(f"⚠️ Multiple matches for '{api_name}' without team context - using first match")
+            return potential_matches[0]
+        else:
+            return None
     
     def should_update_full_name(self, current_name: str, current_full_name: str, api_name: str) -> bool:
         """Determine if we should update roster name with fuller API name"""
