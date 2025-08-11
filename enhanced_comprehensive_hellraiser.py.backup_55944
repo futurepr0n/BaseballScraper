@@ -2350,10 +2350,7 @@ class EnhancedComprehensiveHellraiser:
         print(f"   Processing Time: {processing_time:.1f} seconds")
         print(f"   Total Picks: {total_picks}")
         print(f"   Average Confidence: {avg_confidence:.1f}%")
-        if analysis_picks:
-            print(f"   Score Range: {min(p['confidenceScore'] for p in analysis_picks):.1f}% - {max(p['confidenceScore'] for p in analysis_picks):.1f}%")
-        else:
-            print("   Score Range: No picks generated")
+        print(f"   Score Range: {min(p['confidenceScore'] for p in analysis_picks):.1f}% - {max(p['confidenceScore'] for p in analysis_picks):.1f}%")
         print(f"   Data Sources: {len(comprehensive_analysis['data_sources_used'])} per player")
         
         return analysis
