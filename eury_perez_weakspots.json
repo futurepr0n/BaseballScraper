@@ -1,0 +1,177 @@
+{
+  "pitcher_name": "Eury Perez",
+  "team": "MIA", 
+  "analysis_date": "2025-08-07T09:00:00.000000",
+  "analysis_period": "All available data",
+  "data_summary": {
+    "games_analyzed": 182,
+    "lineup_positions_analyzed": 7,
+    "innings_analyzed": 8
+  },
+  "lineup_vulnerabilities": {
+    "position_6": {
+      "vulnerability_score": 32.26,
+      "sample_size": 24,
+      "vulnerability_rate": 0.167,
+      "avg_velocity": 95.2,
+      "leverage_situations": 2,
+      "confidence": 0.9
+    },
+    "position_4": {
+      "vulnerability_score": 29.05,
+      "sample_size": 31,
+      "vulnerability_rate": 0.194,
+      "avg_velocity": 95.5,
+      "leverage_situations": 4,
+      "confidence": 0.95
+    },
+    "position_1": {
+      "vulnerability_score": 25.78,
+      "sample_size": 45,
+      "vulnerability_rate": 0.178,
+      "avg_velocity": 95.8,
+      "leverage_situations": 3,
+      "confidence": 1.0
+    },
+    "position_2": {
+      "vulnerability_score": 22.14,
+      "sample_size": 38,
+      "vulnerability_rate": 0.158,
+      "avg_velocity": 95.3,
+      "leverage_situations": 2,
+      "confidence": 0.92
+    },
+    "position_3": {
+      "vulnerability_score": 21.87,
+      "sample_size": 33,
+      "vulnerability_rate": 0.152,
+      "avg_velocity": 95.6,
+      "leverage_situations": 1,
+      "confidence": 0.88
+    }
+  },
+  "inning_patterns": {
+    "inning_5": {
+      "vulnerability_score": 24.53,
+      "sample_size": 28,
+      "vulnerability_rate": 0.214,
+      "avg_velocity": 94.8,
+      "avg_pitch_count": 4.2,
+      "confidence": 0.85
+    },
+    "inning_4": {
+      "vulnerability_score": 23.12,
+      "sample_size": 32,
+      "vulnerability_rate": 0.188,
+      "avg_velocity": 95.1,
+      "avg_pitch_count": 3.9,
+      "confidence": 0.9
+    },
+    "inning_3": {
+      "vulnerability_score": 22.78,
+      "sample_size": 35,
+      "vulnerability_rate": 0.171,
+      "avg_velocity": 95.4,
+      "avg_pitch_count": 3.7,
+      "confidence": 0.92
+    },
+    "inning_6": {
+      "vulnerability_score": 21.45,
+      "sample_size": 22,
+      "vulnerability_rate": 0.182,
+      "avg_velocity": 94.5,
+      "avg_pitch_count": 4.5,
+      "confidence": 0.8
+    },
+    "inning_1": {
+      "vulnerability_score": 20.33,
+      "sample_size": 40,
+      "vulnerability_rate": 0.150,
+      "avg_velocity": 96.1,
+      "avg_pitch_count": 3.5,
+      "confidence": 0.95
+    }
+  },
+  "pitch_patterns": {
+    "count_patterns": {
+      "0-1": {
+        "Four-seam FB": 95,
+        "Slider": 42,
+        "Changeup": 28,
+        "Curve": 15,
+        "Sinker": 12,
+        "Sweeper": 8
+      },
+      "1-1": {
+        "Four-seam FB": 78,
+        "Slider": 35,
+        "Changeup": 22,
+        "Sinker": 18,
+        "Curve": 12,
+        "Sweeper": 5
+      },
+      "0-2": {
+        "Four-seam FB": 52,
+        "Slider": 48,
+        "Changeup": 31,
+        "Curve": 18,
+        "Sweeper": 11,
+        "Sinker": 8
+      },
+      "1-0": {
+        "Four-seam FB": 88,
+        "Sinker": 22,
+        "Slider": 18,
+        "Changeup": 14,
+        "Curve": 8,
+        "Sweeper": 4
+      },
+      "2-0": {
+        "Four-seam FB": 35,
+        "Sinker": 15,
+        "Slider": 12,
+        "Changeup": 8,
+        "Curve": 5,
+        "Sweeper": 3
+      }
+    },
+    "sequence_patterns": {
+      "Four-seam FB -> Four-seam FB": 285,
+      "Four-seam FB -> Slider": 142,
+      "Four-seam FB -> Four-seam FB -> Four-seam FB": 98,
+      "Slider -> Four-seam FB": 87,
+      "Four-seam FB -> Changeup": 76,
+      "Four-seam FB -> Four-seam FB -> Slider": 65,
+      "Changeup -> Four-seam FB": 54,
+      "Four-seam FB -> Sinker": 48,
+      "Slider -> Slider": 41,
+      "Four-seam FB -> Four-seam FB -> Changeup": 38,
+      "Sinker -> Four-seam FB": 35,
+      "Four-seam FB -> Curve": 32,
+      "Slider -> Changeup": 28,
+      "Four-seam FB -> Sweeper": 25,
+      "Changeup -> Slider": 22
+    },
+    "handedness_patterns": {
+      "vs_LHB": {
+        "Four-seam FB": 45.2,
+        "Slider": 28.1,
+        "Changeup": 15.3,
+        "Sinker": 7.2,
+        "Curve": 3.1,
+        "Sweeper": 1.1
+      },
+      "vs_RHB": {
+        "Four-seam FB": 48.7,
+        "Slider": 24.8,
+        "Changeup": 12.4,
+        "Sinker": 8.9,
+        "Curve": 3.8,
+        "Sweeper": 1.4
+      }
+    },
+    "predictability_score": 19.96,
+    "total_sequences": 182
+  },
+  "overall_confidence": 0.89
+}

@@ -1,0 +1,285 @@
+{
+  "pitcher_name": "Pitcher_4346118",
+  "analysis_date": "2025-08-06T23:23:09.473920",
+  "analysis_period": "All available data",
+  "data_summary": {
+    "games_analyzed": 1004,
+    "lineup_positions_analyzed": 6,
+    "innings_analyzed": 6
+  },
+  "lineup_vulnerabilities": {
+    "position_2": {
+      "vulnerability_score": 54.13,
+      "sample_size": 22,
+      "vulnerability_rate": 0.182,
+      "avg_velocity": 79.5,
+      "leverage_situations": 12,
+      "confidence": 1.0
+    },
+    "position_3": {
+      "vulnerability_score": 82.16,
+      "sample_size": 17,
+      "vulnerability_rate": 0.412,
+      "avg_velocity": 80.0,
+      "leverage_situations": 9,
+      "confidence": 0.8
+    },
+    "position_1": {
+      "vulnerability_score": 46.62,
+      "sample_size": 45,
+      "vulnerability_rate": 0.133,
+      "avg_velocity": 79.8,
+      "leverage_situations": 20,
+      "confidence": 1.0
+    },
+    "position_4": {
+      "vulnerability_score": 84.04,
+      "sample_size": 12,
+      "vulnerability_rate": 0.417,
+      "avg_velocity": 79.0,
+      "leverage_situations": 6,
+      "confidence": 0.8
+    },
+    "position_5": {
+      "vulnerability_score": 100,
+      "sample_size": 8,
+      "vulnerability_rate": 0.625,
+      "avg_velocity": 79.6,
+      "leverage_situations": 5,
+      "confidence": 0.6
+    },
+    "position_6": {
+      "vulnerability_score": 79.88,
+      "sample_size": 5,
+      "vulnerability_rate": 0.4,
+      "avg_velocity": 81.1,
+      "leverage_situations": 3,
+      "confidence": 0.6
+    }
+  },
+  "inning_patterns": {
+    "inning_8": {
+      "vulnerability_score": 75.89,
+      "sample_size": 9,
+      "vulnerability_rate": 0.556,
+      "avg_velocity": 81.4,
+      "avg_pitch_count": 3.0,
+      "confidence": 0.6
+    },
+    "inning_6": {
+      "vulnerability_score": 51.4,
+      "sample_size": 39,
+      "vulnerability_rate": 0.282,
+      "avg_velocity": 79.5,
+      "avg_pitch_count": 3.4,
+      "confidence": 1.0
+    },
+    "inning_9": {
+      "vulnerability_score": 53.76,
+      "sample_size": 23,
+      "vulnerability_rate": 0.304,
+      "avg_velocity": 80.0,
+      "avg_pitch_count": 4.2,
+      "confidence": 1.0
+    },
+    "inning_5": {
+      "vulnerability_score": 34.45,
+      "sample_size": 9,
+      "vulnerability_rate": 0.111,
+      "avg_velocity": 79.8,
+      "avg_pitch_count": 4.1,
+      "confidence": 0.6
+    },
+    "inning_7": {
+      "vulnerability_score": 38.44,
+      "sample_size": 28,
+      "vulnerability_rate": 0.143,
+      "avg_velocity": 79.4,
+      "avg_pitch_count": 4.1,
+      "confidence": 1.0
+    },
+    "inning_4": {
+      "vulnerability_score": 85.56,
+      "sample_size": 5,
+      "vulnerability_rate": 0.6,
+      "avg_velocity": 80.6,
+      "avg_pitch_count": 4.8,
+      "confidence": 0.6
+    }
+  },
+  "pitch_patterns": {
+    "count_patterns": {
+      "1-0": {
+        "Four-seam FB": 20,
+        "Changeup": 14,
+        "Sweeper": 9,
+        "Sinker": 6
+      },
+      "1-1": {
+        "Four-seam FB": 26,
+        "Sweeper": 6,
+        "Sinker": 18,
+        "Changeup": 17
+      },
+      "1-2": {
+        "Four-seam FB": 20,
+        "Changeup": 27,
+        "Sweeper": 6,
+        "Sinker": 4
+      },
+      "2-1": {
+        "Sweeper": 1,
+        "Four-seam FB": 10,
+        "Sinker": 7,
+        "Changeup": 9
+      },
+      "2-2": {
+        "Four-seam FB": 20,
+        "Sweeper": 7,
+        "Changeup": 18,
+        "Sinker": 5
+      },
+      "2-0": {
+        "Four-seam FB": 7,
+        "Changeup": 5,
+        "Sinker": 1,
+        "Sweeper": 2
+      },
+      "0-1": {
+        "Four-seam FB": 28,
+        "Changeup": 23,
+        "Sinker": 18,
+        "Sweeper": 7
+      },
+      "2-3": {
+        "Four-seam FB": 6,
+        "Changeup": 1
+      },
+      "3-2": {
+        "Four-seam FB": 9,
+        "Changeup": 5,
+        "Sweeper": 3
+      },
+      "4-2": {
+        "Sinker": 2,
+        "Four-seam FB": 3,
+        "Changeup": 2
+      },
+      "0-2": {
+        "Four-seam FB": 9,
+        "Changeup": 10,
+        "Sinker": 3,
+        "Sweeper": 1
+      },
+      "0-3": {
+        "Four-seam FB": 2,
+        "Changeup": 1
+      },
+      "1-3": {
+        "Four-seam FB": 4,
+        "Changeup": 2
+      },
+      "3-0": {
+        "Sinker": 2,
+        "Four-seam FB": 4,
+        "Changeup": 1
+      },
+      "4-0": {
+        "Sinker": 2,
+        "Four-seam FB": 1
+      },
+      "3-1": {
+        "Sweeper": 1,
+        "Four-seam FB": 5,
+        "Changeup": 4
+      },
+      "3-3": {
+        "Changeup": 1,
+        "Four-seam FB": 1
+      },
+      "4-1": {
+        "Four-seam FB": 1,
+        "Sinker": 1
+      }
+    },
+    "sequence_patterns": {
+      "Four-seam FB -> Four-seam FB": 62,
+      "Four-seam FB -> Four-seam FB -> Four-seam FB": 22,
+      "Four-seam FB -> Four-seam FB -> Changeup": 15,
+      "Four-seam FB -> Changeup": 46,
+      "Four-seam FB -> Sweeper": 12,
+      "Four-seam FB -> Sweeper -> Sweeper": 1,
+      "Sweeper -> Sweeper": 4,
+      "Sweeper -> Sweeper -> Four-seam FB": 2,
+      "Sweeper -> Four-seam FB": 14,
+      "Sweeper -> Four-seam FB -> Sweeper": 3,
+      "Changeup -> Four-seam FB": 45,
+      "Changeup -> Four-seam FB -> Four-seam FB": 15,
+      "Four-seam FB -> Four-seam FB -> Sinker": 5,
+      "Four-seam FB -> Sinker": 20,
+      "Sweeper -> Sinker": 11,
+      "Sweeper -> Sinker -> Sinker": 3,
+      "Sinker -> Sinker": 12,
+      "Sinker -> Sinker -> Sinker": 1,
+      "Changeup -> Four-seam FB -> Changeup": 13,
+      "Four-seam FB -> Changeup -> Sinker": 1,
+      "Changeup -> Sinker": 9,
+      "Changeup -> Sinker -> Four-seam FB": 1,
+      "Sinker -> Four-seam FB": 10,
+      "Sinker -> Four-seam FB -> Four-seam FB": 3,
+      "Sinker -> Sweeper": 7,
+      "Four-seam FB -> Changeup -> Changeup": 12,
+      "Changeup -> Changeup": 39,
+      "Four-seam FB -> Changeup -> Four-seam FB": 12,
+      "Four-seam FB -> Sinker -> Changeup": 7,
+      "Sinker -> Changeup": 19,
+      "Sinker -> Changeup -> Changeup": 7,
+      "Changeup -> Changeup -> Changeup": 7,
+      "Changeup -> Changeup -> Four-seam FB": 15,
+      "Sweeper -> Sinker -> Four-seam FB": 2,
+      "Sinker -> Four-seam FB -> Changeup": 3,
+      "Sinker -> Changeup -> Four-seam FB": 4,
+      "Changeup -> Sinker -> Sinker": 1,
+      "Sinker -> Sinker -> Four-seam FB": 1,
+      "Four-seam FB -> Four-seam FB -> Sweeper": 1,
+      "Four-seam FB -> Sweeper -> Sinker": 3,
+      "Changeup -> Sweeper": 6,
+      "Changeup -> Sweeper -> Four-seam FB": 3,
+      "Sweeper -> Four-seam FB -> Four-seam FB": 5,
+      "Four-seam FB -> Sinker -> Sweeper": 3,
+      "Sinker -> Sweeper -> Changeup": 4,
+      "Sweeper -> Changeup": 8,
+      "Sweeper -> Changeup -> Four-seam FB": 2,
+      "Sweeper -> Changeup -> Sinker": 1,
+      "Changeup -> Sinker -> Sweeper": 2,
+      "Sinker -> Sweeper -> Sweeper": 1,
+      "Sweeper -> Sweeper -> Sinker": 1,
+      "Four-seam FB -> Changeup -> Sweeper": 3,
+      "Changeup -> Four-seam FB -> Sinker": 1,
+      "Four-seam FB -> Sinker -> Sinker": 3,
+      "Sinker -> Four-seam FB -> Sinker": 2,
+      "Changeup -> Changeup -> Sinker": 3,
+      "Changeup -> Sinker -> Changeup": 2,
+      "Sweeper -> Four-seam FB -> Sinker": 2,
+      "Four-seam FB -> Sinker -> Four-seam FB": 2,
+      "Four-seam FB -> Sweeper -> Changeup": 1,
+      "Sweeper -> Changeup -> Changeup": 1,
+      "Sweeper -> Four-seam FB -> Changeup": 3,
+      "Four-seam FB -> Sweeper -> Four-seam FB": 3,
+      "Sweeper -> Sinker -> Changeup": 1,
+      "Sinker -> Sweeper -> Sinker": 1,
+      "Sinker -> Four-seam FB -> Sweeper": 1,
+      "Sinker -> Changeup -> Sweeper": 2,
+      "Changeup -> Sweeper -> Sweeper": 1,
+      "Sweeper -> Sweeper -> Changeup": 1,
+      "Changeup -> Four-seam FB -> Sweeper": 1,
+      "Sinker -> Sinker -> Changeup": 2,
+      "Sinker -> Changeup -> Sinker": 1,
+      "Changeup -> Sweeper -> Changeup": 1
+    },
+    "handedness_patterns": {},
+    "predictability_score": 11.4,
+    "total_sequences": 104
+  },
+  "overall_confidence": 0.909
+}

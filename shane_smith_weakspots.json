@@ -1,0 +1,375 @@
+{
+  "pitcher_name": "Shane Smith",
+  "analysis_date": "2025-08-07T13:37:50.633233",
+  "analysis_period": "All available data",
+  "data_summary": {
+    "games_analyzed": 1681,
+    "lineup_positions_analyzed": 6,
+    "innings_analyzed": 6
+  },
+  "lineup_vulnerabilities": {
+    "position_2": {
+      "vulnerability_score": 29.84,
+      "sample_size": 88,
+      "vulnerability_rate": 0.216,
+      "avg_velocity": 90.9,
+      "leverage_situations": 0,
+      "confidence": 1.0
+    },
+    "position_3": {
+      "vulnerability_score": 24.76,
+      "sample_size": 65,
+      "vulnerability_rate": 0.169,
+      "avg_velocity": 91.1,
+      "leverage_situations": 0,
+      "confidence": 1.0
+    },
+    "position_1": {
+      "vulnerability_score": 29.23,
+      "sample_size": 154,
+      "vulnerability_rate": 0.214,
+      "avg_velocity": 91.1,
+      "leverage_situations": 0,
+      "confidence": 1.0
+    },
+    "position_4": {
+      "vulnerability_score": 19.38,
+      "sample_size": 33,
+      "vulnerability_rate": 0.121,
+      "avg_velocity": 91.4,
+      "leverage_situations": 0,
+      "confidence": 1.0
+    },
+    "position_5": {
+      "vulnerability_score": 21.97,
+      "sample_size": 34,
+      "vulnerability_rate": 0.147,
+      "avg_velocity": 91.4,
+      "leverage_situations": 0,
+      "confidence": 1.0
+    },
+    "position_6": {
+      "vulnerability_score": 30.08,
+      "sample_size": 8,
+      "vulnerability_rate": 0.25,
+      "avg_velocity": 92.5,
+      "leverage_situations": 0,
+      "confidence": 0.6
+    }
+  },
+  "inning_patterns": {
+    "inning_1": {
+      "vulnerability_score": 26.28,
+      "sample_size": 88,
+      "vulnerability_rate": 0.216,
+      "avg_velocity": 91.9,
+      "avg_pitch_count": 3.9,
+      "confidence": 1.0
+    },
+    "inning_2": {
+      "vulnerability_score": 22.71,
+      "sample_size": 80,
+      "vulnerability_rate": 0.163,
+      "avg_velocity": 91.8,
+      "avg_pitch_count": 4.3,
+      "confidence": 1.0
+    },
+    "inning_3": {
+      "vulnerability_score": 20.66,
+      "sample_size": 68,
+      "vulnerability_rate": 0.147,
+      "avg_velocity": 91.0,
+      "avg_pitch_count": 3.6,
+      "confidence": 1.0
+    },
+    "inning_4": {
+      "vulnerability_score": 25.12,
+      "sample_size": 61,
+      "vulnerability_rate": 0.18,
+      "avg_velocity": 90.3,
+      "avg_pitch_count": 3.8,
+      "confidence": 1.0
+    },
+    "inning_5": {
+      "vulnerability_score": 30.75,
+      "sample_size": 63,
+      "vulnerability_rate": 0.238,
+      "avg_velocity": 90.4,
+      "avg_pitch_count": 3.5,
+      "confidence": 1.0
+    },
+    "inning_6": {
+      "vulnerability_score": 33.05,
+      "sample_size": 24,
+      "vulnerability_rate": 0.25,
+      "avg_velocity": 89.8,
+      "avg_pitch_count": 4.0,
+      "confidence": 1.0
+    }
+  },
+  "pitch_patterns": {
+    "count_patterns": {
+      "0-1": {
+        "Four-seam FB": 97,
+        "Curve": 34,
+        "Slider": 42,
+        "Sinker": 25,
+        "Changeup": 31,
+        "Sweeper": 1
+      },
+      "0-2": {
+        "Four-seam FB": 62,
+        "Changeup": 32,
+        "Curve": 9,
+        "Sinker": 9,
+        "Slider": 20,
+        "Sweeper": 1
+      },
+      "1-2": {
+        "Curve": 25,
+        "Slider": 28,
+        "Changeup": 42,
+        "Four-seam FB": 61,
+        "Sinker": 5
+      },
+      "1-0": {
+        "Curve": 34,
+        "Four-seam FB": 57,
+        "Slider": 30,
+        "Changeup": 30,
+        "Sinker": 18
+      },
+      "1-1": {
+        "Four-seam FB": 78,
+        "Changeup": 33,
+        "Slider": 23,
+        "Sinker": 12,
+        "Curve": 21
+      },
+      "2-1": {
+        "Four-seam FB": 45,
+        "Sinker": 10,
+        "Changeup": 25,
+        "Curve": 13,
+        "Slider": 8
+      },
+      "3-1": {
+        "Slider": 7,
+        "Four-seam FB": 26,
+        "Changeup": 8,
+        "Sinker": 3,
+        "Curve": 2
+      },
+      "3-2": {
+        "Four-seam FB": 49,
+        "Sinker": 6,
+        "Changeup": 19,
+        "Slider": 20,
+        "Curve": 9
+      },
+      "4-2": {
+        "Changeup": 8,
+        "Four-seam FB": 8,
+        "Sinker": 2,
+        "Slider": 4
+      },
+      "1-3": {
+        "Slider": 4,
+        "Four-seam FB": 14,
+        "Changeup": 9,
+        "Curve": 7,
+        "Sinker": 1
+      },
+      "2-0": {
+        "Four-seam FB": 37,
+        "Slider": 8,
+        "Changeup": 9,
+        "Curve": 6,
+        "Sinker": 6
+      },
+      "3-0": {
+        "Four-seam FB": 10,
+        "Sinker": 1,
+        "Curve": 2,
+        "Changeup": 4,
+        "Slider": 2
+      },
+      "3-3": {
+        "Sinker": 1,
+        "Slider": 4,
+        "Four-seam FB": 7,
+        "Changeup": 1
+      },
+      "2-2": {
+        "Slider": 21,
+        "Four-seam FB": 51,
+        "Changeup": 32,
+        "Curve": 15,
+        "Sinker": 5
+      },
+      "2-3": {
+        "Slider": 2,
+        "Four-seam FB": 7,
+        "Changeup": 3,
+        "Sweeper": 1,
+        "Sinker": 1
+      },
+      "4-1": {
+        "Four-seam FB": 9,
+        "Sinker": 2,
+        "Changeup": 1,
+        "Slider": 1
+      },
+      "0-3": {
+        "Four-seam FB": 7,
+        "Changeup": 4,
+        "Curve": 3,
+        "Slider": 4
+      },
+      "4-0": {
+        "Four-seam FB": 6
+      }
+    },
+    "sequence_patterns": {
+      "Four-seam FB -> Four-seam FB": 214,
+      "Four-seam FB -> Four-seam FB -> Curve": 23,
+      "Four-seam FB -> Curve": 68,
+      "Four-seam FB -> Curve -> Slider": 10,
+      "Curve -> Slider": 21,
+      "Curve -> Slider -> Slider": 4,
+      "Slider -> Slider": 32,
+      "Curve -> Four-seam FB": 68,
+      "Curve -> Four-seam FB -> Four-seam FB": 29,
+      "Four-seam FB -> Four-seam FB -> Slider": 22,
+      "Four-seam FB -> Slider": 70,
+      "Four-seam FB -> Slider -> Four-seam FB": 30,
+      "Slider -> Four-seam FB": 88,
+      "Slider -> Four-seam FB -> Changeup": 14,
+      "Four-seam FB -> Changeup": 106,
+      "Four-seam FB -> Changeup -> Changeup": 18,
+      "Changeup -> Changeup": 57,
+      "Slider -> Four-seam FB -> Four-seam FB": 24,
+      "Four-seam FB -> Four-seam FB -> Four-seam FB": 51,
+      "Four-seam FB -> Four-seam FB -> Sinker": 8,
+      "Four-seam FB -> Sinker": 24,
+      "Four-seam FB -> Sinker -> Sinker": 1,
+      "Sinker -> Sinker": 15,
+      "Changeup -> Four-seam FB": 100,
+      "Changeup -> Four-seam FB -> Four-seam FB": 28,
+      "Slider -> Four-seam FB -> Slider": 16,
+      "Four-seam FB -> Sinker -> Four-seam FB": 6,
+      "Sinker -> Four-seam FB": 26,
+      "Sinker -> Four-seam FB -> Changeup": 5,
+      "Changeup -> Changeup -> Slider": 4,
+      "Changeup -> Slider": 29,
+      "Four-seam FB -> Slider -> Changeup": 12,
+      "Slider -> Changeup": 30,
+      "Slider -> Changeup -> Four-seam FB": 14,
+      "Curve -> Slider -> Four-seam FB": 5,
+      "Four-seam FB -> Changeup -> Four-seam FB": 32,
+      "Changeup -> Four-seam FB -> Curve": 10,
+      "Sinker -> Curve": 8,
+      "Changeup -> Changeup -> Four-seam FB": 18,
+      "Four-seam FB -> Four-seam FB -> Changeup": 36,
+      "Changeup -> Four-seam FB -> Changeup": 21,
+      "Slider -> Four-seam FB -> Curve": 7,
+      "Four-seam FB -> Curve -> Four-seam FB": 26,
+      "Slider -> Slider -> Sinker": 2,
+      "Slider -> Sinker": 16,
+      "Curve -> Changeup": 35,
+      "Curve -> Changeup -> Four-seam FB": 14,
+      "Changeup -> Four-seam FB -> Sinker": 4,
+      "Curve -> Changeup -> Changeup": 6,
+      "Slider -> Slider -> Four-seam FB": 10,
+      "Curve -> Four-seam FB -> Slider": 5,
+      "Four-seam FB -> Slider -> Slider": 4,
+      "Sinker -> Four-seam FB -> Slider": 6,
+      "Four-seam FB -> Changeup -> Slider": 13,
+      "Changeup -> Slider -> Four-seam FB": 6,
+      "Curve -> Four-seam FB -> Curve": 7,
+      "Four-seam FB -> Curve -> Changeup": 10,
+      "Changeup -> Slider -> Changeup": 4,
+      "Curve -> Changeup -> Sinker": 2,
+      "Changeup -> Sinker": 10,
+      "Changeup -> Sinker -> Curve": 1,
+      "Changeup -> Four-seam FB -> Slider": 8,
+      "Changeup -> Changeup -> Changeup": 9,
+      "Slider -> Sinker -> Changeup": 2,
+      "Sinker -> Changeup": 14,
+      "Sinker -> Changeup -> Slider": 3,
+      "Changeup -> Slider -> Sinker": 4,
+      "Curve -> Slider -> Sinker": 2,
+      "Slider -> Sinker -> Sinker": 2,
+      "Curve -> Four-seam FB -> Changeup": 8,
+      "Sweeper -> Sweeper": 1,
+      "Sweeper -> Sweeper -> Changeup": 1,
+      "Sweeper -> Changeup": 1,
+      "Sweeper -> Changeup -> Four-seam FB": 1,
+      "Four-seam FB -> Curve -> Sweeper": 1,
+      "Curve -> Sweeper": 1,
+      "Changeup -> Changeup -> Curve": 3,
+      "Changeup -> Curve": 18,
+      "Slider -> Four-seam FB -> Sinker": 5,
+      "Four-seam FB -> Changeup -> Curve": 7,
+      "Sinker -> Sinker -> Slider": 2,
+      "Sinker -> Slider": 15,
+      "Sinker -> Slider -> Four-seam FB": 7,
+      "Four-seam FB -> Sinker -> Slider": 3,
+      "Sinker -> Slider -> Curve": 1,
+      "Slider -> Curve": 5,
+      "Slider -> Slider -> Changeup": 5,
+      "Slider -> Changeup -> Slider": 3,
+      "Sinker -> Sinker -> Curve": 4,
+      "Sinker -> Curve -> Changeup": 4,
+      "Curve -> Curve": 18,
+      "Curve -> Curve -> Four-seam FB": 8,
+      "Sinker -> Changeup -> Changeup": 4,
+      "Four-seam FB -> Curve -> Curve": 3,
+      "Curve -> Curve -> Changeup": 2,
+      "Curve -> Curve -> Curve": 2,
+      "Changeup -> Curve -> Curve": 3,
+      "Curve -> Curve -> Slider": 2,
+      "Curve -> Slider -> Curve": 1,
+      "Slider -> Curve -> Slider": 2,
+      "Slider -> Slider -> Slider": 3,
+      "Sinker -> Four-seam FB -> Four-seam FB": 9,
+      "Slider -> Changeup -> Changeup": 2,
+      "Slider -> Sinker -> Slider": 3,
+      "Sinker -> Sinker -> Sinker": 1,
+      "Sinker -> Sinker -> Four-seam FB": 2,
+      "Changeup -> Changeup -> Sinker": 1,
+      "Changeup -> Sinker -> Four-seam FB": 2,
+      "Sinker -> Slider -> Sinker": 2,
+      "Slider -> Sinker -> Four-seam FB": 3,
+      "Four-seam FB -> Changeup -> Sinker": 2,
+      "Changeup -> Sinker -> Slider": 2,
+      "Sinker -> Slider -> Slider": 1,
+      "Changeup -> Curve -> Changeup": 3,
+      "Changeup -> Slider -> Slider": 3,
+      "Changeup -> Curve -> Four-seam FB": 3,
+      "Curve -> Changeup -> Curve": 2,
+      "Curve -> Slider -> Changeup": 2,
+      "Curve -> Changeup -> Slider": 2,
+      "Four-seam FB -> Sinker -> Curve": 1,
+      "Sinker -> Curve -> Four-seam FB": 2,
+      "Sinker -> Changeup -> Four-seam FB": 2,
+      "Slider -> Changeup -> Sinker": 1,
+      "Four-seam FB -> Sinker -> Changeup": 3,
+      "Four-seam FB -> Slider -> Sinker": 2,
+      "Sinker -> Changeup -> Curve": 3,
+      "Curve -> Sinker": 7,
+      "Curve -> Sinker -> Four-seam FB": 2,
+      "Changeup -> Curve -> Sinker": 2,
+      "Slider -> Curve -> Four-seam FB": 2,
+      "Four-seam FB -> Curve -> Sinker": 2,
+      "Curve -> Sinker -> Changeup": 1,
+      "Sinker -> Four-seam FB -> Curve": 1,
+      "Curve -> Sinker -> Sinker": 1,
+      "Curve -> Sinker -> Slider": 1
+    },
+    "handedness_patterns": {},
+    "predictability_score": 11.56,
+    "total_sequences": 343
+  },
+  "overall_confidence": 0.996
+}

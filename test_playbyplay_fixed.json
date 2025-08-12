@@ -1,0 +1,3705 @@
+{
+  "test_info": {
+    "game_id": "401694974",
+    "teams": "ARI @ NYY",
+    "total_plays": 74,
+    "real_batter_names": 74,
+    "real_pitcher_names": 74
+  },
+  "sample_plays": [
+    {
+      "play_sequence": 1,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Top",
+      "batter": "Corbin Carroll",
+      "pitcher": "Will Warren",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 3,
+          "result": "Strike Swinging",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Looking",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Ball",
+          "pitch_type": "Changeup",
+          "velocity": 86,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 6,
+          "result": "Strike Swinging",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 3,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "At-bat 4016949740001: "
+    },
+    {
+      "play_sequence": 2,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Top",
+      "batter": "Ketel Marte",
+      "pitcher": "Will Warren",
+      "play_description": "Pitch 3 : Ball In Play",
+      "play_result": "Groundout",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Foul Ball",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ground Out",
+          "pitch_type": "Four-seam FB",
+          "velocity": 93,
+          "balls": 1,
+          "strikes": 1
+        }
+      ],
+      "raw_text": "At-bat 4016949740002: Pitch 3 : Ball In Play"
+    },
+    {
+      "play_sequence": 3,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Mid",
+      "batter": "Pavin Smith",
+      "pitcher": "Will Warren",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Ball",
+          "pitch_type": "Sweeper",
+          "velocity": 82,
+          "balls": 1,
+          "strikes": 0
+        },
+        {
+          "pitch_number": 2,
+          "result": "Strike Looking",
+          "pitch_type": "Sweeper",
+          "velocity": 81,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Curve",
+          "velocity": 82,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 87,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 88,
+          "balls": 2,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "At-bat 4016949740003: "
+    },
+    {
+      "play_sequence": 4,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Bottom",
+      "batter": "Paul Goldschmidt",
+      "pitcher": "Corbin Burnes",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 92,
+          "balls": 0,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 2,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 0,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Slider",
+          "velocity": 85,
+          "balls": 1,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 94,
+          "balls": 1,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "At-bat 4016949740101: "
+    },
+    {
+      "play_sequence": 5,
+      "game_id": "401694974",
+      "inning": 1,
+      "inning_half": "Bottom",
+      "batter": "Cody Bellinger",
+      "pitcher": "Corbin Burnes",
+      "play_description": "",
+      "play_result": "Other",
+      "pitch_sequence": [
+        {
+          "pitch_number": 1,
+          "result": "Strike Looking",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 0,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 2,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 92,
+          "balls": 1,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 3,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 2,
+          "strikes": 1
+        },
+        {
+          "pitch_number": 4,
+          "result": "Strike Swinging",
+          "pitch_type": "Changeup",
+          "velocity": 90,
+          "balls": 2,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 5,
+          "result": "Ball",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 6,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 94,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 7,
+          "result": "Foul Ball",
+          "pitch_type": "Curve",
+          "velocity": 82,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 8,
+          "result": "Foul Ball",
+          "pitch_type": "Cutter",
+          "velocity": 95,
+          "balls": 3,
+          "strikes": 2
+        },
+        {
+          "pitch_number": 9,
+          "result": "Strike Swinging",
+          "pitch_type": "Cutter",
+          "velocity": 93,
+          "balls": 3,
+          "strikes": 3
+        }
+      ],
+      "raw_text": "At-bat 4016949740102: "
+    }
+  ],
+  "full_game_data": {
+    "metadata": {
+      "game_id": "401694974",
+      "api_url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401694974",
+      "scraped_at": "2025-08-06T23:44:54.224368",
+      "away_team": "ARI",
+      "home_team": "NYY"
+    },
+    "plays": [
+      {
+        "play_sequence": 1,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "Top",
+        "batter": "Corbin Carroll",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Strike Swinging",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 3,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740001: "
+      },
+      {
+        "play_sequence": 2,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "Top",
+        "batter": "Ketel Marte",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ground Out",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740002: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 3,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "Mid",
+        "batter": "Pavin Smith",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 82,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740003: "
+      },
+      {
+        "play_sequence": 4,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "Bottom",
+        "batter": "Paul Goldschmidt",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Slider",
+            "velocity": 85,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740101: "
+      },
+      {
+        "play_sequence": 5,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "Bottom",
+        "batter": "Cody Bellinger",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Changeup",
+            "velocity": 90,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 7,
+            "result": "Foul Ball",
+            "pitch_type": "Curve",
+            "velocity": 82,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 8,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 9,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740102: "
+      },
+      {
+        "play_sequence": 6,
+        "game_id": "401694974",
+        "inning": 1,
+        "inning_half": "End",
+        "batter": "Aaron Judge",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Popout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Pop Out",
+            "pitch_type": "Slider",
+            "velocity": 86,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740103: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 7,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "Top",
+        "batter": "Josh Naylor",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ground Out",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740201: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 8,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "Top",
+        "batter": "Eugenio Suarez",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 5 : Ball In Play",
+        "play_result": "Lineout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Line Out",
+            "pitch_type": "Sweeper",
+            "velocity": 83,
+            "balls": 3,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740202: Pitch 5 : Ball In Play"
+      },
+      {
+        "play_sequence": 9,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "Mid",
+        "batter": "Gabriel Moreno",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Foul Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 84,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740203: "
+      },
+      {
+        "play_sequence": 10,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "Bottom",
+        "batter": "Jazz Chisholm Jr.",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740301: "
+      },
+      {
+        "play_sequence": 11,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "Bottom",
+        "batter": "Anthony Volpe",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Slider",
+            "velocity": 87,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740302: "
+      },
+      {
+        "play_sequence": 12,
+        "game_id": "401694974",
+        "inning": 2,
+        "inning_half": "End",
+        "batter": "Austin Wells",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 6 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 89,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ground Out",
+            "pitch_type": "Curve",
+            "velocity": 82,
+            "balls": 2,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740303: Pitch 6 : Ball In Play"
+      },
+      {
+        "play_sequence": 13,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Top",
+        "batter": "Jake McCarthy",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 90,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Foul Ball",
+            "pitch_type": "Changeup",
+            "velocity": 85,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ground Out",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740401: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 14,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Top",
+        "batter": "Alek Thomas",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Flyout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 79,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Fly Out",
+            "pitch_type": "Sweeper",
+            "velocity": 83,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740402: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 15,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Top",
+        "batter": "Geraldo Perdomo",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 3,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 91,
+            "balls": 4,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949740403: "
+      },
+      {
+        "play_sequence": 16,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Top",
+        "batter": "Corbin Carroll",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Home Run",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Home Run",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949740404: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 17,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Mid",
+        "batter": "Ketel Marte",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ground Out",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 2,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740405: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 18,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Bottom",
+        "batter": "Jasson Dominguez",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Home Run",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 82,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 89,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Home Run",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740501: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 19,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Bottom",
+        "batter": "Ben Rice",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Double",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Double",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740502: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 20,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Bottom",
+        "batter": "Oswaldo Cabrera",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 4,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740503: "
+      },
+      {
+        "play_sequence": 21,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Bottom",
+        "batter": "Paul Goldschmidt",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Flyout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Fly Out",
+            "pitch_type": "Slider",
+            "velocity": 87,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740504: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 22,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "Bottom",
+        "batter": "Cody Bellinger",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740505: "
+      },
+      {
+        "play_sequence": 23,
+        "game_id": "401694974",
+        "inning": 3,
+        "inning_half": "End",
+        "batter": "Aaron Judge",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Batters Fielders Choice - Runner Out",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949740506: "
+      },
+      {
+        "play_sequence": 24,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Top",
+        "batter": "Pavin Smith",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 90,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 4,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740601: "
+      },
+      {
+        "play_sequence": 25,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Top",
+        "batter": "Josh Naylor",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 4,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740602: "
+      },
+      {
+        "play_sequence": 26,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Top",
+        "batter": "Eugenio Suarez",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ground Out",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740603: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 27,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Mid",
+        "batter": "Gabriel Moreno",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ground Out",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740604: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 28,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Jazz Chisholm Jr.",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740701: "
+      },
+      {
+        "play_sequence": 29,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Anthony Volpe",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 1 : Ball In Play",
+        "play_result": "Home Run",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Home Run",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949740702: Pitch 1 : Ball In Play"
+      },
+      {
+        "play_sequence": 30,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Austin Wells",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Foul Ball",
+            "pitch_type": "Curve",
+            "velocity": 79,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 7,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 8,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 9,
+            "result": "Foul Ball",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 10,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 11,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 12,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 13,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 84,
+            "balls": 4,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740703: "
+      },
+      {
+        "play_sequence": 31,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Jasson Dominguez",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 5 : Ball In Play",
+        "play_result": "Single",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Foul Ball",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Single",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740704: Pitch 5 : Ball In Play"
+      },
+      {
+        "play_sequence": 32,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Ben Rice",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740705: "
+      },
+      {
+        "play_sequence": 33,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "Bottom",
+        "batter": "Oswaldo Cabrera",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Batter Reached On Error - Batter To First",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740706: "
+      },
+      {
+        "play_sequence": 34,
+        "game_id": "401694974",
+        "inning": 4,
+        "inning_half": "End",
+        "batter": "Paul Goldschmidt",
+        "pitcher": "Corbin Burnes",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Lineout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Line Out",
+            "pitch_type": "Slider",
+            "velocity": 85,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949740707: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 35,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Top",
+        "batter": "Jake McCarthy",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 89,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 90,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 89,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 90,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 7,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 4,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740801: "
+      },
+      {
+        "play_sequence": 36,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Top",
+        "batter": "Alek Thomas",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 6 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 90,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 91,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 86,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ground Out",
+            "pitch_type": "Sweeper",
+            "velocity": 81,
+            "balls": 3,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740802: Pitch 6 : Ball In Play"
+      },
+      {
+        "play_sequence": 37,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Top",
+        "batter": "Geraldo Perdomo",
+        "pitcher": "Will Warren",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Lineout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 91,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Line Out",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740803: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 38,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Mid",
+        "batter": "Corbin Carroll",
+        "pitcher": "Will Warren",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 84,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 80,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 81,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740804: "
+      },
+      {
+        "play_sequence": 39,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Bottom",
+        "batter": "Cody Bellinger",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 7,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 78,
+            "balls": 4,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949740901: "
+      },
+      {
+        "play_sequence": 40,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Bottom",
+        "batter": "Aaron Judge",
+        "pitcher": "Corbin Burnes",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Slider",
+            "velocity": 86,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Slider",
+            "velocity": 87,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Cutter",
+            "velocity": 95,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740902: "
+      },
+      {
+        "play_sequence": 41,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "Bottom",
+        "batter": "Jazz Chisholm Jr.",
+        "pitcher": "Jalen Beeks",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 83,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 83,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Strike Swinging",
+            "pitch_type": "Changeup",
+            "velocity": 89,
+            "balls": 3,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949740903: "
+      },
+      {
+        "play_sequence": 42,
+        "game_id": "401694974",
+        "inning": 5,
+        "inning_half": "End",
+        "batter": "Anthony Volpe",
+        "pitcher": "Jalen Beeks",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ground Out",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 1,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949740904: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 43,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "Top",
+        "batter": "Ketel Marte",
+        "pitcher": "Fernando Cruz",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Slider",
+            "velocity": 81,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741001: "
+      },
+      {
+        "play_sequence": 44,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "Top",
+        "batter": "Pavin Smith",
+        "pitcher": "Fernando Cruz",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Slider",
+            "velocity": 83,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741002: "
+      },
+      {
+        "play_sequence": 45,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "Mid",
+        "batter": "Josh Naylor",
+        "pitcher": "Fernando Cruz",
+        "play_description": "Pitch 5 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Splitter",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 81,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ground Out",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 2,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741003: Pitch 5 : Ball In Play"
+      },
+      {
+        "play_sequence": 46,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "Bottom",
+        "batter": "Austin Wells",
+        "pitcher": "Jalen Beeks",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Flyout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 81,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Cutter",
+            "velocity": 82,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 83,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Fly Out",
+            "pitch_type": "Cutter",
+            "velocity": 81,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741101: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 47,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "Bottom",
+        "batter": "Jasson Dominguez",
+        "pitcher": "Jalen Beeks",
+        "play_description": "Pitch 4 : Ball In Play",
+        "play_result": "Flyout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Changeup",
+            "velocity": 87,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Fly Out",
+            "pitch_type": "Changeup",
+            "velocity": 88,
+            "balls": 1,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741102: Pitch 4 : Ball In Play"
+      },
+      {
+        "play_sequence": 48,
+        "game_id": "401694974",
+        "inning": 6,
+        "inning_half": "End",
+        "batter": "Ben Rice",
+        "pitcher": "Jalen Beeks",
+        "play_description": "Pitch 6 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Cutter",
+            "velocity": 82,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ground Out",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 3,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741103: Pitch 6 : Ball In Play"
+      },
+      {
+        "play_sequence": 49,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "Top",
+        "batter": "Eugenio Suarez",
+        "pitcher": "Fernando Cruz",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Foul Ball",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741201: "
+      },
+      {
+        "play_sequence": 50,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "Top",
+        "batter": "Gabriel Moreno",
+        "pitcher": "Fernando Cruz",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Slider",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 80,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 79,
+            "balls": 0,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741202: "
+      },
+      {
+        "play_sequence": 51,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "Mid",
+        "batter": "Jake McCarthy",
+        "pitcher": "Fernando Cruz",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Flyout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Fly Out",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949741203: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 52,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "Bottom",
+        "batter": "Oswaldo Cabrera",
+        "pitcher": "Shelby Miller",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Out",
+            "pitch_type": "Splitter",
+            "velocity": 87,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741301: "
+      },
+      {
+        "play_sequence": 53,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "Bottom",
+        "batter": "Paul Goldschmidt",
+        "pitcher": "Shelby Miller",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Lineout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Line Out",
+            "pitch_type": "Splitter",
+            "velocity": 88,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741302: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 54,
+        "game_id": "401694974",
+        "inning": 7,
+        "inning_half": "End",
+        "batter": "Cody Bellinger",
+        "pitcher": "Shelby Miller",
+        "play_description": "Pitch 3 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ground Out",
+            "pitch_type": "Splitter",
+            "velocity": 88,
+            "balls": 1,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741303: Pitch 3 : Ball In Play"
+      },
+      {
+        "play_sequence": 55,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Randal Grichuk",
+        "pitcher": "Tim Hill",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Double",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 89,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Double",
+            "pitch_type": "Sinker",
+            "velocity": 88,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741401: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 56,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Geraldo Perdomo",
+        "pitcher": "Tim Hill",
+        "play_description": "Pitch 1 : Ball In Play",
+        "play_result": "Single",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Single",
+            "pitch_type": "Sinker",
+            "velocity": 87,
+            "balls": 0,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949741402: Pitch 1 : Ball In Play"
+      },
+      {
+        "play_sequence": 57,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Corbin Carroll",
+        "pitcher": "Tim Hill",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Batters Fielders Choice - Runner Out",
+            "pitch_type": "Sinker",
+            "velocity": 88,
+            "balls": 0,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949741403: "
+      },
+      {
+        "play_sequence": 58,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Ketel Marte",
+        "pitcher": "Mark Leiter Jr.",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Curve",
+            "velocity": 74,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 74,
+            "balls": 4,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741404: "
+      },
+      {
+        "play_sequence": 59,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Pavin Smith",
+        "pitcher": "Mark Leiter Jr.",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 75,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 75,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 3,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Curve",
+            "velocity": 71,
+            "balls": 4,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741405: "
+      },
+      {
+        "play_sequence": 60,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Josh Naylor",
+        "pitcher": "Mark Leiter Jr.",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Curve",
+            "velocity": 74,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 85,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741406: "
+      },
+      {
+        "play_sequence": 61,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Top",
+        "batter": "Eugenio Suarez",
+        "pitcher": "Mark Leiter Jr.",
+        "play_description": "Pitch 5 : Ball In Play",
+        "play_result": "Home Run",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 94,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 93,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 84,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Sinker",
+            "velocity": 93,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Home Run",
+            "pitch_type": "Splitter",
+            "velocity": 83,
+            "balls": 2,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741407: Pitch 5 : Ball In Play"
+      },
+      {
+        "play_sequence": 62,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Mid",
+        "batter": "Gabriel Moreno",
+        "pitcher": "Adam Ottavino",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 77,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Foul Ball",
+            "pitch_type": "Cutter",
+            "velocity": 87,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741408: "
+      },
+      {
+        "play_sequence": 63,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Bottom",
+        "batter": "Aaron Judge",
+        "pitcher": "Justin Martinez",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 99,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Foul Ball",
+            "pitch_type": "Sinker",
+            "velocity": 100,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 90,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741501: "
+      },
+      {
+        "play_sequence": 64,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "Bottom",
+        "batter": "Jazz Chisholm Jr.",
+        "pitcher": "Justin Martinez",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Swinging",
+            "pitch_type": "Sinker",
+            "velocity": 101,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Swinging",
+            "pitch_type": "Splitter",
+            "velocity": 88,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 90,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 88,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 101,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741502: "
+      },
+      {
+        "play_sequence": 65,
+        "game_id": "401694974",
+        "inning": 8,
+        "inning_half": "End",
+        "batter": "Anthony Volpe",
+        "pitcher": "Justin Martinez",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Foul Ball",
+            "pitch_type": "Sinker",
+            "velocity": 99,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 100,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Splitter",
+            "velocity": 91,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 99,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 101,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741503: "
+      },
+      {
+        "play_sequence": 66,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Top",
+        "batter": "Jake McCarthy",
+        "pitcher": "Adam Ottavino",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Sinker",
+            "velocity": 91,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 79,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 77,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Sweeper",
+            "velocity": 77,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 3,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 6,
+            "result": "Ball",
+            "pitch_type": "Sweeper",
+            "velocity": 78,
+            "balls": 4,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741601: "
+      },
+      {
+        "play_sequence": 67,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Top",
+        "batter": "Lourdes Gurriel Jr.",
+        "pitcher": "Adam Ottavino",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Popout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Sinker",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Pop Out",
+            "pitch_type": "Sweeper",
+            "velocity": 78,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741602: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 68,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Top",
+        "batter": "Geraldo Perdomo",
+        "pitcher": "Brent Headrick",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Single",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Single",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          }
+        ],
+        "raw_text": "At-bat 4016949741603: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 69,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Top",
+        "batter": "Corbin Carroll",
+        "pitcher": "Brent Headrick",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Slider",
+            "velocity": 79,
+            "balls": 0,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 93,
+            "balls": 0,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741604: "
+      },
+      {
+        "play_sequence": 70,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Mid",
+        "batter": "Ketel Marte",
+        "pitcher": "Brent Headrick",
+        "play_description": "Pitch 2 : Ball In Play",
+        "play_result": "Groundout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 92,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ground Out",
+            "pitch_type": "Splitter",
+            "velocity": 82,
+            "balls": 1,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949741605: Pitch 2 : Ball In Play"
+      },
+      {
+        "play_sequence": 71,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Bottom",
+        "batter": "Austin Wells",
+        "pitcher": "A.J. Puk",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Slider",
+            "velocity": 85,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 96,
+            "balls": 2,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 96,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Strike Swinging",
+            "pitch_type": "Four-seam FB",
+            "velocity": 98,
+            "balls": 2,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741701: "
+      },
+      {
+        "play_sequence": 72,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Bottom",
+        "batter": "Trent Grisham",
+        "pitcher": "A.J. Puk",
+        "play_description": "",
+        "play_result": "Other",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Ball",
+            "pitch_type": "Slider",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 0
+          },
+          {
+            "pitch_number": 2,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 97,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Strike Looking",
+            "pitch_type": "Slider",
+            "velocity": 86,
+            "balls": 1,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 4,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 1,
+            "strikes": 3
+          }
+        ],
+        "raw_text": "At-bat 4016949741702: "
+      },
+      {
+        "play_sequence": 73,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "Bottom",
+        "batter": "Ben Rice",
+        "pitcher": "A.J. Puk",
+        "play_description": "Pitch 5 : Ball In Play",
+        "play_result": "Home Run",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Strike Looking",
+            "pitch_type": "Four-seam FB",
+            "velocity": 94,
+            "balls": 0,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 2,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 97,
+            "balls": 1,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 3,
+            "result": "Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 2,
+            "strikes": 1
+          },
+          {
+            "pitch_number": 4,
+            "result": "Foul Ball",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 2,
+            "strikes": 2
+          },
+          {
+            "pitch_number": 5,
+            "result": "Home Run",
+            "pitch_type": "Four-seam FB",
+            "velocity": 95,
+            "balls": 2,
+            "strikes": 2
+          }
+        ],
+        "raw_text": "At-bat 4016949741703: Pitch 5 : Ball In Play"
+      },
+      {
+        "play_sequence": 74,
+        "game_id": "401694974",
+        "inning": 9,
+        "inning_half": "End",
+        "batter": "Pablo Reyes",
+        "pitcher": "A.J. Puk",
+        "play_description": "Pitch 1 : Ball In Play",
+        "play_result": "Lineout",
+        "pitch_sequence": [
+          {
+            "pitch_number": 1,
+            "result": "Line Out",
+            "pitch_type": "Slider",
+            "velocity": 85,
+            "balls": 0,
+            "strikes": 0
+          }
+        ],
+        "raw_text": "At-bat 4016949741704: Pitch 1 : Ball In Play"
+      }
+    ]
+  }
+}

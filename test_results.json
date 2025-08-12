@@ -1,0 +1,77 @@
+{
+  "test_run_timestamp": "2025-08-06T23:14:47.646864",
+  "tests_passed": 6,
+  "tests_failed": 1,
+  "test_details": [
+    {
+      "test_name": "Data Availability Check",
+      "status": "PASSED",
+      "result": {
+        "../BaseballData/data/play-by-play": true,
+        "../BaseballData/data/2025": true,
+        "../BaseballData/data/stats": true,
+        "playbyplay_files_count": 1004,
+        "daily_files_count": 184
+      },
+      "timestamp": "2025-08-06T23:14:47.662716"
+    },
+    {
+      "test_name": "Player ID Mapper",
+      "status": "PASSED",
+      "result": {
+        "name_normalization": "passed",
+        "roster_loading": "attempted"
+      },
+      "timestamp": "2025-08-06T23:14:50.254285"
+    },
+    {
+      "test_name": "Play-by-Play Processor",
+      "status": "FAILED",
+      "error": "'inning_1'",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/test_weakspot_system.py\", line 53, in run_test\n    result = test_function()\n  File \"/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/test_weakspot_system.py\", line 147, in test_playbyplay_processor\n    inning_analysis = processor.analyze_inning_patterns(limited_games)\n  File \"/Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/weakspot_analyzer.py\", line 237, in analyze_inning_patterns\n    inning_analysis[pitcher_key][inning_key]['appearances'] += 1\nKeyError: 'inning_1'\n",
+      "timestamp": "2025-08-06T23:14:53.335460"
+    },
+    {
+      "test_name": "Vulnerability Calculator",
+      "status": "PASSED",
+      "result": {
+        "lineup_scores_calculated": 2,
+        "inning_scores_calculated": 1,
+        "sample_lineup_score": 59.1,
+        "sample_confidence": 0.8
+      },
+      "timestamp": "2025-08-06T23:14:53.846363"
+    },
+    {
+      "test_name": "Weakspot Analyzer",
+      "status": "PASSED",
+      "result": {
+        "sample_pitcher": "Pitcher_4867679",
+        "analysis_type": "rankings_only",
+        "pitchers_in_rankings": 0
+      },
+      "timestamp": "2025-08-06T23:15:05.852934"
+    },
+    {
+      "test_name": "Rankings Generator",
+      "status": "PASSED",
+      "result": {
+        "lineup_rankings_pitchers": 0,
+        "overall_rankings_pitchers": 0,
+        "test_date_range": "2025-07-23 to 2025-08-06"
+      },
+      "timestamp": "2025-08-06T23:15:10.388223"
+    },
+    {
+      "test_name": "Daily Updater",
+      "status": "PASSED",
+      "result": {
+        "today_date": "2025-08-06",
+        "recent_date_range": "2025-07-30 to 2025-08-06",
+        "has_new_playbyplay_data": true,
+        "lineup_data_available": false
+      },
+      "timestamp": "2025-08-06T23:15:16.590670"
+    }
+  ]
+}

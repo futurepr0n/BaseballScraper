@@ -1,0 +1,1552 @@
+{
+  "anonymous_to_name": {
+    "Pitcher_36133": {
+      "real_name": "Unknown Pitcher (Pitcher_36133)",
+      "short_name": "Pitcher_36133",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4987389": {
+      "real_name": "Unknown Pitcher (Pitcher_4987389)",
+      "short_name": "Pitcher_4987389",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5002931": {
+      "real_name": "Unknown Pitcher (Pitcher_5002931)",
+      "short_name": "Pitcher_5002931",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_6341": {
+      "real_name": "Unknown Pitcher (Pitcher_6341)",
+      "short_name": "Pitcher_6341",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_4326800": {
+      "real_name": "Unknown Pitcher (Pitcher_4326800)",
+      "short_name": "Pitcher_4326800",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_4713488": {
+      "real_name": "Unknown Pitcher (Pitcher_4713488)",
+      "short_name": "Pitcher_4713488",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_41344": {
+      "real_name": "Unknown Pitcher (Pitcher_41344)",
+      "short_name": "Pitcher_41344",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_41485": {
+      "real_name": "Unknown Pitcher (Pitcher_41485)",
+      "short_name": "Pitcher_41485",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_4415762": {
+      "real_name": "Unknown Pitcher (Pitcher_4415762)",
+      "short_name": "Pitcher_4415762",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_4991251": {
+      "real_name": "Unknown Pitcher (Pitcher_4991251)",
+      "short_name": "Pitcher_4991251",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 13
+    },
+    "Pitcher_36036": {
+      "real_name": "Unknown Pitcher (Pitcher_36036)",
+      "short_name": "Pitcher_36036",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4993411": {
+      "real_name": "Unknown Pitcher (Pitcher_4993411)",
+      "short_name": "Pitcher_4993411",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_4722847": {
+      "real_name": "Unknown Pitcher (Pitcher_4722847)",
+      "short_name": "Pitcher_4722847",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 24
+    },
+    "Pitcher_4905900": {
+      "real_name": "Unknown Pitcher (Pitcher_4905900)",
+      "short_name": "Pitcher_4905900",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 10
+    },
+    "Pitcher_4867679": {
+      "real_name": "Unknown Pitcher (Pitcher_4867679)",
+      "short_name": "Pitcher_4867679",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 23
+    },
+    "Pitcher_41208": {
+      "real_name": "Unknown Pitcher (Pitcher_41208)",
+      "short_name": "Pitcher_41208",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5124114": {
+      "real_name": "Unknown Pitcher (Pitcher_5124114)",
+      "short_name": "Pitcher_5124114",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 19
+    },
+    "Pitcher_33722": {
+      "real_name": "Unknown Pitcher (Pitcher_33722)",
+      "short_name": "Pitcher_33722",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 28
+    },
+    "Pitcher_35292": {
+      "real_name": "Unknown Pitcher (Pitcher_35292)",
+      "short_name": "Pitcher_35292",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_34954": {
+      "real_name": "Unknown Pitcher (Pitcher_34954)",
+      "short_name": "Pitcher_34954",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4345278": {
+      "real_name": "Unknown Pitcher (Pitcher_4345278)",
+      "short_name": "Pitcher_4345278",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 43
+    },
+    "Pitcher_42363": {
+      "real_name": "Unknown Pitcher (Pitcher_42363)",
+      "short_name": "Pitcher_42363",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_39822": {
+      "real_name": "Unknown Pitcher (Pitcher_39822)",
+      "short_name": "Pitcher_39822",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_32787": {
+      "real_name": "Unknown Pitcher (Pitcher_32787)",
+      "short_name": "Pitcher_32787",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 15
+    },
+    "Pitcher_32145": {
+      "real_name": "Unknown Pitcher (Pitcher_32145)",
+      "short_name": "Pitcher_32145",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_35397": {
+      "real_name": "Unknown Pitcher (Pitcher_35397)",
+      "short_name": "Pitcher_35397",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 22
+    },
+    "Pitcher_28968": {
+      "real_name": "Unknown Pitcher (Pitcher_28968)",
+      "short_name": "Pitcher_28968",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_4187661": {
+      "real_name": "Unknown Pitcher (Pitcher_4187661)",
+      "short_name": "Pitcher_4187661",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_4414362": {
+      "real_name": "Unknown Pitcher (Pitcher_4414362)",
+      "short_name": "Pitcher_4414362",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_40917": {
+      "real_name": "Unknown Pitcher (Pitcher_40917)",
+      "short_name": "Pitcher_40917",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4414247": {
+      "real_name": "Unknown Pitcher (Pitcher_4414247)",
+      "short_name": "Pitcher_4414247",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_33301": {
+      "real_name": "Unknown Pitcher (Pitcher_33301)",
+      "short_name": "Pitcher_33301",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_41177": {
+      "real_name": "Unknown Pitcher (Pitcher_41177)",
+      "short_name": "Pitcher_41177",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_33696": {
+      "real_name": "Unknown Pitcher (Pitcher_33696)",
+      "short_name": "Pitcher_33696",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 23
+    },
+    "Pitcher_5000950": {
+      "real_name": "Unknown Pitcher (Pitcher_5000950)",
+      "short_name": "Pitcher_5000950",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 10
+    },
+    "Pitcher_41308": {
+      "real_name": "Unknown Pitcher (Pitcher_41308)",
+      "short_name": "Pitcher_41308",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_36131": {
+      "real_name": "Unknown Pitcher (Pitcher_36131)",
+      "short_name": "Pitcher_36131",
+      "team": "ATL",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 10
+    },
+    "Pitcher_39878": {
+      "real_name": "Unknown Pitcher (Pitcher_39878)",
+      "short_name": "Pitcher_39878",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 21
+    },
+    "Pitcher_33252": {
+      "real_name": "Unknown Pitcher (Pitcher_33252)",
+      "short_name": "Pitcher_33252",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 26
+    },
+    "Pitcher_5185133": {
+      "real_name": "Unknown Pitcher (Pitcher_5185133)",
+      "short_name": "Pitcher_5185133",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_4987924": {
+      "real_name": "Unknown Pitcher (Pitcher_4987924)",
+      "short_name": "Pitcher_4987924",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4917888": {
+      "real_name": "Unknown Pitcher (Pitcher_4917888)",
+      "short_name": "Pitcher_4917888",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_41828": {
+      "real_name": "Unknown Pitcher (Pitcher_41828)",
+      "short_name": "Pitcher_41828",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_30738": {
+      "real_name": "Unknown Pitcher (Pitcher_30738)",
+      "short_name": "Pitcher_30738",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_34068": {
+      "real_name": "Unknown Pitcher (Pitcher_34068)",
+      "short_name": "Pitcher_34068",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_39949": {
+      "real_name": "Unknown Pitcher (Pitcher_39949)",
+      "short_name": "Pitcher_39949",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 10
+    },
+    "Pitcher_34026": {
+      "real_name": "Unknown Pitcher (Pitcher_34026)",
+      "short_name": "Pitcher_34026",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_5201821": {
+      "real_name": "Unknown Pitcher (Pitcher_5201821)",
+      "short_name": "Pitcher_5201821",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_4411979": {
+      "real_name": "Unknown Pitcher (Pitcher_4411979)",
+      "short_name": "Pitcher_4411979",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_33618": {
+      "real_name": "Unknown Pitcher (Pitcher_33618)",
+      "short_name": "Pitcher_33618",
+      "team": "ATL",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_40937": {
+      "real_name": "Unknown Pitcher (Pitcher_40937)",
+      "short_name": "Pitcher_40937",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_41569": {
+      "real_name": "Unknown Pitcher (Pitcher_41569)",
+      "short_name": "Pitcher_41569",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 10
+    },
+    "Pitcher_3983841": {
+      "real_name": "Unknown Pitcher (Pitcher_3983841)",
+      "short_name": "Pitcher_3983841",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5001153": {
+      "real_name": "Unknown Pitcher (Pitcher_5001153)",
+      "short_name": "Pitcher_5001153",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4722960": {
+      "real_name": "Unknown Pitcher (Pitcher_4722960)",
+      "short_name": "Pitcher_4722960",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 2
+    },
+    "Pitcher_35394": {
+      "real_name": "Unknown Pitcher (Pitcher_35394)",
+      "short_name": "Pitcher_35394",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_31010": {
+      "real_name": "Unknown Pitcher (Pitcher_31010)",
+      "short_name": "Pitcher_31010",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_33716": {
+      "real_name": "Unknown Pitcher (Pitcher_33716)",
+      "short_name": "Pitcher_33716",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_42604": {
+      "real_name": "Unknown Pitcher (Pitcher_42604)",
+      "short_name": "Pitcher_42604",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_41109": {
+      "real_name": "Unknown Pitcher (Pitcher_41109)",
+      "short_name": "Pitcher_41109",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_41975": {
+      "real_name": "Unknown Pitcher (Pitcher_41975)",
+      "short_name": "Pitcher_41975",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_4424862": {
+      "real_name": "Unknown Pitcher (Pitcher_4424862)",
+      "short_name": "Pitcher_4424862",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_37909": {
+      "real_name": "Unknown Pitcher (Pitcher_37909)",
+      "short_name": "Pitcher_37909",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_37005": {
+      "real_name": "Unknown Pitcher (Pitcher_37005)",
+      "short_name": "Pitcher_37005",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 8
+    },
+    "Pitcher_41178": {
+      "real_name": "Unknown Pitcher (Pitcher_41178)",
+      "short_name": "Pitcher_41178",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 18
+    },
+    "Pitcher_42138": {
+      "real_name": "Unknown Pitcher (Pitcher_42138)",
+      "short_name": "Pitcher_42138",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_41227": {
+      "real_name": "Unknown Pitcher (Pitcher_41227)",
+      "short_name": "Pitcher_41227",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 15
+    },
+    "Pitcher_36056": {
+      "real_name": "Unknown Pitcher (Pitcher_36056)",
+      "short_name": "Pitcher_36056",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_5132121": {
+      "real_name": "Unknown Pitcher (Pitcher_5132121)",
+      "short_name": "Pitcher_5132121",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_33224": {
+      "real_name": "Unknown Pitcher (Pitcher_33224)",
+      "short_name": "Pitcher_33224",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_39639": {
+      "real_name": "Unknown Pitcher (Pitcher_39639)",
+      "short_name": "Pitcher_39639",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 18
+    },
+    "Pitcher_4418343": {
+      "real_name": "Unknown Pitcher (Pitcher_4418343)",
+      "short_name": "Pitcher_4418343",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 1
+    },
+    "Pitcher_31258": {
+      "real_name": "Unknown Pitcher (Pitcher_31258)",
+      "short_name": "Pitcher_31258",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 22
+    },
+    "Pitcher_4152950": {
+      "real_name": "Unknown Pitcher (Pitcher_4152950)",
+      "short_name": "Pitcher_4152950",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_42171": {
+      "real_name": "Unknown Pitcher (Pitcher_42171)",
+      "short_name": "Pitcher_42171",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4148749": {
+      "real_name": "Unknown Pitcher (Pitcher_4148749)",
+      "short_name": "Pitcher_4148749",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_42898": {
+      "real_name": "Unknown Pitcher (Pitcher_42898)",
+      "short_name": "Pitcher_42898",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 1
+    },
+    "Pitcher_33770": {
+      "real_name": "Unknown Pitcher (Pitcher_33770)",
+      "short_name": "Pitcher_33770",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_36192": {
+      "real_name": "Unknown Pitcher (Pitcher_36192)",
+      "short_name": "Pitcher_36192",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_4622501": {
+      "real_name": "Unknown Pitcher (Pitcher_4622501)",
+      "short_name": "Pitcher_4622501",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5197166": {
+      "real_name": "Unknown Pitcher (Pitcher_5197166)",
+      "short_name": "Pitcher_5197166",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 15
+    },
+    "Pitcher_4919929": {
+      "real_name": "Unknown Pitcher (Pitcher_4919929)",
+      "short_name": "Pitcher_4919929",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4995355": {
+      "real_name": "Unknown Pitcher (Pitcher_4995355)",
+      "short_name": "Pitcher_4995355",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_39711": {
+      "real_name": "Unknown Pitcher (Pitcher_39711)",
+      "short_name": "Pitcher_39711",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_42584": {
+      "real_name": "Unknown Pitcher (Pitcher_42584)",
+      "short_name": "Pitcher_42584",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 16
+    },
+    "Pitcher_3978173": {
+      "real_name": "Unknown Pitcher (Pitcher_3978173)",
+      "short_name": "Pitcher_3978173",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_36429": {
+      "real_name": "Unknown Pitcher (Pitcher_36429)",
+      "short_name": "Pitcher_36429",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_36581": {
+      "real_name": "Unknown Pitcher (Pitcher_36581)",
+      "short_name": "Pitcher_36581",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 28
+    },
+    "Pitcher_40950": {
+      "real_name": "Unknown Pitcher (Pitcher_40950)",
+      "short_name": "Pitcher_40950",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 1
+    },
+    "Pitcher_2560565": {
+      "real_name": "Unknown Pitcher (Pitcher_2560565)",
+      "short_name": "Pitcher_2560565",
+      "team": "CHW",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_33325": {
+      "real_name": "Unknown Pitcher (Pitcher_33325)",
+      "short_name": "Pitcher_33325",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_33089": {
+      "real_name": "Unknown Pitcher (Pitcher_33089)",
+      "short_name": "Pitcher_33089",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_4717803": {
+      "real_name": "Unknown Pitcher (Pitcher_4717803)",
+      "short_name": "Pitcher_4717803",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 24
+    },
+    "Pitcher_41337": {
+      "real_name": "Unknown Pitcher (Pitcher_41337)",
+      "short_name": "Pitcher_41337",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_39645": {
+      "real_name": "Unknown Pitcher (Pitcher_39645)",
+      "short_name": "Pitcher_39645",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 1
+    },
+    "Pitcher_5136077": {
+      "real_name": "Unknown Pitcher (Pitcher_5136077)",
+      "short_name": "Pitcher_5136077",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_42180": {
+      "real_name": "Unknown Pitcher (Pitcher_42180)",
+      "short_name": "Pitcher_42180",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 9
+    },
+    "Pitcher_30442": {
+      "real_name": "Unknown Pitcher (Pitcher_30442)",
+      "short_name": "Pitcher_30442",
+      "team": "ATL",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_35844": {
+      "real_name": "Unknown Pitcher (Pitcher_35844)",
+      "short_name": "Pitcher_35844",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_5207459": {
+      "real_name": "Unknown Pitcher (Pitcher_5207459)",
+      "short_name": "Pitcher_5207459",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_32175": {
+      "real_name": "Unknown Pitcher (Pitcher_32175)",
+      "short_name": "Pitcher_32175",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 24
+    },
+    "Pitcher_39635": {
+      "real_name": "Unknown Pitcher (Pitcher_39635)",
+      "short_name": "Pitcher_39635",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 31
+    },
+    "Pitcher_4424112": {
+      "real_name": "Unknown Pitcher (Pitcher_4424112)",
+      "short_name": "Pitcher_4424112",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_4916509": {
+      "real_name": "Unknown Pitcher (Pitcher_4916509)",
+      "short_name": "Pitcher_4916509",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_41612": {
+      "real_name": "Unknown Pitcher (Pitcher_41612)",
+      "short_name": "Pitcher_41612",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_36201": {
+      "real_name": "Unknown Pitcher (Pitcher_36201)",
+      "short_name": "Pitcher_36201",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4654313": {
+      "real_name": "Unknown Pitcher (Pitcher_4654313)",
+      "short_name": "Pitcher_4654313",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 24
+    },
+    "Pitcher_5196249": {
+      "real_name": "Unknown Pitcher (Pitcher_5196249)",
+      "short_name": "Pitcher_5196249",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 20
+    },
+    "Pitcher_35026": {
+      "real_name": "Unknown Pitcher (Pitcher_35026)",
+      "short_name": "Pitcher_35026",
+      "team": "ATL",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_36526": {
+      "real_name": "Unknown Pitcher (Pitcher_36526)",
+      "short_name": "Pitcher_36526",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 1
+    },
+    "Pitcher_34973": {
+      "real_name": "Unknown Pitcher (Pitcher_34973)",
+      "short_name": "Pitcher_34973",
+      "team": "TEX",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 45
+    },
+    "Pitcher_5185107": {
+      "real_name": "Unknown Pitcher (Pitcher_5185107)",
+      "short_name": "Pitcher_5185107",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_36202": {
+      "real_name": "Unknown Pitcher (Pitcher_36202)",
+      "short_name": "Pitcher_36202",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 11
+    },
+    "Pitcher_41216": {
+      "real_name": "Unknown Pitcher (Pitcher_41216)",
+      "short_name": "Pitcher_41216",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 49
+    },
+    "Pitcher_29705": {
+      "real_name": "Unknown Pitcher (Pitcher_29705)",
+      "short_name": "Pitcher_29705",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_4228579": {
+      "real_name": "Unknown Pitcher (Pitcher_4228579)",
+      "short_name": "Pitcher_4228579",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_42592": {
+      "real_name": "Unknown Pitcher (Pitcher_42592)",
+      "short_name": "Pitcher_42592",
+      "team": "CHC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_41201": {
+      "real_name": "Unknown Pitcher (Pitcher_41201)",
+      "short_name": "Pitcher_41201",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 50
+    },
+    "Pitcher_5132011": {
+      "real_name": "Unknown Pitcher (Pitcher_5132011)",
+      "short_name": "Pitcher_5132011",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 19
+    },
+    "Pitcher_36071": {
+      "real_name": "Unknown Pitcher (Pitcher_36071)",
+      "short_name": "Pitcher_36071",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 25
+    },
+    "Pitcher_33638": {
+      "real_name": "Unknown Pitcher (Pitcher_33638)",
+      "short_name": "Pitcher_33638",
+      "team": "MIN",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_33108": {
+      "real_name": "Unknown Pitcher (Pitcher_33108)",
+      "short_name": "Pitcher_33108",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 8
+    },
+    "Pitcher_41127": {
+      "real_name": "Unknown Pitcher (Pitcher_41127)",
+      "short_name": "Pitcher_41127",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 12
+    },
+    "Pitcher_34868": {
+      "real_name": "Unknown Pitcher (Pitcher_34868)",
+      "short_name": "Pitcher_34868",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4297835": {
+      "real_name": "Unknown Pitcher (Pitcher_4297835)",
+      "short_name": "Pitcher_4297835",
+      "team": "BOS",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 81
+    },
+    "Pitcher_4705673": {
+      "real_name": "Unknown Pitcher (Pitcher_4705673)",
+      "short_name": "Pitcher_4705673",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 8
+    },
+    "Pitcher_36723": {
+      "real_name": "Unknown Pitcher (Pitcher_36723)",
+      "short_name": "Pitcher_36723",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_4414112": {
+      "real_name": "Unknown Pitcher (Pitcher_4414112)",
+      "short_name": "Pitcher_4414112",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 7
+    },
+    "Pitcher_4346118": {
+      "real_name": "Unknown Pitcher (Pitcher_4346118)",
+      "short_name": "Pitcher_4346118",
+      "team": "SD",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5116839": {
+      "real_name": "Unknown Pitcher (Pitcher_5116839)",
+      "short_name": "Pitcher_5116839",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5116851": {
+      "real_name": "Unknown Pitcher (Pitcher_5116851)",
+      "short_name": "Pitcher_5116851",
+      "team": "NYY",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    },
+    "Pitcher_5136082": {
+      "real_name": "Unknown Pitcher (Pitcher_5136082)",
+      "short_name": "Pitcher_5136082",
+      "team": "CLE",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 4
+    },
+    "Pitcher_4307467": {
+      "real_name": "Unknown Pitcher (Pitcher_4307467)",
+      "short_name": "Pitcher_4307467",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 2
+    },
+    "Pitcher_3210625": {
+      "real_name": "Unknown Pitcher (Pitcher_3210625)",
+      "short_name": "Pitcher_3210625",
+      "team": "TEX",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 9
+    },
+    "Pitcher_4719068": {
+      "real_name": "Unknown Pitcher (Pitcher_4719068)",
+      "short_name": "Pitcher_4719068",
+      "team": "KC",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 22
+    },
+    "Pitcher_33837": {
+      "real_name": "Unknown Pitcher (Pitcher_33837)",
+      "short_name": "Pitcher_33837",
+      "team": "DET",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 24
+    },
+    "Pitcher_42639": {
+      "real_name": "Unknown Pitcher (Pitcher_42639)",
+      "short_name": "Pitcher_42639",
+      "team": "PIT",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 5
+    },
+    "Pitcher_41386": {
+      "real_name": "Unknown Pitcher (Pitcher_41386)",
+      "short_name": "Pitcher_41386",
+      "team": "TB",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 6
+    },
+    "Pitcher_4301067": {
+      "real_name": "Unknown Pitcher (Pitcher_4301067)",
+      "short_name": "Pitcher_4301067",
+      "team": "ATL",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 25
+    },
+    "Pitcher_36728": {
+      "real_name": "Unknown Pitcher (Pitcher_36728)",
+      "short_name": "Pitcher_36728",
+      "team": "SF",
+      "confidence": 0.1,
+      "method": "anonymous_with_context",
+      "sources": [
+        "context"
+      ],
+      "contexts_analyzed": 3
+    }
+  },
+  "generated_at": "2025-08-06T23:31:54.103171",
+  "total_mappings": 140,
+  "high_confidence_count": 0,
+  "mapping_summary": {
+    "direct_id_match": 0,
+    "context_matching": 0,
+    "fallback_methods": 0
+  }
+}
