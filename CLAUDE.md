@@ -386,6 +386,80 @@ pip install requests beautifulsoup4 pandas
 - Machine learning for postponement prediction
 - Weather data integration for postponement context
 
+## Play-by-Play Data Backfill (NEW 2025)
+
+The BaseballScraper includes an efficient play-by-play backfill system for catching up on missing historical data without regenerating everything from scratch.
+
+### Key Features
+- **Smart Detection**: Automatically identifies missing dates by comparing existing files vs available schedules
+- **Date Validation**: Prevents processing today/future dates with incomplete games  
+- **Targeted Processing**: Only processes missing dates (much faster than full regeneration)
+- **Proper Naming**: Generates correct filenames with actual game dates
+- **Comprehensive Logging**: Detailed success/failure tracking with reports
+- **Centralized Output**: Uses correct `BaseballData/data/play-by-play/` directory
+
+### Quick Usage
+
+```bash
+# Check what dates are missing
+python3 backfill_playbyplay_missing_dates.py --list-missing
+
+# Backfill specific date range (recommended for catching up)  
+python3 backfill_playbyplay_missing_dates.py --start-date 2025-08-07 --end-date 2025-08-13
+
+# Backfill ALL missing dates (longer process)
+python3 backfill_playbyplay_missing_dates.py
+
+# Test before running (always recommended)
+python3 backfill_playbyplay_missing_dates.py --start-date 2025-08-07 --end-date 2025-08-13 --dry-run
+```
+
+### Safety Features
+
+**Automatic Date Exclusion:**
+- ✅ **Today's date**: Automatically excluded (games incomplete)
+- ✅ **Future dates**: Automatically excluded  
+- ✅ **Only processes completed historical games**
+
+**Filename Accuracy:**
+- ✅ **Before Fix**: Game 401696637 from August 7 was incorrectly named `CHW_vs_SEA_playbyplay_august_14_2025_401696637.json`
+- ✅ **After Fix**: Same game correctly named `CHW_vs_SEA_playbyplay_august_7_2025_401696637.json`
+
+### Output Structure
+
+Generated files follow this naming convention:
+```
+BaseballData/data/play-by-play/
+├── AWAY_vs_HOME_playbyplay_month_day_year_gameId.json
+├── CHW_vs_SEA_playbyplay_august_7_2025_401696637.json
+├── MIA_vs_ATL_playbyplay_august_7_2025_401696635.json
+└── CIN_vs_PIT_playbyplay_august_8_2025_401696639.json
+```
+
+### Troubleshooting
+
+**Common Issues:**
+- **"No schedule file found"**: Ensure the schedule file exists in either local directory or `BaseballData/SCANNED/`
+- **"No URLs found"**: Check that the schedule file contains valid ESPN game URLs
+- **Timeout errors**: Process runs with 20-second delays between games for respectful scraping
+
+**Monitoring Progress:**
+```bash
+# Monitor logs during backfill
+tail -f logs/playbyplay_backfill.log
+
+# Check generated files
+find /path/to/BaseballData/data/play-by-play -name "*august*2025*" | wc -l
+
+# Verify file naming accuracy  
+ls BaseballData/data/play-by-play/*august_7_2025*
+```
+
+**Integration with Daily Workflow:**
+- The daily automation (`./enhanced_daily_automation.sh`) now correctly outputs to centralized directory
+- Future play-by-play data will be generated automatically
+- Backfill is only needed for historical gaps
+
 ## Dependencies
 
 ### Python Packages

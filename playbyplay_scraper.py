@@ -768,7 +768,7 @@ def save_playbyplay_data(game_data: Dict, date_identifier: str, game_id: str, aw
     
     # Setup separate directories for CSV and JSON as requested
     csv_pbp_dir = DATA_PATH.parent / 'CSV_BACKUPS_PBP'
-    json_pbp_dir = DATA_PATH / 'playbyplay'
+    json_pbp_dir = DATA_PATH / 'play-by-play'  # Corrected to match existing directory structure
     
     csv_pbp_dir.mkdir(parents=True, exist_ok=True)
     json_pbp_dir.mkdir(parents=True, exist_ok=True)
@@ -1065,7 +1065,7 @@ def main():
     print(f"📁 CSV data saved in: {DATA_PATH.parent / 'CSV_BACKUPS_PBP'}")
     print("🏁 Play-by-play scraper completed!")
 
-def process_single_game_playbyplay(playbyplay_url: str) -> Dict:
+def process_single_game_playbyplay(playbyplay_url: str, target_date_identifier: str = None) -> Dict:
     """
     Process a single game's play-by-play data
     
@@ -1092,18 +1092,17 @@ def process_single_game_playbyplay(playbyplay_url: str) -> Dict:
         if not game_data or not game_data.get('plays'):
             return {'success': False, 'error': 'No play data extracted'}
         
-        # Determine date identifier from URL or use current date
-        try:
-            # Try to extract date from URL pattern
-            url_parts = playbyplay_url.split('/')
-            game_id_part = [part for part in url_parts if 'gameId' in part or part.isdigit()]
-            if game_id_part:
-                # Use a simple date format - this could be enhanced
+        # Use provided date identifier or fall back to current date
+        if target_date_identifier:
+            date_identifier = target_date_identifier
+            print(f"📅 Using target date: {date_identifier}")
+        else:
+            # Fallback to current date (for backward compatibility)
+            try:
                 date_identifier = datetime.now().strftime('%B_%d_%Y').lower()
-            else:
+                print(f"📅 Using current date (fallback): {date_identifier}")
+            except:
                 date_identifier = datetime.now().strftime('%B_%d_%Y').lower()
-        except:
-            date_identifier = datetime.now().strftime('%B_%d_%Y').lower()
         
         # Optional player name enhancement
         if BOXSCORE_NAME_MATCHER_AVAILABLE:

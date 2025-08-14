@@ -1,0 +1,58 @@
+{
+  "backfill_summary": {
+    "total_dates_requested": 6,
+    "successful_dates": 6,
+    "total_games_processed": 87,
+    "total_games_failed": 0,
+    "results": [
+      {
+        "success": true,
+        "date": "2025-08-08",
+        "processed": 15,
+        "failed": 0,
+        "total": 15,
+        "success_rate": 100.0
+      },
+      {
+        "success": true,
+        "date": "2025-08-09",
+        "processed": 16,
+        "failed": 0,
+        "total": 16,
+        "success_rate": 100.0
+      },
+      {
+        "success": true,
+        "date": "2025-08-10",
+        "processed": 15,
+        "failed": 0,
+        "total": 15,
+        "success_rate": 100.0
+      },
+      {
+        "success": true,
+        "date": "2025-08-11",
+        "processed": 11,
+        "failed": 0,
+        "total": 11,
+        "success_rate": 100.0
+      },
+      {
+        "success": true,
+        "date": "2025-08-12",
+        "processed": 15,
+        "failed": 0,
+        "total": 15,
+        "success_rate": 100.0
+      },
+      {
+        "success": true,
+        "date": "2025-08-13",
+        "processed": 15,
+        "failed": 0,
+        "total": 15,
+        "success_rate": 100.0
+      }
+    ]
+  }
+}

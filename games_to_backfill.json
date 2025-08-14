@@ -1,0 +1,61 @@
+{
+  "description": "Configuration file for backfilling missing or incorrect MLB games",
+  "issues_found": [
+    {
+      "date": "2025-07-29",
+      "description": "Blue Jays @ Orioles Game 2 - shows 'Scheduled' status with null scores but has player data",
+      "issue_type": "incomplete_result"
+    },
+    {
+      "date": "2025-08-02", 
+      "description": "Atlanta @ Cincinnati suspended game - shows 1-0 CIN but actual final was 4-2 ATL",
+      "issue_type": "incorrect_result"
+    },
+    {
+      "date": "2025-07-12",
+      "description": "Cleveland @ Chicago doubleheader - missing both scheduled and makeup games",
+      "issue_type": "missing_games"
+    }
+  ],
+  "games": [
+    {
+      "game_id": "401696518",
+      "date": "2025-07-29",
+      "teams": "TOR@BAL",
+      "description": "Blue Jays @ Orioles Game 2 (doubleheader)",
+      "expected_result": "BAL 3, TOR 2",
+      "issue": "Shows as 'Scheduled' with null scores"
+    },
+    {
+      "game_id": "401696561", 
+      "date": "2025-08-02",
+      "teams": "ATL@CIN",
+      "description": "Braves @ Reds suspended game (completed Aug 3)",
+      "expected_result": "ATL 4, CIN 2", 
+      "issue": "Shows incorrect result 1-0 CIN"
+    },
+    {
+      "game_id": "401800822",
+      "date": "2025-07-12", 
+      "teams": "CLE@CHW",
+      "description": "Guardians @ White Sox regularly scheduled game",
+      "expected_result": "TBD",
+      "issue": "Missing from July 12 data"
+    },
+    {
+      "game_id": "401696319",
+      "date": "2025-07-12",
+      "teams": "CLE@CHW", 
+      "description": "Guardians @ White Sox makeup game (postponed from July 11)",
+      "expected_result": "TBD",
+      "issue": "Missing makeup game"
+    }
+  ],
+  "processing_notes": [
+    "Game 401696518: Has player statistics but game result shows null scores",
+    "Game 401696561: Result was updated after suspended game completion",
+    "Games 401800822 and 401696319: Both should appear on July 12 as doubleheader",
+    "CSV backups should be updated to maintain data consistency",
+    "After backfill, run daily_update.sh to regenerate predictions"
+  ]
+}

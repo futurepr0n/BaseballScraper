@@ -1,0 +1,18 @@
+{
+  "backfill_summary": {
+    "total_dates_requested": 1,
+    "successful_dates": 1,
+    "total_games_processed": 4,
+    "total_games_failed": 0,
+    "results": [
+      {
+        "success": true,
+        "date": "2025-08-07",
+        "processed": 4,
+        "failed": 0,
+        "total": 4,
+        "success_rate": 100.0
+      }
+    ]
+  }
+}

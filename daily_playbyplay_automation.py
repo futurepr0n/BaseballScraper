@@ -66,7 +66,7 @@ class DailyPlaybyPlayAutomation:
     def ensure_directories(self):
         """Ensure all required directories exist"""
         directories = [
-            PATHS['hellraiser'] / 'playbyplay',
+            DATA_PATH / 'play-by-play',  # Centralized play-by-play directory
             PATHS['scanned'],
             Path('logs')
         ]
@@ -285,7 +285,7 @@ class DailyPlaybyPlayAutomation:
                 'result': result,
                 'configuration': {
                     'data_path': str(DATA_PATH),
-                    'playbyplay_output_path': str(PATHS['hellraiser'] / 'playbyplay'),
+                    'playbyplay_output_path': str(DATA_PATH / 'play-by-play'),
                     'scanned_path': str(PATHS['scanned'])
                 }
             }
@@ -293,7 +293,7 @@ class DailyPlaybyPlayAutomation:
         
         # Save report to file
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_file = PATHS['hellraiser'] / 'playbyplay' / f'daily_playbyplay_report_{timestamp}.json'
+        report_file = DATA_PATH / 'play-by-play' / f'daily_playbyplay_report_{timestamp}.json'
         
         try:
             with open(report_file, 'w') as f:
