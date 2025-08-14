@@ -93,17 +93,72 @@ class DailyPlaybyPlayAutomation:
     
     def check_prerequisites(self) -> bool:
         """Check if prerequisites are met for play-by-play processing"""
-        # Check if enhanced_scrape has already run (CSV files should exist)
-        csv_files = list(Path('.').glob('*_hitting_*.csv')) + list(Path('.').glob('*_pitching_*.csv'))
+        from config import PATHS
         
-        if not csv_files:
-            logger.warning("⚠️ No CSV files found - enhanced_scrape may not have run yet")
-            logger.info("💡 Recommendation: Run enhanced_scrape.py first to collect basic game data")
-            return False
+        # Check centralized CSV backup location first (enhanced_scrape outputs here)
+        csv_backup_path = PATHS['csv_backups']
+        csv_files = []
         
-        logger.info(f"✅ Found {len(csv_files)} CSV files - prerequisites met")
-        return True
+        if csv_backup_path.exists():
+            csv_files = list(csv_backup_path.glob('*_hitting_*.csv')) + list(csv_backup_path.glob('*_pitching_*.csv'))
+            if csv_files:
+                logger.info(f"✅ Found {len(csv_files)} CSV files in centralized backup location")
+                return True
+            else:
+                logger.debug(f"🔍 Checked centralized location: {csv_backup_path} (no CSV files found)")
+        
+        # Fallback: check local directory (for backward compatibility or manual runs)
+        local_csv_files = list(Path('.').glob('*_hitting_*.csv')) + list(Path('.').glob('*_pitching_*.csv'))
+        if local_csv_files:
+            logger.info(f"✅ Found {len(local_csv_files)} CSV files in local directory")
+            return True
+        
+        logger.warning("⚠️ No CSV files found in either centralized backup or local directory")
+        logger.info("💡 Recommendation: Run enhanced_scrape.py first to collect basic game data")
+        logger.info(f"🔍 Checked locations:")
+        logger.info(f"   - Centralized: {csv_backup_path}")
+        logger.info(f"   - Local: {Path('.').resolve()}")
+        return False
     
+    def find_schedule_file(self, filename: str) -> str:
+        """Find schedule file with fallback locations and date ranges"""
+        from config import PATHS
+        from datetime import datetime, timedelta
+        
+        # Define locations to check (prioritize local first for current day, then centralized for processed)
+        locations = [
+            Path('.'),                    # Local directory (current/unprocessed files)
+            PATHS['scanned'],            # Centralized SCANNED (processed files)
+        ]
+        
+        # Check for exact filename match
+        for location in locations:
+            file_path = location / filename
+            if file_path.exists():
+                logger.info(f"✅ Found schedule file: {file_path}")
+                return str(file_path)
+        
+        # If exact file not found, try alternative dates (useful for automation)
+        logger.debug(f"🔍 Exact file {filename} not found, trying alternative dates...")
+        
+        for days_back in [0, 1, 2]:  # Try today, yesterday, day before yesterday
+            alt_date = datetime.now() - timedelta(days=days_back)
+            alt_filename = f"{alt_date.strftime('%B').lower()}_{alt_date.day}_{alt_date.year}.txt"
+            
+            for location in locations:
+                file_path = location / alt_filename
+                if file_path.exists():
+                    logger.info(f"✅ Found alternative schedule file: {file_path} (instead of {filename})")
+                    return str(file_path)
+        
+        # Log detailed search results
+        logger.error(f"❌ No schedule file found for {filename}")
+        logger.info(f"🔍 Searched locations:")
+        for location in locations:
+            logger.info(f"   - {location}: {'exists' if location.exists() else 'not found'}")
+        
+        raise FileNotFoundError(f"Schedule file not found: {filename}")
+
     def process_daily_playbyplay(self, filename: str, dry_run: bool = False) -> Dict:
         """Process play-by-play data for the specified date file"""
         logger.info(f"🎯 Processing daily play-by-play for: {filename}")
@@ -112,15 +167,18 @@ class DailyPlaybyPlayAutomation:
             logger.info("🧪 DRY RUN MODE - No actual processing will occur")
             return {'success': True, 'dry_run': True}
         
-        if not os.path.exists(filename):
-            logger.error(f"❌ File not found: {filename}")
+        try:
+            # Find the schedule file using smart search
+            actual_file_path = self.find_schedule_file(filename)
+        except FileNotFoundError as e:
+            logger.error(str(e))
             return {'success': False, 'error': 'File not found'}
         
         try:
-            # Read URLs from file
-            urls = read_urls_from_file(filename)
+            # Read URLs from the found file
+            urls = read_urls_from_file(actual_file_path)
             if not urls:
-                logger.warning(f"⚠️ No URLs found in {filename}")
+                logger.warning(f"⚠️ No URLs found in {actual_file_path}")
                 return {'success': False, 'error': 'No URLs found'}
             
             logger.info(f"📊 Found {len(urls)} games to process for play-by-play data")
