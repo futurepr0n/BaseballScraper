@@ -5,7 +5,7 @@ import shutil
 from datetime import datetime
 
 # Use centralized configuration for data paths
-from config import PATHS
+from config import PATHS, get_output_dirs
 
 # Load the JSON data from the file
 file_path = 'mlb-batter-hr-props.json'
@@ -25,6 +25,9 @@ primary_dir.mkdir(parents=True, exist_ok=True)
 current_odds_file = os.path.join(primary_dir, 'mlb-hr-odds-only.csv')
 tracking_file = os.path.join(primary_dir, 'mlb-hr-odds-tracking.csv')
 historical_file = os.path.join(primary_dir, 'mlb-hr-odds-history.csv')
+
+# Get output directories for file copying (supports dev/prod sync)
+output_dirs = get_output_dirs('odds')
 
 def load_tracking_data():
     """Load existing tracking data (opening odds, previous odds, etc.)"""
@@ -246,7 +249,65 @@ for market in data['markets']:
 
 # --- Step 3: Process selections and calculate comprehensive tracking ---
 current_time = datetime.now().isoformat()
-processed_players = []
+processed_hr_players = []
+processed_hits_players = []
+
+# Load tracking data for both prop types
+hits_tracking_file = os.path.join(primary_dir, 'mlb-hits-odds-tracking.csv')
+hits_historical_file = os.path.join(primary_dir, 'mlb-hits-odds-history.csv')
+
+def load_hits_tracking_data():
+    """Load existing tracking data for hits props"""
+    tracking_data = {}
+    
+    if os.path.exists(hits_tracking_file):
+        try:
+            with open(hits_tracking_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    player_name = row['player_name'].strip()
+                    tracking_data[player_name] = {
+                        'opening_odds': row.get('opening_odds', '').strip(),
+                        'previous_odds': row.get('previous_odds', '').strip(),
+                        'opening_timestamp': row.get('opening_timestamp', ''),
+                        'previous_timestamp': row.get('previous_timestamp', ''),
+                        'total_runs': int(row.get('total_runs', 0)),
+                        'session_high': row.get('session_high', '').strip(),
+                        'session_low': row.get('session_low', '').strip()
+                    }
+            print(f"Loaded hits tracking data for {len(tracking_data)} players")
+        except Exception as e:
+            print(f"Warning: Could not load hits tracking data: {e}")
+    else:
+        print("No existing hits tracking data found - starting fresh session")
+    
+    return tracking_data
+
+hits_tracking_data = load_hits_tracking_data()
+
+def append_to_hits_history(player_data):
+    """Append current state to historical hits tracking"""
+    file_exists = os.path.exists(hits_historical_file)
+    
+    with open(hits_historical_file, 'a', newline='', encoding='utf-8') as f:
+        fieldnames = ['timestamp', 'player_name', 'current_odds', 'previous_odds', 'opening_odds', 
+                     'movement_from_previous', 'previous_delta', 'total_runs', 'trend_direction']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        
+        if not file_exists:
+            writer.writeheader()
+        
+        writer.writerow({
+            'timestamp': player_data['current_timestamp'],
+            'player_name': player_data['player_name'],
+            'current_odds': player_data['current_odds'],
+            'previous_odds': player_data['previous_odds'], 
+            'opening_odds': player_data['opening_odds'],
+            'movement_from_previous': player_data['movement_from_previous'],
+            'previous_delta': player_data['previous_delta'],
+            'total_runs': player_data['total_runs'],
+            'trend_direction': player_data['trend_direction']
+        })
 
 if 'selections' not in data or not data['selections']:
     print("Error: 'selections' key not found or is empty in the JSON data.")
@@ -280,17 +341,35 @@ for selection in data['selections']:
             continue
 
         if prop_type == "Home Runs":
-            # Calculate comprehensive movement and trends
+            # Calculate comprehensive movement and trends for HR
             player_data = calculate_movement_and_trends(player_name, odds_american, tracking_data, current_time)
             player_data['player_name'] = player_name
             
-            processed_players.append(player_data)
+            processed_hr_players.append(player_data)
             
             # Append to historical tracking
             append_to_history(player_data)
             
             # Print comprehensive status
-            status_msg = f"{player_name}: {player_data['opening_odds']} → {player_data['previous_odds']} → {odds_american}"
+            status_msg = f"⚾ HR {player_name}: {player_data['opening_odds']} → {player_data['previous_odds']} → {odds_american}"
+            if player_data['movement_from_previous'] != 'NEW':
+                status_msg += f" ({player_data['previous_delta_display']})"
+            if player_data['total_runs'] > 1:
+                status_msg += f" [Run #{player_data['total_runs']}, Trend: {player_data['trend_direction']}]"
+            print(status_msg)
+            
+        elif prop_type == "Hits":
+            # Calculate comprehensive movement and trends for Hits
+            player_data = calculate_movement_and_trends(player_name, odds_american, hits_tracking_data, current_time)
+            player_data['player_name'] = player_name
+            
+            processed_hits_players.append(player_data)
+            
+            # Append to hits historical tracking
+            append_to_hits_history(player_data)
+            
+            # Print comprehensive status
+            status_msg = f"🥎 Hits {player_name}: {player_data['opening_odds']} → {player_data['previous_odds']} → {odds_american}"
             if player_data['movement_from_previous'] != 'NEW':
                 status_msg += f" ({player_data['previous_delta_display']})"
             if player_data['total_runs'] > 1:
@@ -314,15 +393,26 @@ def copy_files_to_all_directories(files_to_copy):
 
 # --- Step 4: Write comprehensive tracking files ---
 try:
-    # Write basic odds file (for compatibility)
+    # Define file paths for hits props
+    hits_odds_file = os.path.join(primary_dir, 'mlb-hits-odds-only.csv')
+    
+    # Write basic HR odds file (for compatibility)
     with open(current_odds_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['player_name', 'odds', 'last_updated'])
         
-        for player_data in processed_players:
+        for player_data in processed_hr_players:
             writer.writerow([player_data['player_name'], player_data['current_odds'], player_data['current_timestamp']])
     
-    # Write comprehensive tracking file
+    # Write basic Hits odds file
+    with open(hits_odds_file, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['player_name', 'odds', 'last_updated'])
+        
+        for player_data in processed_hits_players:
+            writer.writerow([player_data['player_name'], player_data['current_odds'], player_data['current_timestamp']])
+    
+    # Write comprehensive HR tracking file
     with open(tracking_file, 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['player_name', 'opening_odds', 'previous_odds', 'current_odds',
                      'opening_timestamp', 'previous_timestamp', 'current_timestamp',
@@ -335,7 +425,26 @@ try:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         
-        for player_data in processed_players:
+        for player_data in processed_hr_players:
+            # Update previous odds for next run
+            player_data['previous_odds'] = player_data['current_odds']
+            player_data['previous_timestamp'] = player_data['current_timestamp']
+            writer.writerow(player_data)
+    
+    # Write comprehensive Hits tracking file
+    with open(hits_tracking_file, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['player_name', 'opening_odds', 'previous_odds', 'current_odds',
+                     'opening_timestamp', 'previous_timestamp', 'current_timestamp',
+                     'total_runs', 'session_high', 'session_low',
+                     'movement_from_previous', 'movement_from_opening', 
+                     'previous_delta', 'opening_delta',
+                     'previous_delta_display', 'opening_delta_display',
+                     'trend_direction', 'favorable_vs_previous', 'favorable_vs_opening']
+        
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        
+        for player_data in processed_hits_players:
             # Update previous odds for next run
             player_data['previous_odds'] = player_data['current_odds']
             player_data['previous_timestamp'] = player_data['current_timestamp']
@@ -345,45 +454,81 @@ try:
     files_to_copy = [
         (current_odds_file, 'mlb-hr-odds-only.csv'),
         (tracking_file, 'mlb-hr-odds-tracking.csv'),
-        (historical_file, 'mlb-hr-odds-history.csv')
+        (historical_file, 'mlb-hr-odds-history.csv'),
+        (hits_odds_file, 'mlb-hits-odds-only.csv'),
+        (hits_tracking_file, 'mlb-hits-odds-tracking.csv'),
+        (hits_historical_file, 'mlb-hits-odds-history.csv')
     ]
     copy_files_to_all_directories(files_to_copy)
 
-    print(f"\nSUCCESS: Processed {len(processed_players)} players")
+    print(f"\n🎯 SUCCESS: Processed {len(processed_hr_players)} HR players, {len(processed_hits_players)} Hits players")
     print(f"Files updated in {len(output_dirs)} directories:")
     for output_dir in output_dirs:
         print(f"  📂 {output_dir}/")
-        print(f"    - mlb-hr-odds-only.csv (basic odds)")
-        print(f"    - mlb-hr-odds-tracking.csv (movement tracking)")
-        print(f"    - mlb-hr-odds-history.csv (historical log)")
+        print(f"    🏠 mlb-hr-odds-only.csv (basic HR odds)")
+        print(f"    🏠 mlb-hr-odds-tracking.csv (HR movement tracking)")
+        print(f"    🏠 mlb-hr-odds-history.csv (HR historical log)")
+        print(f"    🥎 mlb-hits-odds-only.csv (basic Hits odds)")
+        print(f"    🥎 mlb-hits-odds-tracking.csv (Hits movement tracking)")
+        print(f"    🥎 mlb-hits-odds-history.csv (Hits historical log)")
     
-    # Print session summary
-    new_players = len([p for p in processed_players if p['total_runs'] == 1])
-    existing_players = len(processed_players) - new_players
-    movements = {}
-    trends = {}
+    # Print HR session summary
+    if processed_hr_players:
+        new_hr_players = len([p for p in processed_hr_players if p['total_runs'] == 1])
+        existing_hr_players = len(processed_hr_players) - new_hr_players
+        hr_movements = {}
+        hr_trends = {}
+        
+        for player_data in processed_hr_players:
+            if player_data['total_runs'] > 1:  # Only count movement for existing players
+                movement = player_data['movement_from_previous']
+                hr_movements[movement] = hr_movements.get(movement, 0) + 1
+                
+                trend = player_data['trend_direction']
+                hr_trends[trend] = hr_trends.get(trend, 0) + 1
+        
+        print(f"\n⚾ HR SESSION SUMMARY:")
+        print(f"  New HR players: {new_hr_players}")
+        print(f"  Existing HR players: {existing_hr_players}")
+        
+        if hr_movements:
+            print(f"  HR Movement from previous:")
+            for movement, count in hr_movements.items():
+                print(f"    {movement}: {count}")
+        
+        if hr_trends:
+            print(f"  HR Daily trends (vs opening):")
+            for trend, count in hr_trends.items():
+                print(f"    {trend}: {count}")
     
-    for player_data in processed_players:
-        if player_data['total_runs'] > 1:  # Only count movement for existing players
-            movement = player_data['movement_from_previous']
-            movements[movement] = movements.get(movement, 0) + 1
-            
-            trend = player_data['trend_direction']
-            trends[trend] = trends.get(trend, 0) + 1
-    
-    print(f"\nSESSION SUMMARY:")
-    print(f"  New players: {new_players}")
-    print(f"  Existing players: {existing_players}")
-    
-    if movements:
-        print(f"  Movement from previous:")
-        for movement, count in movements.items():
-            print(f"    {movement}: {count}")
-    
-    if trends:
-        print(f"  Daily trends (vs opening):")
-        for trend, count in trends.items():
-            print(f"    {trend}: {count}")
+    # Print Hits session summary
+    if processed_hits_players:
+        new_hits_players = len([p for p in processed_hits_players if p['total_runs'] == 1])
+        existing_hits_players = len(processed_hits_players) - new_hits_players
+        hits_movements = {}
+        hits_trends = {}
+        
+        for player_data in processed_hits_players:
+            if player_data['total_runs'] > 1:  # Only count movement for existing players
+                movement = player_data['movement_from_previous']
+                hits_movements[movement] = hits_movements.get(movement, 0) + 1
+                
+                trend = player_data['trend_direction']
+                hits_trends[trend] = hits_trends.get(trend, 0) + 1
+        
+        print(f"\n🥎 HITS SESSION SUMMARY:")
+        print(f"  New Hits players: {new_hits_players}")
+        print(f"  Existing Hits players: {existing_hits_players}")
+        
+        if hits_movements:
+            print(f"  Hits Movement from previous:")
+            for movement, count in hits_movements.items():
+                print(f"    {movement}: {count}")
+        
+        if hits_trends:
+            print(f"  Hits Daily trends (vs opening):")
+            for trend, count in hits_trends.items():
+                print(f"    {trend}: {count}")
         
 except Exception as e:
     print(f"Error writing tracking files: {e}")

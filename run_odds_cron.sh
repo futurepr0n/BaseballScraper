@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Odds Update Cron Wrapper Script
+# Odds Update Cron Wrapper Script (HR + Hits)
+# Downloads and processes both Home Run and 1+ Hits props
 # Ensures proper environment and logging for cron execution
 
 # Set working directory - handle both dev and production environments
@@ -23,7 +24,7 @@ else
 fi
 
 # Run the odds update script
-echo "$(date): Starting odds update..." >> logs/odds_cron.log
+echo "$(date): Starting odds update (HR + Hits props)..." >> logs/odds_cron.log
 ./update-odds.sh >> logs/odds_cron.log 2>&1
 EXIT_CODE=$?
 

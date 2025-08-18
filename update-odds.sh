@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# update-odds.sh - Enhanced MLB HR odds data updater
+# update-odds.sh - Enhanced MLB odds data updater (HR + Hits)
+# Downloads and processes both Home Run and 1+ Hits props
 # Syncs to both development and production directories
 # Designed to run every 30 minutes throughout the day
 #
@@ -16,7 +17,7 @@ mkdir -p logs
 
 # Log the start time with enhanced formatting
 echo "========================================"
-echo "$(date): 🎰 Starting odds update..."
+echo "$(date): 🎰 Starting odds update (HR + Hits props)..."
 echo "$(date): Working directory: $SCRIPT_DIR"
 
 # Check if we're in valid time window (6 AM - 11:30 PM)
@@ -68,11 +69,17 @@ if [ $? -eq 0 ]; then
             echo "$(date): ✅ Odds update completed successfully"
             
             # Check that output files were created in centralized location
-            CENTRALIZED_ODDS="../BaseballData/data/odds/mlb-hr-odds-only.csv"
+            CENTRALIZED_HR_ODDS="../BaseballData/data/odds/mlb-hr-odds-only.csv"
+            CENTRALIZED_HITS_ODDS="../BaseballData/data/odds/mlb-hits-odds-only.csv"
             
-            if [ -f "$CENTRALIZED_ODDS" ]; then
-                PLAYER_COUNT=$(tail -n +2 "$CENTRALIZED_ODDS" | wc -l)
-                echo "$(date): 📈 Processed $PLAYER_COUNT players in odds data (centralized)"
+            if [ -f "$CENTRALIZED_HR_ODDS" ]; then
+                HR_PLAYER_COUNT=$(tail -n +2 "$CENTRALIZED_HR_ODDS" | wc -l)
+                echo "$(date): ⚾ Processed $HR_PLAYER_COUNT HR players in odds data (centralized)"
+            fi
+            
+            if [ -f "$CENTRALIZED_HITS_ODDS" ]; then
+                HITS_PLAYER_COUNT=$(tail -n +2 "$CENTRALIZED_HITS_ODDS" | wc -l)
+                echo "$(date): 🥎 Processed $HITS_PLAYER_COUNT Hits players in odds data (centralized)"
             fi
             
             # Archive the JSON file with timestamp for debugging
