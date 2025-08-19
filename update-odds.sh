@@ -44,17 +44,35 @@ else
     echo "$(date): ⚠️ Using system Python: $PYTHON_VERSION (venv not activated)"
 fi
 
-# Download the latest odds data from DraftKings
+# Download the latest odds data from DraftKings (both HR and Hits)
 echo "$(date): 📶 Downloading latest odds data from DraftKings..."
-wget --no-check-certificate --timeout=30 --tries=3 -O mlb-batter-hr-props.json "https://sportsbook-nash.draftkings.com/api/sportscontent/dkcaon/v1/leagues/84240/categories/743?=json"
 
-# Check if download was successful
-if [ $? -eq 0 ]; then
-    echo "$(date): ✅ Download successful, processing odds..."
+# Download HR props
+echo "$(date): ⚾ Downloading HR props..."
+wget --no-check-certificate --timeout=30 --tries=3 -O mlb-batter-hr-props.json "https://sportsbook-nash.draftkings.com/api/sportscontent/dkcaon/v1/leagues/84240/categories/743?=json"
+HR_DOWNLOAD_SUCCESS=$?
+
+# Download Hits props (may use different category)
+echo "$(date): 🥎 Downloading Hits props..."
+wget --no-check-certificate --timeout=30 --tries=3 -O mlb-batter-hits-props.json "https://sportsbook-nash.draftkings.com/api/sportscontent/dkcaon/v1/leagues/84240/categories/17320?=json"
+HITS_DOWNLOAD_SUCCESS=$?
+
+# Check if at least one download was successful
+if [ $HR_DOWNLOAD_SUCCESS -eq 0 ] || [ $HITS_DOWNLOAD_SUCCESS -eq 0 ]; then
+    echo "$(date): ✅ At least one download successful, processing odds..."
     
-    # Verify JSON file was downloaded and has content
+    # Verify files and show sizes
     if [ -s "mlb-batter-hr-props.json" ]; then
-        echo "$(date): 📄 JSON file size: $(wc -c < mlb-batter-hr-props.json) bytes"
+        echo "$(date): ⚾ HR props file size: $(wc -c < mlb-batter-hr-props.json) bytes"
+    else
+        echo "$(date): ⚠️ HR props file missing or empty"
+    fi
+    
+    if [ -s "mlb-batter-hits-props.json" ]; then
+        echo "$(date): 🥎 Hits props file size: $(wc -c < mlb-batter-hits-props.json) bytes"
+    else
+        echo "$(date): ⚠️ Hits props file missing or empty (may not be available)"
+    fi
         
         # Run the Python script to process the data (use venv's python)
         echo "$(date): 🔄 Processing odds data..."
@@ -82,28 +100,39 @@ if [ $? -eq 0 ]; then
                 echo "$(date): 🥎 Processed $HITS_PLAYER_COUNT Hits players in odds data (centralized)"
             fi
             
-            # Archive the JSON file with timestamp for debugging
+            # Archive the JSON files with timestamp for debugging
             TIMESTAMP=$(date +%Y%m%d_%H%M%S)
             mkdir -p "logs/json_archive"
-            cp mlb-batter-hr-props.json "logs/json_archive/mlb-batter-hr-props_$TIMESTAMP.json"
             
-            # Clean up current JSON file
-            rm mlb-batter-hr-props.json
+            if [ -f "mlb-batter-hr-props.json" ]; then
+                cp mlb-batter-hr-props.json "logs/json_archive/mlb-batter-hr-props_$TIMESTAMP.json"
+                rm mlb-batter-hr-props.json
+                echo "$(date): 🗃️ Archived HR props file"
+            fi
+            
+            if [ -f "mlb-batter-hits-props.json" ]; then
+                cp mlb-batter-hits-props.json "logs/json_archive/mlb-batter-hits-props_$TIMESTAMP.json"
+                rm mlb-batter-hits-props.json
+                echo "$(date): 🗃️ Archived Hits props file"
+            fi
             
         else
             echo "$(date): ❌ Error processing odds data"
-            # Keep JSON file for debugging
-            mv mlb-batter-hr-props.json "mlb-batter-hr-props_error_$(date +%Y%m%d_%H%M%S).json"
+            # Keep JSON files for debugging
+            ERROR_TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+            if [ -f "mlb-batter-hr-props.json" ]; then
+                mv mlb-batter-hr-props.json "mlb-batter-hr-props_error_$ERROR_TIMESTAMP.json"
+            fi
+            if [ -f "mlb-batter-hits-props.json" ]; then
+                mv mlb-batter-hits-props.json "mlb-batter-hits-props_error_$ERROR_TIMESTAMP.json"
+            fi
             deactivate 2>/dev/null
             exit 1
         fi
-    else
-        echo "$(date): ❌ Downloaded JSON file is empty or missing"
-        deactivate 2>/dev/null
-        exit 1
-    fi
 else
-    echo "$(date): ❌ Error downloading odds data (wget exit code: $?)"
+    echo "$(date): ❌ Error downloading odds data"
+    echo "$(date): HR download exit code: $HR_DOWNLOAD_SUCCESS"
+    echo "$(date): Hits download exit code: $HITS_DOWNLOAD_SUCCESS"
     deactivate 2>/dev/null
     exit 1
 fi

@@ -1,23 +1,46 @@
-import json
-import csv
+#!/usr/bin/env python3
+"""
+Legacy odds-scrape.py - Backwards compatibility wrapper
+Calls the enhanced odds scraper for improved functionality
+"""
+
 import os
-import shutil
-from datetime import datetime
+import sys
 
-# Use centralized configuration for data paths
-from config import PATHS, get_output_dirs
-
-# Load the JSON data from the file
-file_path = 'mlb-batter-hr-props.json'
-try:
-    with open(file_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-except FileNotFoundError:
-    print(f"Error: File '{file_path}' not found. Please download it first.")
-    exit()
-except json.JSONDecodeError:
-    print(f"Error: Could not decode JSON from '{file_path}'. The file might be corrupted or not valid JSON.")
-    exit()
+# For backwards compatibility, call the enhanced version
+if __name__ == "__main__":
+    print("🔄 Legacy odds-scrape.py called - forwarding to enhanced version...")
+    
+    # Import and run enhanced version
+    try:
+        from enhanced_odds_scrape import EnhancedOddsScraper
+        scraper = EnhancedOddsScraper()
+        success = scraper.run()
+        sys.exit(0 if success else 1)
+    except Exception as e:
+        print(f"❌ Error running enhanced odds scraper: {e}")
+        print("🔄 Falling back to original logic...")
+        
+        # Original import logic for fallback
+        import json
+        import csv
+        import shutil
+        from datetime import datetime
+        
+        # Use centralized configuration for data paths
+        from config import PATHS, get_output_dirs
+        
+        # Load the JSON data from the file
+        file_path = 'mlb-batter-hr-props.json'
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found. Please download it first.")
+            exit(1)
+        except json.JSONDecodeError:
+            print(f"Error: Could not decode JSON from '{file_path}'. The file might be corrupted or not valid JSON.")
+            exit(1)
 
 # Use centralized odds directory
 primary_dir = PATHS['odds']

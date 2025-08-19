@@ -1,0 +1,7 @@
+# MLB Odds Tracking - Every 30 minutes during baseball hours (6:30 AM - 11:30 PM)
+# Automatically downloads, processes, and syncs odds to centralized location
+# 
+# Add this to your crontab with: crontab odds-crontab.txt
+
+# Run every 30 minutes from 6:30 AM to 11:30 PM
+30,00 6-23 * * * /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/update-odds.sh >> /Users/futurepr0n/Development/Capping.Pro/Claude-Code/BaseballScraper/logs/odds-update.log 2>&1
