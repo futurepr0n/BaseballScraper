@@ -74,13 +74,13 @@ if [ $HR_DOWNLOAD_SUCCESS -eq 0 ] || [ $HITS_DOWNLOAD_SUCCESS -eq 0 ]; then
         echo "$(date): ⚠️ Hits props file missing or empty (may not be available)"
     fi
         
-        # Run the Python script to process the data (use venv's python)
-        echo "$(date): 🔄 Processing odds data..."
+        # Run the enhanced Python script to process the data (use venv's python)
+        echo "$(date): 🔄 Processing odds data with enhanced scraper..."
         if [ -n "$VIRTUAL_ENV" ]; then
-            python odds-scrape.py
+            python enhanced_odds_scrape.py
         else
             echo "$(date): ⚠️ Warning: venv not activated, using system python3"
-            python3 odds-scrape.py
+            python3 enhanced_odds_scrape.py
         fi
         
         if [ $? -eq 0 ]; then
