@@ -61,8 +61,8 @@ log "INFO" "Python path: $PYTHONPATH"
 
 # Check for virtual environment
 if [ -f "venv/bin/activate" ]; then
-    # Activate virtual environment
-    source venv/bin/activate
+    # Activate virtual environment (cron compatible)
+    . venv/bin/activate
     if [ $? -eq 0 ]; then
         log "SUCCESS" "Virtual environment activated: $VIRTUAL_ENV"
         log "INFO" "Python executable: $(which python)"

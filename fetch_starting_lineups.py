@@ -315,6 +315,9 @@ class StartingLineupFetcher:
             players_key = f'{team_side}Players'
             team_players = lineups.get(players_key, [])
             
+            # Get team abbreviation for this side
+            team_abbr = lineup_data[team_side].get("abbr", "")
+            
             for i, player in enumerate(team_players):
                 if isinstance(player, dict) and player.get('fullName'):
                     player_name = player.get('fullName', '')
@@ -323,9 +326,9 @@ class StartingLineupFetcher:
                     player_handedness = self.get_player_handedness_from_api(player.get('id'))
                     
                     if player_handedness:
-                        # Update roster with batter handedness
+                        # Update roster with batter handedness - name validation happens inside function
                         if self.update_roster_with_batter_handedness(
-                            player_name, player_handedness, 'LINEUP'
+                            player_name, player_handedness, team_abbr if team_abbr else None
                         ):
                             batter_updates += 1
                     
@@ -533,7 +536,7 @@ class StartingLineupFetcher:
         if len(potential_matches) > 1 and team_abbr:
             team_matches = []
             for match in potential_matches:
-                player_team = match.get("team_abbr", "").upper()
+                player_team = match.get("team", "").upper()
                 if player_team == team_abbr.upper():
                     team_matches.append(match)
             
@@ -566,7 +569,15 @@ class StartingLineupFetcher:
         # Use the more complete of current_name or current_full_name for comparison
         current_best = current_full_name if current_full_name else current_name
         if not current_best:
-            return True  # No current name, definitely update
+            return False  # CRITICAL: Don't update missing names without validation
+        
+        # CRITICAL VALIDATION: First initials must match
+        current_first_initial = current_best[0].upper() if current_best else ""
+        api_first_initial = api_name[0].upper() if api_name else ""
+        
+        if current_first_initial != api_first_initial:
+            print(f"⚠️ BLOCKED: First initial mismatch '{current_best}' vs '{api_name}' ({current_first_initial} ≠ {api_first_initial})")
+            return False
         
         # Check if API name has more words (fuller name)
         current_words = len(current_best.split())

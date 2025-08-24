@@ -94,7 +94,9 @@ class HellraiserScheduler:
                 data['archiveMetadata'] = {
                     'archivedAt': datetime.datetime.now().isoformat(),
                     'runType': run_type,
-                    'originalFilename': current_analysis.name
+                    'originalFilename': current_analysis.name,
+                    'cronTriggered': True,  # Mark that this was cron-triggered
+                    'gameContext': self.get_game_context()  # Add game timing context
                 }
                 
                 with open(archive_path, 'w') as f:
@@ -177,45 +179,74 @@ class HellraiserScheduler:
         
         return schedule
     
-    def run_scheduled_analysis(self):
-        """Run analysis based on calculated schedule"""
-        schedule = self.calculate_run_schedule()
-        
-        if not schedule:
-            self.log("📅 No games scheduled for today")
-            return
-        
-        self.log(f"📅 Today's run schedule: {len(schedule)} runs planned")
-        for run_type, run_time in schedule:
-            self.log(f"   {run_time.strftime('%H:%M')} - {run_type}")
-        
+    def determine_run_type(self) -> str:
+        """Intelligently determine what type of run this is based on game times"""
+        game_times = self.get_game_times_today()
         now = datetime.datetime.now().time()
         
-        # Find next scheduled run
-        next_run = None
-        for run_type, run_time in schedule:
-            if run_time > now:
-                next_run = (run_type, run_time)
-                break
+        if not game_times:
+            return "No Games Scheduled"
         
-        if next_run:
-            run_type, run_time = next_run
-            
-            # Calculate wait time
-            now_dt = datetime.datetime.combine(datetime.date.today(), now)
-            run_dt = datetime.datetime.combine(datetime.date.today(), run_time)
-            wait_seconds = (run_dt - now_dt).total_seconds()
-            
-            if wait_seconds > 0:
-                self.log(f"⏰ Next run: {run_type} at {run_time.strftime('%H:%M')} (in {wait_seconds/60:.1f} minutes)")
-                return True  # Indicates there's a scheduled run
-            else:
-                # Run immediately if it's time
-                self.run_analysis(run_type)
-                return True
+        earliest_game = game_times[0]
+        latest_game = game_times[-1]
+        
+        # Smart labeling based on timing relative to games
+        if now < datetime.time(10, 0):
+            return "Early Morning Baseline"
+        elif now < datetime.time(earliest_game.hour - 1, 0):
+            return "Pre-Game Analysis"
+        elif now < datetime.time(earliest_game.hour + 1, 0):
+            return "Game Time Update"
+        elif len(game_times) > 1 and earliest_game.hour < now.hour < latest_game.hour:
+            return "Midday Adjustment"
+        elif now >= datetime.time(latest_game.hour - 2, 0):
+            return "Evening Final Analysis"
         else:
-            self.log("✅ All scheduled runs completed for today")
-            return False
+            return "Scheduled Update"
+
+    def get_game_context(self) -> dict:
+        """Get context about today's games for metadata"""
+        game_times = self.get_game_times_today()
+        now = datetime.datetime.now().time()
+        
+        if not game_times:
+            return {"gamesScheduled": False}
+        
+        earliest_game = game_times[0] 
+        latest_game = game_times[-1]
+        
+        # Determine relationship to game times
+        before_all_games = now < earliest_game
+        after_all_games = now > latest_game
+        between_games = earliest_game <= now <= latest_game
+        
+        return {
+            "gamesScheduled": True,
+            "gameCount": len(game_times),
+            "earliestGame": earliest_game.strftime("%H:%M"),
+            "latestGame": latest_game.strftime("%H:%M"),
+            "analysisTime": now.strftime("%H:%M"),
+            "timingContext": {
+                "beforeAllGames": before_all_games,
+                "betweenGames": between_games,
+                "afterAllGames": after_all_games
+            }
+        }
+
+    def run_scheduled_analysis(self):
+        """Run analysis immediately with intelligent labeling"""
+        # FIXED: Run analysis immediately instead of waiting for calculated times
+        run_type = self.determine_run_type()
+        game_context = self.get_game_context()
+        
+        self.log(f"📅 Game context: {game_context.get('gameCount', 0)} games today")
+        if game_context.get('gamesScheduled'):
+            self.log(f"🕐 Games: {game_context['earliestGame']} - {game_context['latestGame']}")
+            self.log(f"🎯 Analysis type: {run_type}")
+        
+        # Run the analysis immediately with intelligent labeling
+        success = self.run_analysis(run_type)
+        return success
 
 def main():
     """Main scheduler execution"""
